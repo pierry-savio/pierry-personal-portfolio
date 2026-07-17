@@ -1,7 +1,34 @@
+// I M P O R T S
+//  |
+//  |
+    //Variables and functions
+    @use './variables-functions/variables' as *;
+    @use './variables-functions/colors' as *;
+    @use './variables-functions/functions' as *;
+//  |
+//  |
+    //Nav
+    @use './nav/nav.scss' as *;
+    @use './nav/nav-mobile.scss' as *;
+    @use './nav/nav-pc.scss' as *;
+//  |
+//  |
+    //Pages
+    @use './pages/home' as *;
+    @use './pages/projects' as *;
+    @use './pages/skills' as *;
+    @use './pages/education' as *;
+    @use './pages/contact' as *;
+
+//RESETS
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-//Imports
+
+
+
+
+

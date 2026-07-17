@@ -1,0 +1,39 @@
+$background: #171717;
+
+$title: white;
+$text: #b2b2b2;
+$text-highlight: #ff00cc;
+
+$gray: #212121;
+$gray-light: #2d2d2d;
+
+$line: #5e5e5e;
+$section-mark: #ff00cc;
+
+//GRADIENTS
+//  |
+//  |
+    //Button
+    $main-gradient: linear-gradient(
+        45deg,
+        #2f00ff,
+        #ff00fb,
+        #ff0037
+    );
+//  |
+//  |
+    //Background
+    $background-gradient: linear-gradient(
+        45deg,
+        #160015,
+        #221c22
+    );
+//  |
+//  |
+    //Button
+    $button-gradient: linear-gradient(
+        45deg,
+        #3700ff,
+        #ff00fb
+    );
+
