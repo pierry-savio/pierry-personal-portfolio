@@ -36,7 +36,8 @@ button.open-nav-button:hover img {
 }
 
 button.open-nav-button.closed {
-  bottom: -74px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 footer {
@@ -47,6 +48,8 @@ footer {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  align-self: center;
+  justify-self: center;
 }
 footer button.close-nav-button {
   background-color: #2d2d2d;
@@ -76,6 +79,9 @@ footer nav.nav-mobile {
   justify-content: center;
   background-color: #2d2d2d;
   width: 100%;
+  opacity: 1;
+  overflow: hidden;
+  transition: 0.5s ease;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
@@ -107,7 +113,13 @@ footer {
 }
 
 footer.closed {
-  bottom: -100px;
+  opacity: 0;
+  pointer-events: none;
+}
+footer.closed nav.nav-mobile {
+  width: 0;
+  border-radius: 50%;
+  transform: translateY(-40px);
 }
 
 @media (min-width: 1200px) {
