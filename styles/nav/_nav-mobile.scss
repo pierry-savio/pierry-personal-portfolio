@@ -1,0 +1,53 @@
+//Variables and functions
+    @use "../variables-functions/variables"  as *;
+    @use '../variables-functions/colors'     as *;
+    @use '../variables-functions/functions'  as *;
+    @use '../variables-functions/fonts'      as *;
+
+
+
+footer{
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    button.close-nav-button{
+        background-color: $gray-light;
+        border: none;
+        border-radius: 36px 36px 0 0;
+        height: 10vw;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    nav.nav-mobile{
+        display: flex;
+        justify-content: center;
+        padding: 10px 4% 10px 4%;
+        background-color: $gray-light;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        
+        a{
+            text-decoration: none;
+            font-style: none;
+            img{
+                width: 40px;
+            }
+        }
+    }
+}

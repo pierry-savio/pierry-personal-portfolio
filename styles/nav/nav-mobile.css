@@ -1,1 +1,6 @@
-/*# sourceMappingURL=nav-mobile.css.map */
+footer nav.nav-mobile {
+  background-color: red;
+}
+footer nav.nav-mobile img {
+  width: 1px;
+}/*# sourceMappingURL=nav-mobile.css.map */
