@@ -6,6 +6,7 @@
     @use '../nav/nav.scss'                   as *;
     @use '../nav/nav-mobile.scss'            as *;
     @use '../nav/nav-pc.scss'                as *;
+    @use '../variables-functions/animations' as *;
 
 h1{
     @include mainFont();

@@ -25,13 +25,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 div.vertical-line{
     width: 1px;
     background-color: $line;
 }
-
 
 
 

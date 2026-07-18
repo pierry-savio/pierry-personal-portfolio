@@ -3,11 +3,42 @@
     @use '../variables-functions/colors'     as *;
     @use '../variables-functions/functions'  as *;
     @use '../variables-functions/fonts'      as *;
+    @use '../variables-functions/animations' as *;
 
 
+button.open-nav-button{
+    position: fixed;
+    bottom: 28px;
+    left: calc(50% - 35px);
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    background: $gray-light;
+    opacity: 0.95;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.45);
+    animation: floating 4s ease infinite;
+    transition: .5s ease;
+
+    img{
+        width: 30px;
+        aspect-ratio: 1 / 1;
+        transition: 0.3s ease;
+    }
+
+    &:hover{
+        background: $line;
+        img{
+            transform: rotate(10deg);
+        }
+    }
+}
+
+button.open-nav-button.closed{
+    bottom: -74px;
+}
 
 footer{
-
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -20,34 +51,75 @@ footer{
         background-color: $gray-light;
         border: none;
         border-radius: 36px 36px 0 0;
-        height: 10vw;
+        height: 42px;
         width: 20%;
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+        transition: 0.3s ease;
 
         img{
             width: 20px;
             height: 20px;
+            transition: 0.3s ease;
+        }
+
+        &:hover{
+            background-color: $line;
+
+            img{
+                transform: rotate(90deg);
+            }
         }
     }
 
     nav.nav-mobile{
         display: flex;
         justify-content: center;
-        padding: 10px 4% 10px 4%;
         background-color: $gray-light;
         width: 100%;
 
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         
         a{
             text-decoration: none;
             font-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid $line;
+            padding: 12px 20px 12px 20px;
+            
+            transition: 0.3s ease;
+
             img{
-                width: 40px;
+                width: 30px;
+                transition: 0.3s ease;
+            }
+
+            &:hover{
+                background-color: $line;
+                img{
+                    transform: rotate(10deg);
+                }
             }
         }
+
+        a.current-page{
+            border-top: 4px solid $section-mark;
+        }
+    }
+    transition: 0.5s ease;
+}
+
+footer.closed{
+    bottom: -100px;
+}
+
+@media (min-width: 1200px){
+    footer, button.open-nav-button{
+        display: none;
     }
 }
