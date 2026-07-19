@@ -8,6 +8,11 @@
     @use '../nav/nav-pc.scss'                as *;
     @use '../variables-functions/animations' as *;
 
+main.home{
+    background: $background;
+    height: 100vh;
+}
+
 h1{
     @include mainFont();
     font-weight: 500;

@@ -4,3 +4,86 @@
     @use '../variables-functions/functions'  as *;
     @use '../variables-functions/fonts'      as *;
     @use '../variables-functions/animations' as *;
+
+footer.footer-pc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 80%;
+    position: fixed;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    nav.nav-pc{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border: 1px solid $line;
+        background-color: $gray-low-op;
+        border-radius: 55px;
+        overflow: hidden;
+
+        a{
+            border: 1px solid transparent;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            width: 100%;
+            padding: 10px;
+            transition: 0.3s ease;
+            
+            border-radius: 55px;
+            img{
+                width: 32px;
+                transition: 0.3s ease;
+            }
+
+            &:hover{
+                border: 1px solid $line;
+                background-color: $gray;
+
+                img{
+                    //transform: rotate(10deg);
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+
+    button.close-nav-button{
+        border: 1px solid $line;
+        background-color: $gray-low-op;
+        border-radius: 50%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        
+        img{
+            width: 32px;
+            transition: 0.3s ease;
+        }
+
+        &:hover{
+            background-color: $gray;
+
+            img{
+                transform: rotate(10deg);
+            }
+        }
+
+
+    }
+}
+
+@media (orientation: portrait) {
+    footer.footer-pc{
+        display: none;
+    }
+}

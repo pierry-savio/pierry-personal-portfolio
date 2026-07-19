@@ -10,6 +10,7 @@
   }
 }
 button.open-nav-button {
+  z-index: 10;
   position: fixed;
   bottom: 28px;
   left: calc(50% - 35px);
@@ -40,7 +41,7 @@ button.open-nav-button.closed {
   pointer-events: none;
 }
 
-footer {
+footer.footer-mobile {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -51,7 +52,7 @@ footer {
   align-self: center;
   justify-self: center;
 }
-footer button.close-nav-button {
+footer.footer-mobile button.close-nav-button {
   background-color: #2d2d2d;
   border: none;
   border-radius: 36px 36px 0 0;
@@ -63,18 +64,18 @@ footer button.close-nav-button {
   cursor: pointer;
   transition: 0.3s ease;
 }
-footer button.close-nav-button img {
+footer.footer-mobile button.close-nav-button img {
   width: 20px;
   height: 20px;
   transition: 0.3s ease;
 }
-footer button.close-nav-button:hover {
+footer.footer-mobile button.close-nav-button:hover {
   background-color: #5e5e5e;
 }
-footer button.close-nav-button:hover img {
+footer.footer-mobile button.close-nav-button:hover img {
   transform: rotate(90deg);
 }
-footer nav.nav-mobile {
+footer.footer-mobile nav.nav-mobile {
   display: flex;
   justify-content: center;
   background-color: #2d2d2d;
@@ -85,7 +86,7 @@ footer nav.nav-mobile {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
-footer nav.nav-mobile a {
+footer.footer-mobile nav.nav-mobile a {
   text-decoration: none;
   font-style: none;
   display: flex;
@@ -95,38 +96,120 @@ footer nav.nav-mobile a {
   padding: 12px 20px 12px 20px;
   transition: 0.3s ease;
 }
-footer nav.nav-mobile a img {
+footer.footer-mobile nav.nav-mobile a img {
   width: 30px;
   transition: 0.3s ease;
 }
-footer nav.nav-mobile a:hover {
+footer.footer-mobile nav.nav-mobile a:hover {
   background-color: #5e5e5e;
 }
-footer nav.nav-mobile a:hover img {
+footer.footer-mobile nav.nav-mobile a:hover img {
   transform: rotate(10deg);
 }
-footer nav.nav-mobile a.current-page {
+footer.footer-mobile nav.nav-mobile a.current-page {
   border-top: 4px solid #ff00cc;
 }
-footer {
+footer.footer-mobile {
   transition: 0.5s ease;
 }
 
-footer.closed {
-  opacity: 0;
+footer.footer-mobile.closed {
+  z-index: 9;
   pointer-events: none;
+  opacity: 0;
 }
-footer.closed nav.nav-mobile {
-  width: 0;
+footer.footer-mobile.closed button.close-nav-button {
+  opacity: 0;
+}
+footer.footer-mobile.closed nav.nav-mobile {
+  width: 70px;
+  height: 70px;
+  padding: 20px;
   border-radius: 50%;
-  transform: translateY(-40px);
+  padding: 20px;
+  transform: translateY(-29px);
 }
 
-@media (min-width: 1200px) {
-  footer, button.open-nav-button {
+@media (orientation: landscape) {
+  footer.footer-mobile, button.open-nav-button {
     display: none;
   }
 }
+footer.footer-pc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 80%;
+  position: fixed;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+footer.footer-pc nav.nav-pc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #5e5e5e;
+  background-color: rgba(33, 33, 33, 0.5);
+  border-radius: 55px;
+  overflow: hidden;
+}
+footer.footer-pc nav.nav-pc a {
+  border: 1px solid transparent;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px;
+  transition: 0.3s ease;
+  border-radius: 55px;
+}
+footer.footer-pc nav.nav-pc a img {
+  width: 32px;
+  transition: 0.3s ease;
+}
+footer.footer-pc nav.nav-pc a:hover {
+  border: 1px solid #5e5e5e;
+  background-color: #212121;
+}
+footer.footer-pc nav.nav-pc a:hover img {
+  transform: rotateY(180deg);
+}
+footer.footer-pc button.close-nav-button {
+  border: 1px solid #5e5e5e;
+  background-color: rgba(33, 33, 33, 0.5);
+  border-radius: 50%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+footer.footer-pc button.close-nav-button img {
+  width: 32px;
+  transition: 0.3s ease;
+}
+footer.footer-pc button.close-nav-button:hover {
+  background-color: #212121;
+}
+footer.footer-pc button.close-nav-button:hover img {
+  transform: rotate(10deg);
+}
+
+@media (orientation: portrait) {
+  footer.footer-pc {
+    display: none;
+  }
+}
+main.home {
+  background: #171717;
+  height: 100vh;
+}
+
 h1 {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;

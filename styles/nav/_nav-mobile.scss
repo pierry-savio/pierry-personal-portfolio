@@ -7,6 +7,7 @@
 
 
 button.open-nav-button{
+    z-index: 10;
     position: fixed;
     bottom: 28px;
     left: calc(50% - 35px);
@@ -39,7 +40,7 @@ button.open-nav-button.closed{
     pointer-events: none;
 }
 
-footer{
+footer.footer-mobile{
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -120,19 +121,28 @@ footer{
     transition: 0.5s ease;
 }
 
-footer.closed{
-    opacity: 0;
-    pointer-events: none;
+footer.footer-mobile.closed{
+        z-index: 9;
+        pointer-events: none;
+        opacity: 0;
+    
+
+    button.close-nav-button{
+        opacity: 0;
+    }
 
     nav.nav-mobile{
-        width: 0;
+        width: 70px;
+        height: 70px;
+        padding: 20px;
         border-radius: 50%;
-        transform: translateY(-40px);
+        padding: 20px;
+        transform: translateY(-29px);
     }
 }
 
-@media (min-width: 1200px){
-    footer, button.open-nav-button{
+@media (orientation: landscape){
+    footer.footer-mobile, button.open-nav-button{
         display: none;
     }
 }
