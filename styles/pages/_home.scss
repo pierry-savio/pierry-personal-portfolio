@@ -11,6 +11,11 @@
 main.home{
     background: $background;
     height: 100vh;
+
+    img{
+        width: 300px;
+        border-radius: 0 0 40% 40%;
+    }
 }
 
 h1{

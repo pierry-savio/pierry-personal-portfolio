@@ -23,14 +23,20 @@
 
     </header>
 
+    
     <main class="home">
+        <div class="elipse left"></div>
         <h1>Pierry Savio</h1>
+        <img src="./video/hacker.gif"></img>
+        <div class="elipse right"></div>
     </main>
+    
 
     <!--NAV MOBILE-->
     <button class="open-nav-button" id="open_nav_mobile_button">
         <img src="./img/icons/sailling.png" alt="Abrir navegação">
     </button>
+
 
     <footer class="footer-mobile closed" id="mobile_footer">
         <button class="close-nav-button" id="close_nav_mobile_button">
@@ -63,8 +69,10 @@
 
     <!--NAV PC-->
     <footer class="footer-pc" id="pc_footer">
-        <nav class="nav-pc">
-            <a href="./index.html">
+
+        <nav class="nav-pc" id="nav_pc">
+
+            <a href="./index.html" class="current-page">
                 <img src="./img/icons/home.png" alt="Início">
             </a>
 
@@ -85,10 +93,11 @@
             </a>
         </nav>
 
-        <button class="close-nav-button">
+        <button class="close-nav-button" id="close_nav_pc_button">
             <img src="./img/icons/sailling.png" alt="Navegação">
         </button>
     </footer>
+    
 
     <script src="script.js"></script>
 </body>

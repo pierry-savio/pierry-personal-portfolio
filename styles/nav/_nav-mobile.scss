@@ -146,3 +146,15 @@ footer.footer-mobile.closed{
         display: none;
     }
 }
+
+div.elipse.e1{
+    left: 100%;
+    top: 100%;
+    transform: translateX(-50%) translateY(-100%);
+}
+
+div.elipse.e2{
+    left: 0;
+    top: 0;
+    transform: translateX(-50%) translateY(0%);
+}

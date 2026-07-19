@@ -9,6 +9,20 @@
     transform: scale(1);
   }
 }
+@keyframes elipse-floating {
+  0% {
+    transform: scale(1);
+    transform: translateY(0px);
+  }
+  50% {
+    transform: scale(1.15);
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: scale(1);
+    transform: translateY(0px);
+  }
+}
 button.open-nav-button {
   z-index: 10;
   position: fixed;
@@ -135,6 +149,18 @@ footer.footer-mobile.closed nav.nav-mobile {
     display: none;
   }
 }
+div.elipse.e1 {
+  left: 100%;
+  top: 100%;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+div.elipse.e2 {
+  left: 0;
+  top: 0;
+  transform: translateX(-50%) translateY(0%);
+}
+
 footer.footer-pc {
   display: flex;
   justify-content: center;
@@ -147,14 +173,21 @@ footer.footer-pc {
   transform: translateX(-50%);
 }
 footer.footer-pc nav.nav-pc {
+  /*
   display: flex;
   justify-content: space-between;
   align-items: center;
+  */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   width: 100%;
+  max-height: 60px;
   border: 1px solid #5e5e5e;
   background-color: rgba(33, 33, 33, 0.5);
   border-radius: 55px;
   overflow: hidden;
+  transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
 footer.footer-pc nav.nav-pc a {
   border: 1px solid transparent;
@@ -164,6 +197,7 @@ footer.footer-pc nav.nav-pc a {
   align-items: center;
   text-decoration: none;
   width: 100%;
+  max-height: 100%;
   padding: 10px;
   transition: 0.3s ease;
   border-radius: 55px;
@@ -178,6 +212,16 @@ footer.footer-pc nav.nav-pc a:hover {
 }
 footer.footer-pc nav.nav-pc a:hover img {
   transform: rotateY(180deg);
+}
+footer.footer-pc nav.nav-pc a.current-page {
+  border: 2px solid #ff00cc;
+  background-color: rgba(255, 0, 204, 0.05);
+  box-shadow: 0 0 10px 0 #ff00cc;
+}
+footer.footer-pc nav.nav-pc.closed {
+  border: 0px solid #5e5e5e;
+  max-height: 0px;
+  width: 0;
 }
 footer.footer-pc button.close-nav-button {
   border: 1px solid #5e5e5e;
@@ -195,6 +239,9 @@ footer.footer-pc button.close-nav-button img {
 }
 footer.footer-pc button.close-nav-button:hover {
   background-color: #212121;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 2px 2px 10px 0 rgba(255, 0, 204, 0.2);
+  border: 1px solid #ff00cc;
 }
 footer.footer-pc button.close-nav-button:hover img {
   transform: rotate(10deg);
@@ -208,6 +255,10 @@ footer.footer-pc button.close-nav-button:hover img {
 main.home {
   background: #171717;
   height: 100vh;
+}
+main.home img {
+  width: 300px;
+  border-radius: 0 0 40% 40%;
 }
 
 h1 {
@@ -229,4 +280,23 @@ h1 {
 div.vertical-line {
   width: 1px;
   background-color: #5e5e5e;
+}
+
+div.elipse {
+  position: fixed;
+  z-index: 0;
+  opacity: 0.1;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(45deg, #2f00ff, #ff00fb, #ff0037);
+  filter: blur(50px);
+  animation: elipse-floating 4s ease infinite;
+}
+
+div.elipse.right {
+  right: -5%;
+}
+
+div.elipse.left {
+  left: -5%;
 }/*# sourceMappingURL=index.css.map */

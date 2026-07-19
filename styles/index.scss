@@ -33,6 +33,25 @@ div.vertical-line{
     background-color: $line;
 }
 
+div.elipse{
+    position: fixed;
+    z-index: 0;
+    opacity: 0.1;
+    width: 250px;
+    height: 250px;
+    background: $main-gradient;
+    filter: blur(50px);
+    animation: elipse-floating 4s ease infinite;
+}
+
+div.elipse.right{
+    right: -5%;
+}
+
+div.elipse.left{
+    left: -5%;
+}
+
 
 
 
