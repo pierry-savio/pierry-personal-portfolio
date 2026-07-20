@@ -23,6 +23,17 @@
     transform: translateY(0px);
   }
 }
+@keyframes scroll-progress-line-animation {
+  0% {
+    border-radius: 0 20px 0 0;
+  }
+  50% {
+    border-radius: 0 0 20px 0;
+  }
+  100% {
+    border-radius: 0 20px 0 0;
+  }
+}
 button.open-nav-button {
   z-index: 10;
   position: fixed;
@@ -252,6 +263,21 @@ footer.footer-pc button.close-nav-button:hover img {
     display: none;
   }
 }
+header {
+  background-color: #212121;
+  text-align: center;
+  text-justify: center;
+  padding-bottom: 10px;
+}
+header p {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 15px;
+}
+
 main.home {
   background: #171717;
   height: 100vh;
@@ -283,7 +309,7 @@ div.vertical-line {
 }
 
 div.elipse {
-  position: fixed;
+  position: absolute;
   z-index: 0;
   opacity: 0.1;
   width: 250px;
@@ -313,4 +339,22 @@ div.elipse.left {
   div.elipse.left {
     left: -5%;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+div.scroll-progress-line {
+  background: linear-gradient(45deg, #2f00ff, #ff00fb, #ff0037);
+  height: 10px;
+  width: 50%;
+  margin-bottom: 10px;
+  animation: scroll-progress-line-animation 2s linear infinite;
+}
+
+span.text-highlight {
+  font-weight: 900;
+}
+
+/*
+
+    div class="scroll-progress-line"></div>
+    <p><span class="text-highlight">PIERRY SAVIO</span> - DESENVOLVEDOR WEB</p>
+
+*//*# sourceMappingURL=index.css.map */

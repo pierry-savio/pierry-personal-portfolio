@@ -13,6 +13,10 @@
     @use './nav/nav-pc.scss' as *;
 //  |
 //  |
+    //Header
+    @use './header' as *;
+//  |
+//  |
     //Pages
     @use './pages/home' as *;
     @use './pages/projects' as *;
@@ -34,7 +38,7 @@ div.vertical-line{
 }
 
 div.elipse{
-    position: fixed;
+    position: absolute;
     z-index: 0;
     opacity: 0.1;
     width: 250px;
@@ -68,8 +72,24 @@ div.elipse.left{
     }
 }
 
+div.scroll-progress-line{
+    background: $main-gradient;
+    height: 10px;
+    width: 50%;
+    margin-bottom: 10px;
+    animation: scroll-progress-line-animation 2s linear infinite;
+}
 
+span.text-highlight{
+    font-weight: 900;
+}
 
+/*
+
+    div class="scroll-progress-line"></div>
+    <p><span class="text-highlight">PIERRY SAVIO</span> - DESENVOLVEDOR WEB</p>
+
+*/
 
 
 

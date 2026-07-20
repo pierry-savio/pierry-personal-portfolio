@@ -1,0 +1,22 @@
+//Variables and functions
+    @use "./variables-functions/variables"  as *;
+    @use './variables-functions/colors'     as *;
+    @use './variables-functions/functions'  as *;
+    @use './variables-functions/fonts'      as *;
+    @use './nav/nav.scss'                   as *;
+    @use './nav/nav-mobile.scss'            as *;
+    @use './nav/nav-pc.scss'                as *;
+    @use './variables-functions/animations' as *;
+
+header{
+    background-color: $gray;
+    text-align: center;
+    text-justify: center;
+    padding-bottom: 10px;
+
+    p{
+        @include mainFont();
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 15px;
+    }
+}
