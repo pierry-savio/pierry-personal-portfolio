@@ -33,8 +33,15 @@ $section-mark: #ff00cc;
 //  |
     //Button
     $button-gradient: linear-gradient(
-        45deg,
-        #3700ff,
+        33deg,
+        #ff00fb,
+        #8c00ff,
         #ff00fb
+    );
+    $button-gradient-hover: linear-gradient(
+        33deg,
+        #8c00ff,
+        #ff00fb,
+        #8c00ff
     );
 

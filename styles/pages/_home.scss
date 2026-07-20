@@ -24,6 +24,11 @@ main{
             position: absolute;
             justify-self: center;
             animation: hacker-animation 4s ease infinite;
+            transition: 0.3s ease;
+
+            &:hover{
+                filter: grayscale(1);
+            }
         }
 
         img.bg-hacker{
@@ -91,12 +96,26 @@ main{
 
                 a.contact-a{
                     button{
-                        box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.3);
+                        box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.2);
                         background: $button-gradient;
                         font-size: 20px;
                         font-weight: 900;
                         color: white;
-                        border: 2px solid rgba($text-highlight, 0.5);
+                        border: 2px solid rgba($text-highlight, 0.2);
+                        animation: button-animation 4s linear infinite;
+                        transition: 0.3s ease;
+
+                        &:hover{
+                            transform: scale(1.02);
+                            box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.6);
+                            border: 2px solid rgba($text-highlight, 0.8);
+                        }
+
+                        &:active{
+                            transform: scale(0.95);
+                            box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.6);
+                            border: 2px solid rgba($text-highlight, 0.8);
+                        }
                     }
                 }
 
@@ -106,6 +125,12 @@ main{
                         border: 1px solid $line;
                         font-size: 18px;
                         color: $text;
+                        transition: 0.3s ease;
+
+                        &:hover{
+                            border: 1px solid white;
+                            letter-spacing: 8px;
+                        }
                     }
                 }
 
@@ -113,10 +138,59 @@ main{
                     text-align: center;
                     color: $line;
                     text-decoration: underline;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        @media(orientation: landscape){
+
+            padding: 200px 20px 200px 20px;
+            grid-template-columns: repeat(2, 1fr);
+            overflow: hidden;
+
+            img.hacker{
+                width: 600px;
+                left: calc(25% - 300px);
+                top: calc(50% - 400px);
+            }
+
+            img.bg-hacker{
+                width: 600px;
+                left: calc(25% - 300px);
+                top: calc(50% - 400px);
+            }
+
+            div.part2{
+                margin-top: 48px;
+                max-width: 700px;
+
+                div.title-paragraph-container{
+                    align-items: start;
+                    
+
+                    h1{
+                        font-size: 80px;
+                        letter-spacing: 10px;
+                        line-height: 65px;
+                    }
+
+                    p{
+                        text-align: left;
+                    }
+                }
+
+                div.buttons-container{
+                    align-items: left;
+                    justify-content: left;
+                    text-align: left;
+                    color: red;
+
+                    a.curriculum{
+                        text-align: left;
+                    }
                 }
             }
         }
     }
-}
-
-
+}   

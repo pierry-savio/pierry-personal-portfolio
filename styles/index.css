@@ -45,6 +45,23 @@
     transform: translateX(0px) translateY(0px) rotateX(0deg);
   }
 }
+@keyframes button-animation {
+  0% {
+    filter: brightness(1);
+  }
+  25% {
+    filter: brightness(1.5);
+  }
+  50% {
+    filter: brightness(1);
+  }
+  75% {
+    filter: brightness(0.8);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
 button.open-nav-button {
   z-index: 10;
   position: fixed;
@@ -194,6 +211,7 @@ footer.footer-pc {
   bottom: 4%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
 }
 footer.footer-pc nav.nav-pc {
   /*
@@ -307,6 +325,10 @@ main section.home img.hacker {
   position: absolute;
   justify-self: center;
   animation: hacker-animation 4s ease infinite;
+  transition: 0.3s ease;
+}
+main section.home img.hacker:hover {
+  filter: grayscale(1);
 }
 main section.home img.bg-hacker {
   z-index: 1;
@@ -375,23 +397,82 @@ main section.home div.part2 div.buttons-container a button {
   width: 100%;
 }
 main section.home div.part2 div.buttons-container a.contact-a button {
-  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.3);
-  background: linear-gradient(45deg, #3700ff, #ff00fb);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.2);
+  background: linear-gradient(33deg, #ff00fb, #8c00ff, #ff00fb);
   font-size: 20px;
   font-weight: 900;
   color: white;
-  border: 2px solid rgba(255, 0, 204, 0.5);
+  border: 2px solid rgba(255, 0, 204, 0.2);
+  animation: button-animation 4s linear infinite;
+  transition: 0.3s ease;
+}
+main section.home div.part2 div.buttons-container a.contact-a button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+}
+main section.home div.part2 div.buttons-container a.contact-a button:active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
 }
 main section.home div.part2 div.buttons-container a.about-me-a button {
   background: transparent;
   border: 1px solid #5e5e5e;
   font-size: 18px;
   color: #b2b2b2;
+  transition: 0.3s ease;
+}
+main section.home div.part2 div.buttons-container a.about-me-a button:hover {
+  border: 1px solid white;
+  letter-spacing: 8px;
 }
 main section.home div.part2 div.buttons-container a.curriculum {
   text-align: center;
   color: #5e5e5e;
   text-decoration: underline;
+  font-size: 18px;
+}
+@media (orientation: landscape) {
+  main section.home {
+    padding: 200px 20px 200px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+  }
+  main section.home img.hacker {
+    width: 600px;
+    left: calc(25% - 300px);
+    top: calc(50% - 400px);
+  }
+  main section.home img.bg-hacker {
+    width: 600px;
+    left: calc(25% - 300px);
+    top: calc(50% - 400px);
+  }
+  main section.home div.part2 {
+    margin-top: 48px;
+    max-width: 700px;
+  }
+  main section.home div.part2 div.title-paragraph-container {
+    align-items: start;
+  }
+  main section.home div.part2 div.title-paragraph-container h1 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+  main section.home div.part2 div.title-paragraph-container p {
+    text-align: left;
+  }
+  main section.home div.part2 div.buttons-container {
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    color: red;
+  }
+  main section.home div.part2 div.buttons-container a.curriculum {
+    text-align: left;
+  }
 }
 
 * {
