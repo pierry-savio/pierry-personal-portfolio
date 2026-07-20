@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes floating {
   0% {
     transform: scale(1);
@@ -32,6 +33,17 @@
   }
   100% {
     border-radius: 0 20px 0 0;
+  }
+}
+@keyframes hacker-animation {
+  0% {
+    transform: translateX(0px) translateY(0px) rotateX(0deg);
+  }
+  50% {
+    transform: translateX(-5px) translateY(-15px) rotateX(20deg);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px) rotateX(0deg);
   }
 }
 button.open-nav-button {
@@ -268,6 +280,10 @@ header {
   text-align: center;
   text-justify: center;
   padding-bottom: 10px;
+  position: fixed;
+  width: 100%;
+  opacity: 0.9;
+  z-index: 10;
 }
 header p {
   font-family: "Source Code Pro", monospace;
@@ -280,22 +296,124 @@ header p {
 
 main.home {
   background: #171717;
-  height: 100vh;
+  padding: 0px 20px 100px 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
-main.home img {
-  width: 300px;
-  border-radius: 0 0 40% 40%;
+main.home img.hacker {
+  z-index: 2;
+  width: 320px;
+  border-radius: 150px;
+  position: absolute;
+  justify-self: center;
+  animation: hacker-animation 4s ease infinite;
 }
-
-h1 {
+main.home img.bg-hacker {
+  z-index: 1;
+  filter: blur(8px) brightness(0.8);
+  width: 320px;
+  border-radius: 150px;
+  position: absolute;
+  justify-self: center;
+  animation: hacker-animation 3s ease infinite;
+}
+main.home div.part2 {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 240px;
+  gap: 30px;
+}
+main.home div.part2 div.title-paragraph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+main.home div.part2 div.title-paragraph-container h1 {
+  color: white;
+  font-size: 35px;
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  font-weight: 500;
-  color: #ff00cc;
+  font-weight: 900;
+}
+main.home div.part2 div.title-paragraph-container p {
+  color: #b2b2b2;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+}
+main.home div.part2 div.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+main.home div.part2 div.buttons-container a {
+  width: 100%;
+  text-decoration: none;
+}
+main.home div.part2 div.buttons-container a button {
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 80px;
+  padding: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+}
+main.home div.part2 div.buttons-container a.contact-a button {
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.3);
+  background: linear-gradient(45deg, #3700ff, #ff00fb);
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+}
+main.home div.part2 div.buttons-container a.about-me-a button {
+  background: transparent;
+  border: 1px solid #5e5e5e;
+  font-size: 18px;
+  color: #b2b2b2;
+}
+main.home div.part2 div.buttons-container a.curriculum {
+  text-align: center;
+  color: #5e5e5e;
+  text-decoration: underline;
 }
 
+/*
+
+<img src="./video/hacker.gif"></img>
+
+<div class="part2">
+    <div class="title-paragraph-container">
+        <h1>Pierry Savio</h1>
+        <p>Construo aplicações web e soluções modernas, ajudando você a vender mais e a se destacar online.</p>
+    </div>
+
+    <div class="buttons-container">
+        <a href="#contact">
+            <button>FAZER ORÇAMENTO</button>
+        </a>
+        <a href="#about_me">
+            <button>SOBRE MIM</button>
+        </a>
+        <a href="">Veja meu currículo</a>
+    </div>
+</div>
+
+*/
 * {
   padding: 0;
   margin: 0;
@@ -309,7 +427,7 @@ div.vertical-line {
 }
 
 div.elipse {
-  position: absolute;
+  position: fixed;
   z-index: 0;
   opacity: 0.1;
   width: 250px;

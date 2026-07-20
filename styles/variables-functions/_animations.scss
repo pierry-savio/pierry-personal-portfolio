@@ -38,3 +38,15 @@
         border-radius: 0 20px 0 0;
     }
 }
+
+@keyframes hacker-animation {
+    0%{
+        transform: translateX(0px) translateY(0px) rotateX(0deg);
+    }
+    50%{
+        transform: translateX(-5px) translateY(-15px) rotateX(20deg);
+    }
+    100%{
+        transform: translateX(0px) translateY(0px) rotateX(0deg);
+    }
+}

@@ -13,6 +13,10 @@ header{
     text-align: center;
     text-justify: center;
     padding-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    opacity: 0.90;
+    z-index: 10;
 
     p{
         @include mainFont();
