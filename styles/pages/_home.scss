@@ -8,134 +8,115 @@
     @use '../nav/nav-pc.scss'                as *;
     @use '../variables-functions/animations' as *;
 
-main.home{
-    background: $background;
-    padding: 0px 20px 100px 20px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+main{
+    section.home{
+        background: $background;
+        padding: 0px 20px 100px 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
 
 
-    img.hacker{
-        z-index: 2;
-        width: 320px;
-        border-radius: 150px;
-        //transform: translateX(-7px) translateY(-35px);
-        position: absolute;
-        justify-self: center;
-        animation: hacker-animation 4s ease infinite;
-    }
-
-    img.bg-hacker{
-        z-index: 1;
-        filter: blur(8px) brightness(0.8);
-        width: 320px;
-        border-radius: 150px;
-        //transform: translateX(-7px) translateY(-35px);
-        position: absolute;
-        justify-self: center;
-        animation: hacker-animation 3s ease infinite;
-    }
-
-    div.part2{
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 240px;
-        gap: 30px;
-
-        div.title-paragraph-container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 15px;
-            
-            h1{
-                color: white;
-                font-size: 35px;
-                @include mainFont();
-                font-weight: 900;
-            }
-
-            p{
-                color: $text;
-                @include mainFont();
-                text-align: center;
-            }
+        img.hacker{
+            z-index: 2;
+            width: 320px;
+            border-radius: 150px;
+            //transform: translateX(-7px) translateY(-35px);
+            position: absolute;
+            justify-self: center;
+            animation: hacker-animation 4s ease infinite;
         }
 
-        div.buttons-container{
+        img.bg-hacker{
+            z-index: 1;
+            filter: blur(8px) brightness(0.8);
+            width: 320px;
+            border-radius: 150px;
+            //transform: translateX(-7px) translateY(-35px);
+            position: absolute;
+            justify-self: center;
+            animation: hacker-animation 3s ease infinite;
+        }
+
+        div.part2{
+            z-index: 2;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            gap: 15px;
+            margin-top: 240px;
+            gap: 30px;
 
-            a{
-                width: 100%;
-                text-decoration: none;
-                button{
-                    letter-spacing: 5px;
-                    border: none;
-                    border-radius: 80px;
-                    padding: 12px;
-                    @include mainFont();
-                    width: 100%;
-                }
-            }
-
-            a.contact-a{
-                button{
-                    box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.3);
-                    background: $button-gradient;
-                    font-size: 20px;
-                    font-weight: 900;
+            div.title-paragraph-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 15px;
+                
+                h1{
                     color: white;
+                    font-size: 35px;
+                    @include mainFont();
+                    font-weight: 900;
                 }
-            }
 
-            a.about-me-a{
-                button{
-                    background: transparent;
-                    border: 1px solid $line;
-                    font-size: 18px;
+                p{
                     color: $text;
+                    @include mainFont();
+                    text-align: center;
                 }
             }
 
-            a.curriculum{
-                text-align: center;
-                color: $line;
-                text-decoration: underline;
+            div.buttons-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                gap: 15px;
+
+                a{
+                    width: 100%;
+                    text-decoration: none;
+                    button{
+                        cursor: pointer;
+                        letter-spacing: 5px;
+                        border: none;
+                        border-radius: 80px;
+                        padding: 12px;
+                        @include mainFont();
+                        width: 100%;
+                    }
+                }
+
+                a.contact-a{
+                    button{
+                        box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.3);
+                        background: $button-gradient;
+                        font-size: 20px;
+                        font-weight: 900;
+                        color: white;
+                        border: 2px solid rgba($text-highlight, 0.5);
+                    }
+                }
+
+                a.about-me-a{
+                    button{
+                        background: transparent;
+                        border: 1px solid $line;
+                        font-size: 18px;
+                        color: $text;
+                    }
+                }
+
+                a.curriculum{
+                    text-align: center;
+                    color: $line;
+                    text-decoration: underline;
+                }
             }
         }
     }
 }
-
-/*
-
-<img src="./video/hacker.gif"></img>
-
-<div class="part2">
-    <div class="title-paragraph-container">
-        <h1>Pierry Savio</h1>
-        <p>Construo aplicações web e soluções modernas, ajudando você a vender mais e a se destacar online.</p>
-    </div>
-
-    <div class="buttons-container">
-        <a href="#contact">
-            <button>FAZER ORÇAMENTO</button>
-        </a>
-        <a href="#about_me">
-            <button>SOBRE MIM</button>
-        </a>
-        <a href="">Veja meu currículo</a>
-    </div>
-</div>
-
-*/
 
 

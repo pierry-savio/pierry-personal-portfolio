@@ -1,13 +1,12 @@
-@charset "UTF-8";
 @keyframes floating {
   0% {
-    transform: scale(1);
+    transform: scale(1) translateX(-50%);
   }
   50% {
-    transform: scale(1.06);
+    transform: scale(1.06) translateX(-50%);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1) translateX(-50%);
   }
 }
 @keyframes elipse-floating {
@@ -50,7 +49,8 @@ button.open-nav-button {
   z-index: 10;
   position: fixed;
   bottom: 28px;
-  left: calc(50% - 35px);
+  left: 50%;
+  transform: translateX(-50%);
   padding: 20px;
   border-radius: 50%;
   border: none;
@@ -294,13 +294,13 @@ header p {
   font-size: 15px;
 }
 
-main.home {
+main section.home {
   background: #171717;
   padding: 0px 20px 100px 20px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
-main.home img.hacker {
+main section.home img.hacker {
   z-index: 2;
   width: 320px;
   border-radius: 150px;
@@ -308,7 +308,7 @@ main.home img.hacker {
   justify-self: center;
   animation: hacker-animation 4s ease infinite;
 }
-main.home img.bg-hacker {
+main section.home img.bg-hacker {
   z-index: 1;
   filter: blur(8px) brightness(0.8);
   width: 320px;
@@ -317,7 +317,7 @@ main.home img.bg-hacker {
   justify-self: center;
   animation: hacker-animation 3s ease infinite;
 }
-main.home div.part2 {
+main section.home div.part2 {
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -326,14 +326,14 @@ main.home div.part2 {
   margin-top: 240px;
   gap: 30px;
 }
-main.home div.part2 div.title-paragraph-container {
+main section.home div.part2 div.title-paragraph-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 15px;
 }
-main.home div.part2 div.title-paragraph-container h1 {
+main section.home div.part2 div.title-paragraph-container h1 {
   color: white;
   font-size: 35px;
   font-family: "Source Code Pro", monospace;
@@ -342,7 +342,7 @@ main.home div.part2 div.title-paragraph-container h1 {
   font-style: normal;
   font-weight: 900;
 }
-main.home div.part2 div.title-paragraph-container p {
+main section.home div.part2 div.title-paragraph-container p {
   color: #b2b2b2;
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
@@ -350,7 +350,7 @@ main.home div.part2 div.title-paragraph-container p {
   font-style: normal;
   text-align: center;
 }
-main.home div.part2 div.buttons-container {
+main section.home div.part2 div.buttons-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -358,11 +358,12 @@ main.home div.part2 div.buttons-container {
   width: 100%;
   gap: 15px;
 }
-main.home div.part2 div.buttons-container a {
+main section.home div.part2 div.buttons-container a {
   width: 100%;
   text-decoration: none;
 }
-main.home div.part2 div.buttons-container a button {
+main section.home div.part2 div.buttons-container a button {
+  cursor: pointer;
   letter-spacing: 5px;
   border: none;
   border-radius: 80px;
@@ -373,47 +374,26 @@ main.home div.part2 div.buttons-container a button {
   font-style: normal;
   width: 100%;
 }
-main.home div.part2 div.buttons-container a.contact-a button {
+main section.home div.part2 div.buttons-container a.contact-a button {
   box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.3);
   background: linear-gradient(45deg, #3700ff, #ff00fb);
   font-size: 20px;
   font-weight: 900;
   color: white;
+  border: 2px solid rgba(255, 0, 204, 0.5);
 }
-main.home div.part2 div.buttons-container a.about-me-a button {
+main section.home div.part2 div.buttons-container a.about-me-a button {
   background: transparent;
   border: 1px solid #5e5e5e;
   font-size: 18px;
   color: #b2b2b2;
 }
-main.home div.part2 div.buttons-container a.curriculum {
+main section.home div.part2 div.buttons-container a.curriculum {
   text-align: center;
   color: #5e5e5e;
   text-decoration: underline;
 }
 
-/*
-
-<img src="./video/hacker.gif"></img>
-
-<div class="part2">
-    <div class="title-paragraph-container">
-        <h1>Pierry Savio</h1>
-        <p>Construo aplicações web e soluções modernas, ajudando você a vender mais e a se destacar online.</p>
-    </div>
-
-    <div class="buttons-container">
-        <a href="#contact">
-            <button>FAZER ORÇAMENTO</button>
-        </a>
-        <a href="#about_me">
-            <button>SOBRE MIM</button>
-        </a>
-        <a href="">Veja meu currículo</a>
-    </div>
-</div>
-
-*/
 * {
   padding: 0;
   margin: 0;
@@ -421,29 +401,51 @@ main.home div.part2 div.buttons-container a.curriculum {
   -webkit-tap-highlight-color: transparent;
 }
 
+body, html {
+  position: relative;
+  scroll-behavior: smooth;
+}
+
 div.vertical-line {
   width: 1px;
   background-color: #5e5e5e;
 }
 
-div.elipse {
-  position: fixed;
+.home {
+  position: relative;
+}
+
+.background-decoration {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
   z-index: 0;
-  opacity: 0.1;
+}
+
+.elipse {
+  position: absolute;
   width: 250px;
   height: 250px;
   border-radius: 50%;
   background: linear-gradient(45deg, #2f00ff, #ff00fb, #ff0037);
-  filter: blur(50px);
-  animation: elipse-floating 4s ease infinite;
+  opacity: 0.2;
+  animation: elipse-floating 3s ease infinite;
+  will-change: transform;
+  filter: blur(80px);
 }
-
-div.elipse.right {
+.elipse--right {
   right: -20%;
+  top: 0;
 }
-
-div.elipse.left {
+.elipse--left {
   left: -20%;
+}
+.elipse--up {
+  top: 0;
+}
+.elipse--down {
+  bottom: 0;
 }
 
 @media (orientation: landscape) {
