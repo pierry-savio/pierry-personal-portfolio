@@ -39,18 +39,35 @@ div.elipse{
     opacity: 0.1;
     width: 250px;
     height: 250px;
+    border-radius: 50%;
     background: $main-gradient;
     filter: blur(50px);
     animation: elipse-floating 4s ease infinite;
 }
 
 div.elipse.right{
-    right: -5%;
+    right: -20%;
 }
 
 div.elipse.left{
-    left: -5%;
+    left: -20%;
 }
+
+@media (orientation: landscape){
+    div.elipse{
+        width: 500px;
+        height: 500px;
+    }
+
+    div.elipse.right{
+        right: -5%;
+    }
+
+    div.elipse.left{
+        left: -5%;
+    }
+}
+
 
 
 
