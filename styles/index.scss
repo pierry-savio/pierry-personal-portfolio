@@ -57,7 +57,7 @@ div.vertical-line{
 }
 
 .elipse {
-  position: absolute; // sem mais "position: absolute" duplicado no wrapper
+  position: absolute;
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -67,8 +67,8 @@ div.vertical-line{
   will-change: transform;
   filter: blur(80px);
 
-  &--right { right: -20%; top: 0; }
-  &--left  { left: -20%; }
+  &--right { right: 0%; top: 0; }
+  &--left  { left: 0%; }
   &--up    { top: 0; }
   &--down  { bottom: 0; }
 }
@@ -77,14 +77,6 @@ div.vertical-line{
     div.elipse{
         width: 500px;
         height: 500px;
-    }
-
-    div.elipse.right{
-        right: -5%;
-    }
-
-    div.elipse.left{
-        left: -5%;
     }
 }
 
