@@ -101,3 +101,12 @@
         opacity: 1;
     }
 }
+
+@keyframes progress-bar {
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}

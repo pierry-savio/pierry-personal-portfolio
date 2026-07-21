@@ -19,6 +19,7 @@
 //  |
     //Pages
     @use './pages/home' as *;
+    @use './pages/about-me' as *;
     @use './pages/projects' as *;
     @use './pages/skills' as *;
     @use './pages/education' as *;
@@ -83,9 +84,12 @@ div.vertical-line{
 div.scroll-progress-line{
     background: $main-gradient;
     height: 10px;
-    width: 50%;
+    width: 100%;
     margin-bottom: 10px;
-    animation: scroll-progress-line-animation 2s linear infinite;
+    border-radius: 50px;
+    transform-origin: 0 50%;
+    animation: progress-bar linear;
+    animation-timeline: scroll();
 }
 
 span.text-highlight{

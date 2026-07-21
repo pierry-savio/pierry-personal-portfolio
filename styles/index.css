@@ -92,6 +92,14 @@
     opacity: 1;
   }
 }
+@keyframes progress-bar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
 button.open-nav-button {
   z-index: 10;
   position: fixed;
@@ -331,7 +339,7 @@ header {
   position: fixed;
   width: 100%;
   opacity: 0.9;
-  z-index: 10;
+  z-index: 15;
 }
 header p {
   font-family: "Source Code Pro", monospace;
@@ -349,6 +357,7 @@ main section.home {
   grid-template-columns: repeat(1, 1fr);
 }
 main section.home div.hacker-wrapper {
+  z-index: 3;
   position: absolute;
   width: 300px;
   top: 240px;
@@ -374,7 +383,7 @@ main section.home div.hacker-wrapper img.bg-hacker {
   width: calc(100% + 10px);
 }
 main section.home div.part2 {
-  z-index: 2;
+  z-index: 4;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -510,6 +519,24 @@ main section.home div.part2 div.buttons-container a.curriculum {
   }
 }
 
+main section.about-me {
+  padding: 100px 20px 100px 20px;
+  background: linear-gradient(45deg, #160015, #221c22);
+  color: white;
+}
+main section.about-me img {
+  width: 70%;
+}
+main section.about-me div.calisthenics-img-wrapper {
+  max-width: 70%;
+  max-height: 300px;
+  overflow: hidden;
+}
+main section.about-me div.calisthenics-img-wrapper img {
+  width: 300px;
+  transform: translateY(-200px) translateX(-35px);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -573,9 +600,12 @@ div.vertical-line {
 div.scroll-progress-line {
   background: linear-gradient(45deg, #2f00ff, #ff00fb, #ff0037);
   height: 10px;
-  width: 50%;
+  width: 100%;
   margin-bottom: 10px;
-  animation: scroll-progress-line-animation 2s linear infinite;
+  border-radius: 50px;
+  transform-origin: 0 50%;
+  animation: progress-bar linear;
+  animation-timeline: scroll();
 }
 
 span.text-highlight {
