@@ -415,7 +415,6 @@ main section.home div.part2 div.buttons-container {
   align-items: center;
   width: 100%;
   gap: 15px;
-  overflow: hidden;
   animation: start-animation-1 1s ease forwards;
 }
 main section.home div.part2 div.buttons-container a {
