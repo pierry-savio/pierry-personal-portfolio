@@ -33,43 +33,16 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+/*
 body, html, .home{
     position: relative;
     scroll-behavior: smooth;
 }
+    */
 
 div.vertical-line{
     width: 1px;
     background-color: $line;
-}
-
-.background-decoration {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
-}
-
-//ELIPSES
-img.elipse {
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  opacity: 0.2;
-  //animation: elipse-floating 3s ease infinite;
-  will-change: transform;
-
-  &--right { right: -100px;}
-  &--left  { left: -100px;}
-  &--up    { top: -100px;}
-  &--down  { bottom: -100px; }
-}
-
-@media (orientation: landscape){
-    img.elipse{
-        transform: scale(2);
-    }
 }
 
 div.scroll-progress-line{

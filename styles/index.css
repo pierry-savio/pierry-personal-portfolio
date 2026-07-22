@@ -351,10 +351,12 @@ header p {
 }
 
 main section.home {
-  background: #171717;
+  background-image: url("../../img/background/background-main.png");
   padding: 0px 20px 100px 20px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  position: relative;
+  overflow: hidden;
 }
 main section.home div.hacker-wrapper {
   z-index: 3;
@@ -534,49 +536,17 @@ main section.about-me div.calisthenics-img-wrapper img {
   -webkit-tap-highlight-color: transparent;
 }
 
-body, html, .home {
-  position: relative;
-  scroll-behavior: smooth;
+/*
+body, html, .home{
+    position: relative;
+    scroll-behavior: smooth;
 }
-
+    */
 div.vertical-line {
   width: 1px;
   background-color: #5e5e5e;
 }
 
-.background-decoration {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
-}
-
-img.elipse {
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  opacity: 0.2;
-  will-change: transform;
-}
-img.elipse--right {
-  right: -100px;
-}
-img.elipse--left {
-  left: -100px;
-}
-img.elipse--up {
-  top: -100px;
-}
-img.elipse--down {
-  bottom: -100px;
-}
-
-@media (orientation: landscape) {
-  img.elipse {
-    transform: scale(2);
-  }
-}
 div.scroll-progress-line {
   background: linear-gradient(45deg, #2f00ff, #ff00fb, #ff0037);
   height: 10px;
