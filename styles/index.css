@@ -56,7 +56,7 @@
     filter: brightness(1);
   }
   75% {
-    filter: brightness(0.8);
+    filter: brightness(1.5);
   }
   100% {
     filter: brightness(1);
@@ -352,6 +352,8 @@ header p {
 
 main section.home {
   background-image: url("../../img/background/background-main.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 0px 20px 100px 20px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -411,6 +413,7 @@ main section.home div.part2 div.title-paragraph-container p {
   font-style: normal;
   text-align: center;
   animation: start-animation-3 1s ease forwards;
+  font-size: 16px;
 }
 main section.home div.part2 div.buttons-container {
   display: flex;
@@ -513,20 +516,47 @@ main section.home div.part2 div.buttons-container a.curriculum {
 
 main section.about-me {
   padding: 100px 20px 100px 20px;
-  background: linear-gradient(45deg, #160015, #221c22);
+  background-image: url("../../img/background/background-main.png");
+  background-size: cover;
+}
+main section.about-me h2 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
   color: white;
+  font-weight: 900;
 }
-main section.about-me img {
-  width: 70%;
+main section.about-me div.about-me-container {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
-main section.about-me div.calisthenics-img-wrapper {
-  max-width: 70%;
-  max-height: 300px;
-  overflow: hidden;
+main section.about-me div.about-me-container div.item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
 }
-main section.about-me div.calisthenics-img-wrapper img {
-  width: 300px;
-  transform: translateY(-200px) translateX(-35px);
+main section.about-me div.about-me-container div.item img {
+  width: 60%;
+  max-width: 300px;
+}
+main section.about-me div.about-me-container div.item p {
+  color: #b2b2b2;
+  font-size: 16px;
+}
+main section.about-me div.about-me-container div.item.left {
+  align-items: start;
+  text-align: start;
+}
+main section.about-me div.about-me-container div.item.right {
+  align-items: end;
+  text-align: end;
 }
 
 * {

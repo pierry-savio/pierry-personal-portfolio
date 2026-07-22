@@ -12,21 +12,43 @@ main{
     section.about-me{
 
         padding: 100px 20px 100px 20px;
-        background: $background-gradient;
-        color: white;
+        background-image: url('../../img/background/background-main.png');
+        background-size: cover;
 
-        img{
-            width: 70%;
+        h2{
+            @include mainFont();
+            color: white;
+            font-weight: 900;
         }
 
-        div.calisthenics-img-wrapper{
-            max-width: 70%;
-            max-height: 300px;
-            overflow: hidden;
+        div.about-me-container{
+            @include mainFont();
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
 
-            img{
-                width: 300px;
-                transform: translateY(-200px) translateX(-35px);
+            div.item{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                justify-content: center;
+
+                img{
+                    width: 60%;
+                    max-width: 300px;
+                }
+                p{
+                    color: $text;
+                    font-size: $text-font-size;
+                }
+            }
+            div.item.left{
+                align-items: start;
+                text-align: start;
+            }
+            div.item.right{
+                align-items: end;
+                text-align: end;
             }
         }
     }
