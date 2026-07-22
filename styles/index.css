@@ -367,20 +367,13 @@ main section.home div.hacker-wrapper {
   justify-content: center;
   align-items: center;
 }
-main section.home div.hacker-wrapper img.hacker, main section.home div.hacker-wrapper img.bg-hacker {
+main section.home div.hacker-wrapper img.hacker {
+  z-index: 2;
   width: 100%;
   position: absolute;
   border-radius: 150px;
   animation: start-animation-1 1s ease forwards;
-}
-main section.home div.hacker-wrapper img.hacker {
-  z-index: 2;
-}
-main section.home div.hacker-wrapper img.bg-hacker {
-  position: absolute;
-  z-index: 1;
-  filter: blur(18px) brightness(4);
-  width: calc(100% + 10px);
+  filter: drop-shadow(0 0 30px rgba(255, 0, 204, 0.4));
 }
 main section.home div.part2 {
   z-index: 4;
@@ -490,9 +483,6 @@ main section.home div.part2 div.buttons-container a.curriculum {
     top: calc(50% + 60px);
     left: calc(25% - 325px);
   }
-  main section.home div.hacker-wrapper img.bg-hacker {
-    filter: blur(18px) brightness(2);
-  }
   main section.home div.part2 {
     margin-top: 48px;
     max-width: 700px;
@@ -544,7 +534,7 @@ main section.about-me div.calisthenics-img-wrapper img {
   -webkit-tap-highlight-color: transparent;
 }
 
-body, html {
+body, html, .home {
   position: relative;
   scroll-behavior: smooth;
 }
@@ -552,10 +542,6 @@ body, html {
 div.vertical-line {
   width: 1px;
   background-color: #5e5e5e;
-}
-
-.home {
-  position: relative;
 }
 
 .background-decoration {
@@ -566,35 +552,30 @@ div.vertical-line {
   z-index: 0;
 }
 
-.elipse {
+img.elipse {
   position: absolute;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, #2f00ff, #ff00fb, #ff0037);
+  width: 350px;
+  height: 350px;
   opacity: 0.2;
-  animation: elipse-floating 3s ease infinite;
   will-change: transform;
-  filter: blur(80px);
 }
-.elipse--right {
-  right: 0%;
+img.elipse--right {
+  right: 0;
   top: 0;
 }
-.elipse--left {
-  left: 0%;
+img.elipse--left {
+  left: 0;
 }
-.elipse--up {
+img.elipse--up {
   top: 0;
 }
-.elipse--down {
+img.elipse--down {
   bottom: 0;
 }
 
 @media (orientation: landscape) {
-  div.elipse {
-    width: 500px;
-    height: 500px;
+  img.elipse {
+    transform: scale(2);
   }
 }
 div.scroll-progress-line {
@@ -610,11 +591,4 @@ div.scroll-progress-line {
 
 span.text-highlight {
   font-weight: 900;
-}
-
-/*
-
-    div class="scroll-progress-line"></div>
-    <p><span class="text-highlight">PIERRY SAVIO</span> - DESENVOLVEDOR WEB</p>
-
-*//*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

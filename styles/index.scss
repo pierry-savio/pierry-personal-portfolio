@@ -33,7 +33,7 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-body, html{
+body, html, .home{
     position: relative;
     scroll-behavior: smooth;
 }
@@ -41,12 +41,6 @@ body, html{
 div.vertical-line{
     width: 1px;
     background-color: $line;
-}
-
-//ELIPSES
-
-.home {
-  position: relative; // já deve ter, mas confirme
 }
 
 .background-decoration {
@@ -57,27 +51,24 @@ div.vertical-line{
   z-index: 0;
 }
 
-.elipse {
+//ELIPSES
+img.elipse {
   position: absolute;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: $main-gradient;
+  width: 350px;
+  height: 350px;
   opacity: 0.2;
-  animation: elipse-floating 3s ease infinite;
+  //animation: elipse-floating 3s ease infinite;
   will-change: transform;
-  filter: blur(80px);
 
-  &--right { right: 0%; top: 0; }
-  &--left  { left: 0%; }
+  &--right { right: 0; top: 0; }
+  &--left  { left: 0; }
   &--up    { top: 0; }
   &--down  { bottom: 0; }
 }
 
 @media (orientation: landscape){
-    div.elipse{
-        width: 500px;
-        height: 500px;
+    img.elipse{
+        transform: scale(2);
     }
 }
 
@@ -95,13 +86,6 @@ div.scroll-progress-line{
 span.text-highlight{
     font-weight: 900;
 }
-
-/*
-
-    div class="scroll-progress-line"></div>
-    <p><span class="text-highlight">PIERRY SAVIO</span> - DESENVOLVEDOR WEB</p>
-
-*/
 
 
 
