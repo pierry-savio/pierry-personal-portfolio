@@ -60,10 +60,10 @@ img.elipse {
   //animation: elipse-floating 3s ease infinite;
   will-change: transform;
 
-  &--right { right: 0; top: 0; }
-  &--left  { left: 0; }
-  &--up    { top: 0; }
-  &--down  { bottom: 0; }
+  &--right { right: -100px;}
+  &--left  { left: -100px;}
+  &--up    { top: -100px;}
+  &--down  { bottom: -100px; }
 }
 
 @media (orientation: landscape){

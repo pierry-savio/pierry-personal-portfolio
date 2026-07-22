@@ -560,17 +560,16 @@ img.elipse {
   will-change: transform;
 }
 img.elipse--right {
-  right: 0;
-  top: 0;
+  right: -100px;
 }
 img.elipse--left {
-  left: 0;
+  left: -100px;
 }
 img.elipse--up {
-  top: 0;
+  top: -100px;
 }
 img.elipse--down {
-  bottom: 0;
+  bottom: -100px;
 }
 
 @media (orientation: landscape) {
