@@ -12,13 +12,15 @@ main{
     section.about-me{
 
         padding: 100px 20px 100px 20px;
-        background-image: url('../../img/background/background-main.png');
-        background-size: cover;
+        background: $gray;
 
         h2{
             @include mainFont();
             color: white;
             font-weight: 900;
+            font-size: $title-font-size-mobile;
+            text-align: center;
+            margin-bottom: 60px;
         }
 
         div.about-me-container{
@@ -26,6 +28,9 @@ main{
             display: flex;
             flex-direction: column;
             gap: 60px;
+            max-width: 700px;
+            align-self: center;
+            justify-self: center;
 
             div.item{
                 display: flex;
@@ -36,6 +41,8 @@ main{
                 img{
                     width: 60%;
                     max-width: 300px;
+                    border-radius: 12px;
+                    box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.8);
                 }
                 p{
                     color: $text;
@@ -49,6 +56,20 @@ main{
             div.item.right{
                 align-items: end;
                 text-align: end;
+            }
+        }
+
+        @media (orientation: landscape){
+            h2{
+                font-size: 80px;
+            }
+            
+            div.about-me-container{
+                div.item{
+                    p{
+                        font-size: $text-big-font-size;
+                    }
+                }
             }
         }
     }

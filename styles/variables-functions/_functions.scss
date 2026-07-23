@@ -1,0 +1,20 @@
+@mixin mainBackground(){
+    background-image: url('../../img/background/background-main.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin background2(){
+    background-image: url('../../img/background/background2.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin background3(){
+    background-image: url('../../img/background/background3.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}

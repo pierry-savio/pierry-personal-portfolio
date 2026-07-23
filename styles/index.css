@@ -340,6 +340,7 @@ header {
   width: 100%;
   opacity: 0.9;
   z-index: 15;
+  border-bottom: 1px solid #2d2d2d;
 }
 header p {
   font-family: "Source Code Pro", monospace;
@@ -352,8 +353,9 @@ header p {
 
 main section.home {
   background-image: url("../../img/background/background-main.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-position: center;
   padding: 0px 20px 100px 20px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -516,8 +518,7 @@ main section.home div.part2 div.buttons-container a.curriculum {
 
 main section.about-me {
   padding: 100px 20px 100px 20px;
-  background-image: url("../../img/background/background-main.png");
-  background-size: cover;
+  background: #212121;
 }
 main section.about-me h2 {
   font-family: "Source Code Pro", monospace;
@@ -526,6 +527,9 @@ main section.about-me h2 {
   font-style: normal;
   color: white;
   font-weight: 900;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 main section.about-me div.about-me-container {
   font-family: "Source Code Pro", monospace;
@@ -535,6 +539,9 @@ main section.about-me div.about-me-container {
   display: flex;
   flex-direction: column;
   gap: 60px;
+  max-width: 700px;
+  align-self: center;
+  justify-self: center;
 }
 main section.about-me div.about-me-container div.item {
   display: flex;
@@ -545,6 +552,8 @@ main section.about-me div.about-me-container div.item {
 main section.about-me div.about-me-container div.item img {
   width: 60%;
   max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.8);
 }
 main section.about-me div.about-me-container div.item p {
   color: #b2b2b2;
@@ -557,6 +566,14 @@ main section.about-me div.about-me-container div.item.left {
 main section.about-me div.about-me-container div.item.right {
   align-items: end;
   text-align: end;
+}
+@media (orientation: landscape) {
+  main section.about-me h2 {
+    font-size: 80px;
+  }
+  main section.about-me div.about-me-container div.item p {
+    font-size: 20px;
+  }
 }
 
 * {

@@ -17,6 +17,7 @@ header{
     width: 100%;
     opacity: 0.90;
     z-index: 15;
+    border-bottom: 1px solid $gray-light;
 
     p{
         @include mainFont();
