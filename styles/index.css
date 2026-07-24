@@ -487,58 +487,12 @@ main section.home div.part2 div.buttons-container {
   gap: 15px;
   animation: start-animation-1 1s ease forwards;
 }
-main section.home div.part2 div.buttons-container a {
-  width: 100%;
-  text-decoration: none;
-}
-main section.home div.part2 div.buttons-container a button {
-  cursor: pointer;
-  letter-spacing: 5px;
-  border: none;
-  border-radius: 80px;
-  padding: 12px;
-  font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  width: 100%;
-}
-main section.home div.part2 div.buttons-container a.contact-a button {
-  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.2);
-  background: linear-gradient(33deg, #ff00fb, #8c00ff, #ff00fb);
-  font-size: 20px;
-  font-weight: 900;
-  color: white;
-  border: 2px solid rgba(255, 0, 204, 0.2);
-  animation: button-animation 4s linear infinite;
-  transition: 0.3s ease;
-}
-main section.home div.part2 div.buttons-container a.contact-a button:hover {
-  transform: scale(1.02);
-  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
-  border: 2px solid rgba(255, 0, 204, 0.8);
-}
-main section.home div.part2 div.buttons-container a.contact-a button:active {
-  transform: scale(0.95);
-  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
-  border: 2px solid rgba(255, 0, 204, 0.8);
-}
-main section.home div.part2 div.buttons-container a.about-me-a button {
-  background: transparent;
-  border: 1px solid #5e5e5e;
-  font-size: 18px;
-  color: #b2b2b2;
-  transition: 0.3s ease;
-}
-main section.home div.part2 div.buttons-container a.about-me-a button:hover {
-  border: 1px solid white;
-  letter-spacing: 8px;
-}
 main section.home div.part2 div.buttons-container a.curriculum {
   text-align: center;
   color: #5e5e5e;
   text-decoration: underline;
   font-size: 18px;
+  align-self: start;
 }
 @media (orientation: landscape) {
   main section.home {
