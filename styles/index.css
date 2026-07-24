@@ -161,6 +161,14 @@ a.button-secondary button:hover {
     transform: scaleX(1);
   }
 }
+@keyframes progress-bar-about-me {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
 button.open-nav-button {
   z-index: 100;
   position: fixed;
@@ -535,7 +543,6 @@ main section.about-me {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0px;
 }
 main section.about-me h2 {
   font-family: "Source Code Pro", monospace;
@@ -546,6 +553,7 @@ main section.about-me h2 {
   font-weight: 900;
   font-size: 35px;
   text-align: center;
+  margin-bottom: 80px;
 }
 main section.about-me div.about-me-container {
   position: relative;
@@ -572,6 +580,8 @@ main section.about-me div.about-me-container div.middle-line {
   border-radius: 10px 10px 0 0;
   z-index: 1;
   opacity: 0.5;
+  animation: progress-bar-about-me linear;
+  animation-timeline: scroll();
 }
 main section.about-me div.about-me-container div.item {
   z-index: 2;

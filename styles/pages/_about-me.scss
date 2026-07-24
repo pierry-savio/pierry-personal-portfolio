@@ -17,7 +17,6 @@ main{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 0px;
 
         h2{
             @include mainFont();
@@ -25,6 +24,7 @@ main{
             font-weight: 900;
             font-size: $title-font-size-mobile;
             text-align: center;
+            margin-bottom: 80px;
         }
 
         div.about-me-container{
@@ -50,6 +50,9 @@ main{
                 border-radius: 10px 10px 0 0;
                 z-index: 1;
                 opacity: 0.5;
+
+                animation: progress-bar-about-me linear;
+	            animation-timeline: scroll(); 
             }
 
             div.item{
