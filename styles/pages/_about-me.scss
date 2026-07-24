@@ -25,12 +25,16 @@ main{
 
         div.about-me-container{
             @include mainFont();
-            display: flex;
-            flex-direction: column;
-            gap: 60px;
-            max-width: 700px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 900px;
             align-self: center;
             justify-self: center;
+
+            div.column1, div.column2{
+                display: grid;
+                grid-template-rows: repeat(4, 1fr);
+            }
 
             div.item{
                 display: flex;
@@ -39,7 +43,7 @@ main{
                 justify-content: center;
 
                 img{
-                    width: 60%;
+                    width: 100%;
                     max-width: 300px;
                     border-radius: 12px;
                     box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.8);

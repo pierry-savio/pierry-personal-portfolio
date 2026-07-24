@@ -536,12 +536,15 @@ main section.about-me div.about-me-container {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  max-width: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
   align-self: center;
   justify-self: center;
+}
+main section.about-me div.about-me-container div.column1, main section.about-me div.about-me-container div.column2 {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
 }
 main section.about-me div.about-me-container div.item {
   display: flex;
@@ -550,7 +553,7 @@ main section.about-me div.about-me-container div.item {
   justify-content: center;
 }
 main section.about-me div.about-me-container div.item img {
-  width: 60%;
+  width: 100%;
   max-width: 300px;
   border-radius: 12px;
   box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.8);
