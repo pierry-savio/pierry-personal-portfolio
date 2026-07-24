@@ -26,4 +26,3 @@ const nav_pc = document.getElementById("nav_pc");
 close_nav_pc_button.addEventListener("click", () =>{
     nav_pc.classList.toggle("closed");
 })
-

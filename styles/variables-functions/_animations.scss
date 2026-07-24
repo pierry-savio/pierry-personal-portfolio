@@ -119,3 +119,34 @@
         height: 100%;
     }
 }
+
+@keyframes about-me-left-item{
+    from{
+        transform: translateX(-150px) scale(0.75);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes about-me-right-item{
+    from{
+        transform: translateX(150px) scale(0.75);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes about-me-projects-button{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
