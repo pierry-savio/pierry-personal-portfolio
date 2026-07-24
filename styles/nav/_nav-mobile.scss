@@ -9,8 +9,8 @@
 button.open-nav-button{
     z-index: 100;
     position: fixed;
-    bottom: 28px;
-    left: 50%;
+    bottom: 5vh;
+    left: 50vw;
     transform: translateX(-50%);
     padding: 20px;
     border-radius: 50%;
@@ -20,6 +20,7 @@ button.open-nav-button{
     cursor: pointer;
     box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.45);
     animation: floating 4s ease infinite;
+    animation-timeline: auto;
     transition: .5s ease;
 
     img{
