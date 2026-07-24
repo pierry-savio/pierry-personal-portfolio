@@ -2,15 +2,16 @@
 //  |
 //  |
     //Variables and functions
-    @use './variables-functions/variables' as *;
-    @use './variables-functions/colors' as *;
-    @use './variables-functions/functions' as *;
+    @use './variables-functions/variables'  as *;
+    @use './variables-functions/colors'     as *;
+    @use './variables-functions/functions'  as *;
+    @use './variables-functions/components' as *;
 //  |
 //  |
     //Nav
-    @use './nav/nav.scss' as *;
+    @use './nav/nav.scss'        as *;
     @use './nav/nav-mobile.scss' as *;
-    @use './nav/nav-pc.scss' as *;
+    @use './nav/nav-pc.scss'     as *;
 //  |
 //  |
     //Header
@@ -18,12 +19,12 @@
 //  |
 //  |
     //Pages
-    @use './pages/home' as *;
-    @use './pages/about-me' as *;
-    @use './pages/projects' as *;
-    @use './pages/skills' as *;
+    @use './pages/home'      as *;
+    @use './pages/about-me'  as *;
+    @use './pages/projects'  as *;
+    @use './pages/skills'    as *;
     @use './pages/education' as *;
-    @use './pages/contact' as *;
+    @use './pages/contact'   as *;
 
 //RESETS
 *{

@@ -1,0 +1,64 @@
+//Variables and functions
+    @use '../variables-functions/fonts'      as *;
+    @use '../variables-functions/colors'     as *;
+
+a.button-primary{
+    width: 100%;
+    text-decoration: none;
+    
+    button{
+        cursor: pointer;
+        letter-spacing: 5px;
+        border: none;
+        border-radius: 80px;
+        padding: 12px;
+        @include mainFont();
+        width: 100%;
+
+        box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.2);
+        background: $button-gradient;
+        font-size: 20px;
+        font-weight: 900;
+        color: white;
+        border: 2px solid rgba($text-highlight, 0.2);
+        animation: button-animation 4s linear infinite;
+        transition: 0.3s ease;
+
+        &:hover{
+            transform: scale(1.02);
+            box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.6);
+            border: 2px solid rgba($text-highlight, 0.8);
+        }
+
+        &:active{
+            transform: scale(0.95);
+            box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.6);
+            border: 2px solid rgba($text-highlight, 0.8);
+        }
+    }
+}
+
+a.button-secondary{
+    width: 100%;
+    text-decoration: none;
+    button{
+        cursor: pointer;
+        letter-spacing: 5px;
+        border: none;
+        border-radius: 80px;
+        padding: 12px;
+        @include mainFont();
+        width: 100%;
+
+        background: transparent;
+        border: 1px solid $line;
+        font-size: 18px;
+        color: $text;
+        transition: 0.3s ease;
+
+        &:hover{
+            border: 1px solid white;
+            letter-spacing: 8px;
+        }
+    }
+}

@@ -11,8 +11,13 @@
 main{
     section.about-me{
 
-        padding: 100px 40px 100px 40px;
+        padding: 100px 40px 200px 40px;
         background: $gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
 
         h2{
             @include mainFont();
@@ -20,10 +25,11 @@ main{
             font-weight: 900;
             font-size: $title-font-size-mobile;
             text-align: center;
-            margin-bottom: 60px;
         }
 
         div.about-me-container{
+
+            position: relative;
             @include mainFont();
             display: grid;
             grid-template-columns: repeat(1, 1fr);
@@ -31,8 +37,23 @@ main{
             max-width: 900px;
             align-self: center;
             justify-self: center;
+            padding-bottom: 80px;
+
+            div.middle-line{
+                position: absolute;
+                align-self: start;
+                justify-self: center;
+                height: 100%;
+                width: 4px;
+                background-color: $text-highlight;
+                box-shadow: 0 0 10px 1px $text-highlight;
+                border-radius: 10px 10px 0 0;
+                z-index: 1;
+                opacity: 0.5;
+            }
 
             div.item{
+                z-index: 2;
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
@@ -67,6 +88,13 @@ main{
             }
         }
 
+        div.see-projects-container{
+            max-width: 600px;
+            width: 100%;
+            align-self: center;
+            justify-self: center;
+        }
+
         @media (orientation: landscape){
             h2{
                 font-size: 80px;
@@ -74,17 +102,8 @@ main{
             
             div.about-me-container{
 
-                position: relative;
-
                 div.middle-line{
-                    position: absolute;
-                    align-self: start;
-                    justify-self: center;
-                    height: 100%;
-                    width: 1px;
-                    background-color: $text-highlight;
-                    box-shadow: 0 0 10px 1px $text-highlight;
-                    border-radius: 10px;
+                    opacity: 1;
                 }
 
                 div.item{
