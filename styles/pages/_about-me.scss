@@ -11,7 +11,7 @@
 main{
     section.about-me{
 
-        padding: 100px 20px 100px 20px;
+        padding: 100px 40px 100px 40px;
         background: $gray;
 
         h2{
@@ -26,15 +26,11 @@ main{
         div.about-me-container{
             @include mainFont();
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
+            gap: 60px;
             max-width: 900px;
             align-self: center;
             justify-self: center;
-
-            div.column1, div.column2{
-                display: grid;
-                grid-template-rows: repeat(4, 1fr);
-            }
 
             div.item{
                 display: flex;
@@ -43,21 +39,29 @@ main{
                 justify-content: center;
 
                 img{
-                    width: 100%;
+                    width: 80%;
                     max-width: 300px;
                     border-radius: 12px;
-                    box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.8);
                 }
                 p{
                     color: $text;
                     font-size: $text-font-size;
+                    max-width: 100%;
                 }
             }
             div.item.left{
+                img{
+                    box-shadow: -10px 10px 0 0 rgba($text-highlight, 0.1);
+                }
+
                 align-items: start;
                 text-align: start;
             }
             div.item.right{
+                img{
+                    box-shadow: 10px 10px 0 0 rgba($text-highlight, 0.1);
+                }
+
                 align-items: end;
                 text-align: end;
             }
@@ -69,11 +73,29 @@ main{
             }
             
             div.about-me-container{
+
+                position: relative;
+
+                div.middle-line{
+                    position: absolute;
+                    align-self: start;
+                    justify-self: center;
+                    height: 100%;
+                    width: 1px;
+                    background-color: $text-highlight;
+                    box-shadow: 0 0 10px 1px $text-highlight;
+                    border-radius: 10px;
+                }
+
                 div.item{
+                    img{
+                        width: 100%;
+                    }
                     p{
                         font-size: $text-big-font-size;
+                        max-width: 45%;
                     }
-                }
+                }   
             }
         }
     }
