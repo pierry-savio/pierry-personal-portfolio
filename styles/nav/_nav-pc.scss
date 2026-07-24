@@ -18,11 +18,7 @@ footer.footer-pc{
     z-index: 10;
 
     nav.nav-pc{
-        /*
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        */
+        z-index: 100;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(1, 1fr);
