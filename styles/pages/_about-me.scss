@@ -10,7 +10,7 @@
 
 main{
     section.about-me{
-
+        overflow: clip;
         padding: 100px 40px 200px 40px;
         background: $gray;
         display: flex;
@@ -53,7 +53,7 @@ main{
 
                 animation: progress-bar-about-me linear;
 	            animation-timeline: scroll(); 
-                animation-range: 30% 100%;
+                animation-range: 40% 100%;
             }
 
             div.item{
@@ -76,9 +76,13 @@ main{
                 }
             }
             div.item.left{
-                animation: about-me-left-item linear;
+                transform: translateX(-150px) scale(0.75);
+                opacity: 0;
+
+                animation: about-me-left-item;
 	            animation-timeline: view(); 
-                animation-range: -10% 45%;
+                animation-range: 0% 45%;
+                animation-fill-mode: forwards;
 
                 img{
                     box-shadow: -10px 10px 0 0 rgba($text-highlight, 0.1);
@@ -88,9 +92,13 @@ main{
                 text-align: start;
             }
             div.item.right{
+                transform: translateX(150px) scale(0.75);
+                opacity: 0;
+
                 animation: about-me-right-item linear;
 	            animation-timeline: view(); 
                 animation-range: 0% 45%;
+                animation-fill-mode: forwards;
 
 
                 img{
@@ -107,10 +115,12 @@ main{
             width: 100%;
             align-self: center;
             justify-self: center;
+            opacity: 0;
             
             animation: about-me-projects-button linear;
             animation-timeline: view();
-            animation-range: 0% 40%;
+            animation-range: 0% 30%;
+            animation-fill-mode: forwards;
         }
 
         @media (orientation: landscape){
