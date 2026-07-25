@@ -1,64 +1,3 @@
-a.button-primary {
-  width: 100%;
-  text-decoration: none;
-}
-a.button-primary button {
-  cursor: pointer;
-  letter-spacing: 5px;
-  border: none;
-  border-radius: 80px;
-  padding: 12px;
-  font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  width: 100%;
-  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.2);
-  background: linear-gradient(33deg, #ff00fb, #8c00ff, #ff00fb);
-  font-size: 20px;
-  font-weight: 900;
-  color: white;
-  border: 2px solid rgba(255, 0, 204, 0.2);
-  animation: button-animation 4s linear infinite;
-  transition: 0.3s ease;
-}
-a.button-primary button:hover {
-  transform: scale(1.02);
-  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
-  border: 2px solid rgba(255, 0, 204, 0.8);
-}
-a.button-primary button:active {
-  transform: scale(0.95);
-  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
-  border: 2px solid rgba(255, 0, 204, 0.8);
-}
-
-a.button-secondary {
-  width: 100%;
-  text-decoration: none;
-}
-a.button-secondary button {
-  cursor: pointer;
-  letter-spacing: 5px;
-  border: none;
-  border-radius: 80px;
-  padding: 12px;
-  font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  width: 100%;
-  background: transparent;
-  border: 1px solid #5e5e5e;
-  font-size: 18px;
-  color: #b2b2b2;
-  transition: 0.3s ease;
-}
-a.button-secondary button:hover {
-  border: 1px solid white;
-  letter-spacing: 8px;
-}
-
 @keyframes floating {
   0% {
     transform: scale(1) translateX(-50%);
@@ -198,10 +137,10 @@ a.button-secondary button:hover {
   }
 }
 button.open-nav-button {
-  z-index: 100;
   position: fixed;
   bottom: 5%;
   left: 50%;
+  z-index: 100;
   transform: translateX(-50%);
   padding: 20px;
   border-radius: 50%;
@@ -426,6 +365,84 @@ footer.footer-pc button.close-nav-button:hover img {
     display: none;
   }
 }
+a.button-primary {
+  width: 100%;
+  text-decoration: none;
+}
+a.button-primary button {
+  cursor: pointer;
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 80px;
+  padding: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.2);
+  background: linear-gradient(33deg, #ff00fb, #8c00ff, #ff00fb);
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  border: 2px solid rgba(255, 0, 204, 0.2);
+  animation: button-animation 4s linear infinite;
+  transition: 0.3s ease;
+}
+a.button-primary button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+}
+a.button-primary button:active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+}
+
+a.button-secondary {
+  width: 100%;
+  text-decoration: none;
+}
+a.button-secondary button {
+  cursor: pointer;
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 80px;
+  padding: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #5e5e5e;
+  font-size: 18px;
+  color: #b2b2b2;
+  transition: 0.3s ease;
+}
+a.button-secondary button:hover {
+  border: 1px solid white;
+  letter-spacing: 8px;
+}
+
+h2.title {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-weight: 900;
+  font-size: 35px;
+  text-align: left;
+  margin-bottom: 80px;
+}
+@media (orientation: landscape) {
+  h2.title {
+    font-size: 80px;
+  }
+}
+
 header {
   background-color: #212121;
   text-align: center;
@@ -574,17 +591,6 @@ main section.about-me {
   justify-content: center;
   align-items: center;
 }
-main section.about-me h2 {
-  font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  color: white;
-  font-weight: 900;
-  font-size: 35px;
-  text-align: center;
-  margin-bottom: 80px;
-}
 main section.about-me div.about-me-container {
   position: relative;
   font-family: "Source Code Pro", monospace;
@@ -635,7 +641,7 @@ main section.about-me div.about-me-container div.item p {
 main section.about-me div.about-me-container div.item.left {
   transform: translateX(-150px) scale(0.75);
   opacity: 0;
-  animation: about-me-left-item;
+  animation: about-me-left-item linear;
   animation-timeline: view();
   animation-range: 0% 45%;
   animation-fill-mode: forwards;
@@ -674,9 +680,6 @@ main section.about-me div.see-projects-container {
   animation-fill-mode: forwards;
 }
 @media (orientation: landscape) {
-  main section.about-me h2 {
-    font-size: 80px;
-  }
   main section.about-me div.about-me-container div.middle-line {
     opacity: 1;
   }

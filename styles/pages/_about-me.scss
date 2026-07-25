@@ -18,17 +18,7 @@ main{
         justify-content: center;
         align-items: center;
 
-        h2{
-            @include mainFont();
-            color: white;
-            font-weight: 900;
-            font-size: $title-font-size-mobile;
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
         div.about-me-container{
-
             position: relative;
             @include mainFont();
             display: grid;
@@ -79,7 +69,7 @@ main{
                 transform: translateX(-150px) scale(0.75);
                 opacity: 0;
 
-                animation: about-me-left-item;
+                animation: about-me-left-item linear;
 	            animation-timeline: view(); 
                 animation-range: 0% 45%;
                 animation-fill-mode: forwards;
@@ -124,9 +114,6 @@ main{
         }
 
         @media (orientation: landscape){
-            h2{
-                font-size: 80px;
-            }
             
             div.about-me-container{
 

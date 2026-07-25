@@ -1,6 +1,12 @@
 //Variables and functions
-    @use '../variables-functions/fonts'      as *;
+    @use "../variables-functions/variables"  as *;
     @use '../variables-functions/colors'     as *;
+    @use '../variables-functions/functions'  as *;
+    @use '../variables-functions/fonts'      as *;
+    @use '../nav/nav.scss'                   as *;
+    @use '../nav/nav-mobile.scss'            as *;
+    @use '../nav/nav-pc.scss'                as *;
+    @use '../variables-functions/animations' as *;
 
 a.button-primary{
     width: 100%;
@@ -60,5 +66,18 @@ a.button-secondary{
             border: 1px solid white;
             letter-spacing: 8px;
         }
+    }
+}
+
+h2.title{
+    @include mainFont();
+    color: white;
+    font-weight: 900;
+    font-size: $title-font-size-mobile;
+    text-align: left;
+    margin-bottom: 80px;
+
+    @media (orientation: landscape){
+        font-size: 80px;
     }
 }
