@@ -81,3 +81,10 @@ h2.title{
         font-size: 80px;
     }
 }
+
+p.paragraph{
+    color: $text;
+    text-align: left;
+    @include mainFont();
+    font-size: $text-font-size;
+}

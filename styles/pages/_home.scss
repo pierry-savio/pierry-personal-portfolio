@@ -62,12 +62,8 @@ main{
                     animation: start-animation-2 1s ease forwards;
                 }
 
-                p{
-                    color: $text;
-                    @include mainFont();
-                    text-align: center;
+                p.paragraph{
                     animation: start-animation-3 1s ease forwards;
-                    font-size: $text-font-size;
                 }
             }
 
