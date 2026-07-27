@@ -1,9 +1,7 @@
 // I M P O R T S
 
     //Variables and functions
-    @use './variables-functions/colors'    as *;
-    @use './variables-functions/functions' as *;
-    @use './variables-functions/variables' as *;
+    @use './variables-functions/colors' as *;
     
     //Animations
     @use './animations/animations' as *;
