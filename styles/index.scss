@@ -2,10 +2,11 @@
 //  |
 //  |
     //Variables and functions
-    @use './variables-functions/variables'  as *;
-    @use './variables-functions/colors'     as *;
-    @use './variables-functions/functions'  as *;
-    @use './variables-functions/components' as *;
+    @use './variables-functions/variables'             as *;
+    @use './variables-functions/colors'                as *;
+    @use './variables-functions/functions'             as *;
+    @use './variables-functions/components/buttons'    as *;
+    @use './variables-functions/components/fonts'      as *;
 //  |
 //  |
     //Nav

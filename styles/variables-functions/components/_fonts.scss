@@ -1,0 +1,31 @@
+//Variables and functions
+    @use "../variables"  as *;
+    @use '../functions'     as *;
+    @use "../variables" as *;
+    @use '../colors'    as *;
+
+@mixin text-main($color: $text){
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@mixin text-paragraph($color: $text){
+    @include text-main();
+    color: $color;
+    text-align: left;
+}
+
+@mixin text-title($color: $title){
+    @include text-main();
+    color: $color;
+    font-size: $title-font-size-mobile;
+    font-weight: 900;
+
+    @media (orientation: landscape){
+        font-size: $title-font-size-pc;
+        letter-spacing: 10px;
+        line-height: 65px;
+    }
+}

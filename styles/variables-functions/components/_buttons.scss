@@ -1,14 +1,11 @@
 //Variables and functions
-    @use "../variables-functions/variables"  as *;
-    @use '../variables-functions/colors'     as *;
-    @use '../variables-functions/functions'  as *;
-    @use '../variables-functions/fonts'      as *;
-    @use '../nav/nav.scss'                   as *;
-    @use '../nav/nav-mobile.scss'            as *;
-    @use '../nav/nav-pc.scss'                as *;
-    @use '../variables-functions/animations' as *;
+    @use "../variables"  as *;
+    @use '../functions'     as *;
+    @use './fonts'         as *;
+    @use "../variables" as *;
+    @use '../colors'    as *;
 
-a.button-primary{
+@mixin button-primary(){
     width: 100%;
     text-decoration: none;
     
@@ -18,9 +15,8 @@ a.button-primary{
         border: none;
         border-radius: 80px;
         padding: 12px;
-        @include mainFont();
+        @include text-main();
         width: 100%;
-
         box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.2);
         background: $button-gradient;
         font-size: 20px;
@@ -44,7 +40,7 @@ a.button-primary{
     }
 }
 
-a.button-secondary{
+@mixin button-secondary{
     width: 100%;
     text-decoration: none;
     button{
@@ -53,9 +49,8 @@ a.button-secondary{
         border: none;
         border-radius: 80px;
         padding: 12px;
-        @include mainFont();
+        @include text-main();
         width: 100%;
-
         background: transparent;
         border: 1px solid $line;
         font-size: 18px;
@@ -67,24 +62,4 @@ a.button-secondary{
             letter-spacing: 8px;
         }
     }
-}
-
-h2.title{
-    @include mainFont();
-    color: white;
-    font-weight: 900;
-    font-size: $title-font-size-mobile;
-    text-align: left;
-    margin-bottom: 80px;
-
-    @media (orientation: landscape){
-        font-size: 80px;
-    }
-}
-
-p.paragraph{
-    color: $text;
-    text-align: left;
-    @include mainFont();
-    font-size: $text-font-size;
 }

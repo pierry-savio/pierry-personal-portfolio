@@ -1,12 +1,13 @@
 //Variables and functions
-    @use "../variables-functions/variables"  as *;
-    @use '../variables-functions/colors'     as *;
-    @use '../variables-functions/functions'  as *;
-    @use '../variables-functions/fonts'      as *;
-    @use '../nav/nav.scss'                   as *;
-    @use '../nav/nav-mobile.scss'            as *;
-    @use '../nav/nav-pc.scss'                as *;
-    @use '../variables-functions/animations' as *;
+    @use "../variables-functions/variables"             as *;
+    @use '../variables-functions/colors'                as *;
+    @use '../variables-functions/functions'             as *;
+    @use '../variables-functions/components/fonts'      as *;
+    @use '../nav/nav.scss'                              as *;
+    @use '../nav/nav-mobile.scss'                       as *;
+    @use '../nav/nav-pc.scss'                           as *;
+    @use '../variables-functions/animations'            as *;
+    @use '../variables-functions/components/buttons'    as *;
 
 main{
     section.home{
@@ -55,14 +56,12 @@ main{
                 gap: 15px;
                 
                 h1{
-                    color: white;
-                    font-size: $title-font-size-mobile;
-                    @include mainFont();
-                    font-weight: 900;
+                    @include text-title();
                     animation: start-animation-2 1s ease forwards;
                 }
 
-                p.paragraph{
+                p{
+                    @include text-paragraph();
                     animation: start-animation-3 1s ease forwards;
                 }
             }
@@ -75,6 +74,14 @@ main{
                 width: 100%;
                 gap: 15px;
                 animation: start-animation-1 1s ease forwards;
+
+                a.contact-a{
+                    @include button-primary();
+                }
+
+                a.about-me-a{
+                    @include button-secondary();
+                }
                 
                 a.curriculum{
                     text-align: center;
@@ -104,16 +111,6 @@ main{
 
                 div.title-paragraph-container{
                     align-items: start;                  
-
-                    h1{
-                        font-size: $title-font-size-pc;
-                        letter-spacing: 10px;
-                        line-height: 65px;
-                    }
-
-                    p{
-                        text-align: left;
-                    }
                 }
 
                 div.buttons-container{

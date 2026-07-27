@@ -1,12 +1,13 @@
 //Variables and functions
-    @use "../variables-functions/variables"  as *;
-    @use '../variables-functions/colors'     as *;
-    @use '../variables-functions/functions'  as *;
-    @use '../variables-functions/fonts'      as *;
-    @use '../nav/nav.scss'                   as *;
-    @use '../nav/nav-mobile.scss'            as *;
-    @use '../nav/nav-pc.scss'                as *;
-    @use '../variables-functions/animations' as *;
+    @use "../variables-functions/variables"             as *;
+    @use '../variables-functions/colors'                as *;
+    @use '../variables-functions/functions'             as *;
+    @use '../variables-functions/components/fonts'      as *;
+    @use '../nav/nav.scss'                              as *;
+    @use '../nav/nav-mobile.scss'                       as *;
+    @use '../nav/nav-pc.scss'                           as *;
+    @use '../variables-functions/animations'            as *;
+    @use '../variables-functions/components/buttons'    as *;
 
 main{
     section.about-me{
@@ -18,9 +19,13 @@ main{
         justify-content: center;
         align-items: center;
 
+        h2{
+            @include text-title();
+        }
+
         div.about-me-container{
             position: relative;
-            @include mainFont();
+            @include text-main();
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             gap: 60px;
@@ -111,6 +116,10 @@ main{
             animation-timeline: view();
             animation-range: 0% 30%;
             animation-fill-mode: forwards;
+
+            a{
+                @include button-primary();
+            }
         }
 
         @media (orientation: landscape){
