@@ -5,3 +5,64 @@
     @use '../variables-functions/colors'    as *;
     @use '../variables-functions/functions' as *;
     @use '../variables-functions/variables' as *;
+
+section.projects{
+    background: $background-gradient;
+    padding: 75px 20px 100px 20px;
+    color: white;
+
+    h2{
+        @include text-title();
+    }
+
+    div.projects-carousel{
+        div.project-container{
+            div.project-header{
+                p{
+
+                }
+            }
+
+            div.project-content{
+                img{
+
+                }
+
+                div.project-skills{
+                    p{
+
+                    }
+                }
+
+                div.texts-container{
+                    h3{
+
+                    }
+                    p{
+
+                    }
+                }
+
+                div.buttons-container{
+                    a{
+                        button{
+                            
+                        }
+                    }
+
+                    a.test-button{
+
+                    }
+
+                    a.github-button{
+                        button{
+                            img{
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }   
+    }
+}
