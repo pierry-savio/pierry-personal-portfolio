@@ -2,7 +2,7 @@
     @use "../variables-functions/variables"        as *;
     @use '../variables-functions/colors'           as *;
     @use '../variables-functions/functions'        as *;
-    @use '../variables-functions/components/fonts' as *;
+    @use '../components/fonts'                     as *;
     @use '../variables-functions/animations'       as *;
 
 button.open-nav-button{

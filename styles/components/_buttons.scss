@@ -1,9 +1,8 @@
 //Variables and functions
-    @use "../variables"  as *;
-    @use '../functions'     as *;
-    @use './fonts'         as *;
-    @use "../variables" as *;
-    @use '../colors'    as *;
+    @use '../variables-functions/functions'     as *;
+    @use '../components/fonts'         as *;
+    @use "../variables-functions/variables" as *;
+    @use '../variables-functions/colors'    as *;
 
 @mixin button-primary(){
     width: 100%;
