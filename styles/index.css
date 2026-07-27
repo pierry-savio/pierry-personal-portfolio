@@ -724,8 +724,9 @@ main section.about-me div.see-projects-container a button:active {
 }
 
 section.projects {
-  background: linear-gradient(45deg, #160015, #221c22);
-  padding: 75px 20px 100px 20px;
+  background: linear-gradient(180deg, #160015, #221c22);
+  height: 100vh;
+  padding: 75px 30px 0px 30px;
   color: white;
 }
 section.projects h2 {
@@ -743,6 +744,60 @@ section.projects h2 {
     letter-spacing: 10px;
     line-height: 65px;
   }
+}
+section.projects h2 {
+  position: absolute;
+  top: 85px;
+}
+section.projects div.projects-carousel {
+  margin-top: 85px;
+}
+section.projects div.projects-carousel div.project-container {
+  background-color: #212121;
+  border-radius: 8px;
+  border: 1px solid #5e5e5e;
+  overflow: hidden;
+}
+section.projects div.projects-carousel div.project-container div.project-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2d2d2d;
+  padding: 8px 14px 8px 14px;
+  border-bottom: 1px solid #5e5e5e;
+}
+section.projects div.projects-carousel div.project-container div.project-header p {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 500;
+}
+section.projects div.projects-carousel div.project-container div.project-content {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+section.projects div.projects-carousel div.project-container div.project-content img {
+  width: 100%;
+  border-radius: 8px;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.project-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.project-skills p {
+  border-radius: 8px;
+  background-color: #362132;
+  padding: 8px;
+  font-size: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 * {
   padding: 0;

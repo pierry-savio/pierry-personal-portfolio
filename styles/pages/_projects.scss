@@ -8,29 +8,61 @@
 
 section.projects{
     background: $background-gradient;
-    padding: 75px 20px 100px 20px;
+    height: 100vh;
+    padding: 75px 30px 0px 30px;
     color: white;
 
     h2{
         @include text-title();
+        position: absolute;
+        top: 85px;
     }
 
     div.projects-carousel{
-        div.project-container{
-            div.project-header{
-                p{
+        margin-top: 85px;
 
+        div.project-container{
+            background-color: $gray;
+            border-radius: $border-radius;
+            border: 1px solid $line;
+            overflow: hidden;
+
+            div.project-header{
+                display: flex;
+                justify-content: space-between;
+                background-color: $gray-light;
+                padding: 8px 14px 8px 14px;
+                border-bottom: 1px solid $line;
+
+                p{
+                    @include text-main();
+                    font-size: 12px;
+                    font-weight: 500;
                 }
             }
 
             div.project-content{
-                img{
+                padding: 14px;
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
 
+                img{
+                    width: 100%;
+                    border-radius: $border-radius;
                 }
 
                 div.project-skills{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
                     p{
-
+                        border-radius: $border-radius;
+                        background-color: $skill;
+                        padding: 8px;
+                        font-size: 12px;
+                        @include text-main();
                     }
                 }
 
