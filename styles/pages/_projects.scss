@@ -1,10 +1,7 @@
 //Variables and functions
-    @use "../variables-functions/variables"             as *;
-    @use '../variables-functions/colors'                as *;
-    @use '../variables-functions/functions'             as *;
-    @use '../variables-functions/components/fonts'      as *;
-    @use '../nav/nav.scss'                              as *;
-    @use '../nav/nav-mobile.scss'                       as *;
-    @use '../nav/nav-pc.scss'                           as *;
-    @use '../variables-functions/animations'            as *;
-    @use '../variables-functions/components/buttons'    as *;
+    @use '../animations/animations'         as *;
+    @use '../components/buttons'            as *;
+    @use '../components/fonts'              as *;
+    @use '../variables-functions/colors'    as *;
+    @use '../variables-functions/functions' as *;
+    @use '../variables-functions/variables' as *;
