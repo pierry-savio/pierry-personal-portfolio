@@ -23,11 +23,18 @@ section.projects{
         margin-top: 85px;
 
         div.project-container{
+            max-width: 500px;
             background-color: $gray;
             border-radius: $border-radius;
             border: 1px solid $line;
             overflow: hidden;
-            
+            filter: blur(0px);
+            width: 75%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%) scale(1);
+            transition: 1s ease;
 
 
             div.project-header{
@@ -136,22 +143,24 @@ section.projects{
             }
         }
 
-        div.project-container.closed{
+        div.project-container.closed-left{
             filter: blur(2px);
             position: fixed;
             top: 50%;
             left: 50%;
+            transform: translateX(-150%) translateY(-50%) scale(0.85);
         }
 
-        div.project-container.closed.closed-left{
-            transform: translateX(-157%) translateY(-50%) scale(0.85) ;
-        }
-
-        div.project-container.closed.closed-right{
-            transform: translateX(57%) translateY(-50%) scale(0.85);
+        div.project-container.closed-right{
+            filter: blur(2px);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateX(50%) translateY(-50%) scale(0.85);
         }
 
         div.project-arrow{
+            z-index: 999;
             background-color: $skill;
             width: fit-content;
             aspect-ratio: 1 / 1;

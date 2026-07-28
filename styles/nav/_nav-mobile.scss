@@ -99,8 +99,8 @@ footer.footer-mobile{
             justify-content: center;
             align-items: center;
             border-right: 1px solid $line;
+            border-top: 4px solid transparent;
             padding: 12px 20px 12px 20px;
-            
             transition: 0.3s ease;
 
             img{

@@ -223,6 +223,7 @@ footer.footer-mobile nav.nav-mobile a {
   justify-content: center;
   align-items: center;
   border-right: 1px solid #5e5e5e;
+  border-top: 4px solid transparent;
   padding: 12px 20px 12px 20px;
   transition: 0.3s ease;
 }
@@ -754,10 +755,18 @@ section.projects div.projects-carousel {
   margin-top: 85px;
 }
 section.projects div.projects-carousel div.project-container {
+  max-width: 500px;
   background-color: #212121;
   border-radius: 8px;
   border: 1px solid #5e5e5e;
   overflow: hidden;
+  filter: blur(0px);
+  width: 75%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(1);
+  transition: 1s ease;
 }
 section.projects div.projects-carousel div.project-container div.project-header {
   display: flex;
@@ -892,19 +901,22 @@ section.projects div.projects-carousel div.project-container div.project-content
 section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.github-button button img {
   width: 20px;
 }
-section.projects div.projects-carousel div.project-container.closed {
+section.projects div.projects-carousel div.project-container.closed-left {
   filter: blur(2px);
   position: fixed;
   top: 50%;
   left: 50%;
+  transform: translateX(-150%) translateY(-50%) scale(0.85);
 }
-section.projects div.projects-carousel div.project-container.closed.closed-left {
-  transform: translateX(-157%) translateY(-50%) scale(0.85);
-}
-section.projects div.projects-carousel div.project-container.closed.closed-right {
-  transform: translateX(57%) translateY(-50%) scale(0.85);
+section.projects div.projects-carousel div.project-container.closed-right {
+  filter: blur(2px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(50%) translateY(-50%) scale(0.85);
 }
 section.projects div.projects-carousel div.project-arrow {
+  z-index: 999;
   background-color: #362132;
   width: -moz-fit-content;
   width: fit-content;
