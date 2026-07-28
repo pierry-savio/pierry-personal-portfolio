@@ -45,61 +45,71 @@ project_arrow_right.addEventListener("click", () =>{
     
     if (currentProject < 3) {
         currentProject+=1;
+
+        switch (currentProject){
+            case 1:
+                card3.classList.add("closed-left");
+                card1.classList.remove("closed-right");
+                card1.classList.remove("closed-left");
+            break;
+
+            case 2:
+                card1.classList.add("closed-left");
+                card2.classList.remove("closed-right");
+                card2.classList.remove("closed-left");
+            break;
+
+            case 3:
+                card2.classList.add("closed-left");
+                card3.classList.remove("closed-right");
+                card3.classList.remove("closed-left");
+            break;
+        }
     }
     else{
         currentProject = 1;
+        card1.classList.remove("closed-right");
+        card1.classList.remove("closed-left");
+        card2.classList.add("closed-right");
+        card3.classList.add("closed-right");
     }
-
-    switch (currentProject){
-        case 1:
-            card3.classList.add("closed-left");
-            card1.classList.remove("closed-right");
-            card1.classList.remove("closed-left");
-        break;
-
-        case 2:
-            card1.classList.add("closed-left");
-            card2.classList.remove("closed-right");
-            card2.classList.remove("closed-left");
-        break;
-
-        case 3:
-            card2.classList.add("closed-left");
-            card3.classList.remove("closed-right");
-            card3.classList.remove("closed-left");
-        break;
-    }
-
-    console.log(currentProject);
 });
 
 project_arrow_left.addEventListener("click", () =>{
     if (currentProject > 1) {
         currentProject-=1;
+
+        switch (currentProject){
+            case 1:
+                card2.classList.add("closed-right");
+                card1.classList.remove("closed-left");
+                card1.classList.remove("closed-right");
+            break;
+
+            case 2:
+                card3.classList.add("closed-right");
+                card2.classList.remove("closed-left");
+                card2.classList.remove("closed-right");
+            break;
+
+            case 3:
+                card1.classList.add("closed-right");
+                card3.classList.remove("closed-left");
+                card3.classList.remove("closed-right");
+            break;
+        }
     }
     else{
         currentProject = 3;
+        card1.classList.remove("closed-right");
+        card1.classList.add("closed-left");
+
+        card2.classList.remove("closed-right")
+        card2.classList.add("closed-left");
+
+        card3.classList.remove("closed-right");
+        card3.classList.remove("closed-left");
     }
 
-    switch (currentProject){
-        case 1:
-            card2.classList.add("closed-right");
-            card1.classList.remove("closed-left");
-            card1.classList.remove("closed-right");
-        break;
-
-        case 2:
-            card3.classList.add("closed-right");
-            card2.classList.remove("closed-left");
-            card2.classList.remove("closed-right");
-        break;
-
-        case 3:
-            card1.classList.add("closed-right");
-            card3.classList.remove("closed-left");
-            card3.classList.remove("closed-right");
-        break;
-    }
-
-    console.log(currentProject);
+    
 });

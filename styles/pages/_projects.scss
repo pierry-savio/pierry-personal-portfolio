@@ -23,10 +23,12 @@ section.projects{
         margin-top: 85px;
 
         div.project-container{
-            max-width: 500px;
+            z-index: 3;
+            box-shadow: 0 0 50px 0 rgba($text-highlight, 0.5);
+            max-width: 600px;
             background-color: $gray;
             border-radius: $border-radius;
-            border: 1px solid $line;
+            border: 1px solid rgba($text-highlight, 0.5);
             overflow: hidden;
             filter: blur(0px);
             width: 75%;
@@ -144,6 +146,8 @@ section.projects{
         }
 
         div.project-container.closed-left{
+            border: 1px solid rgba($line, 1);
+            box-shadow: 0 0 10px 0 transparent;
             filter: blur(2px);
             position: fixed;
             top: 50%;
@@ -152,6 +156,8 @@ section.projects{
         }
 
         div.project-container.closed-right{
+            border: 1px solid rgba($line, 1);
+            box-shadow: 0 0 10px 0 transparent;
             filter: blur(2px);
             position: fixed;
             top: 50%;
@@ -160,6 +166,7 @@ section.projects{
         }
 
         div.project-arrow{
+            cursor: pointer;
             z-index: 999;
             background-color: $skill;
             width: fit-content;

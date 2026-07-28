@@ -755,10 +755,12 @@ section.projects div.projects-carousel {
   margin-top: 85px;
 }
 section.projects div.projects-carousel div.project-container {
-  max-width: 500px;
+  z-index: 3;
+  box-shadow: 0 0 50px 0 rgba(255, 0, 204, 0.5);
+  max-width: 600px;
   background-color: #212121;
   border-radius: 8px;
-  border: 1px solid #5e5e5e;
+  border: 1px solid rgba(255, 0, 204, 0.5);
   overflow: hidden;
   filter: blur(0px);
   width: 75%;
@@ -902,6 +904,8 @@ section.projects div.projects-carousel div.project-container div.project-content
   width: 20px;
 }
 section.projects div.projects-carousel div.project-container.closed-left {
+  border: 1px solid #5e5e5e;
+  box-shadow: 0 0 10px 0 transparent;
   filter: blur(2px);
   position: fixed;
   top: 50%;
@@ -909,6 +913,8 @@ section.projects div.projects-carousel div.project-container.closed-left {
   transform: translateX(-150%) translateY(-50%) scale(0.85);
 }
 section.projects div.projects-carousel div.project-container.closed-right {
+  border: 1px solid #5e5e5e;
+  box-shadow: 0 0 10px 0 transparent;
   filter: blur(2px);
   position: fixed;
   top: 50%;
@@ -916,6 +922,7 @@ section.projects div.projects-carousel div.project-container.closed-right {
   transform: translateX(50%) translateY(-50%) scale(0.85);
 }
 section.projects div.projects-carousel div.project-arrow {
+  cursor: pointer;
   z-index: 999;
   background-color: #362132;
   width: -moz-fit-content;
