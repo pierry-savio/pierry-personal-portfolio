@@ -489,7 +489,7 @@ main section.home div.part2 div.buttons-container a.contact-a button {
   font-weight: 900;
   color: white;
   border: 2px solid rgba(255, 0, 204, 0.2);
-  animation: button-animation 4s linear infinite;
+  animation: button-animation 4s ease-in-out infinite;
   transition: 0.3s ease;
 }
 main section.home div.part2 div.buttons-container a.contact-a button:hover {
@@ -697,7 +697,7 @@ main section.about-me div.see-projects-container a button {
   font-weight: 900;
   color: white;
   border: 2px solid rgba(255, 0, 204, 0.2);
-  animation: button-animation 4s linear infinite;
+  animation: button-animation 4s ease-in-out infinite;
   transition: 0.3s ease;
 }
 main section.about-me div.see-projects-container a button:hover {
@@ -726,8 +726,9 @@ main section.about-me div.see-projects-container a button:active {
 section.projects {
   background: linear-gradient(180deg, #160015, #221c22);
   height: 100vh;
-  padding: 75px 30px 0px 30px;
+  padding: 50px 40px 0px 40px;
   color: white;
+  overflow-x: clip;
 }
 section.projects h2 {
   font-family: "Source Code Pro", monospace;
@@ -747,7 +748,7 @@ section.projects h2 {
 }
 section.projects h2 {
   position: absolute;
-  top: 85px;
+  top: 70px;
 }
 section.projects div.projects-carousel {
   margin-top: 85px;
@@ -799,6 +800,140 @@ section.projects div.projects-carousel div.project-container div.project-content
   font-weight: 300;
   font-style: normal;
 }
+section.projects div.projects-carousel div.project-container div.project-content div.texts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  gap: 5px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.texts-container h3 {
+  font-weight: 900;
+  font-size: 25px;
+  text-align: center;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.texts-container p {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  font-size: 15px;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a {
+  text-decoration: none;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a button {
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  height: 100%;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.test-button {
+  width: 100%;
+  text-decoration: none;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.test-button button {
+  cursor: pointer;
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 80px;
+  padding: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.2);
+  background: linear-gradient(33deg, #ff00fb, #8c00ff, #ff00fb);
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  border: 2px solid rgba(255, 0, 204, 0.2);
+  animation: button-animation 4s ease-in-out infinite;
+  transition: 0.3s ease;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.test-button button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+}
+section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.test-button button:active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+}
+section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.test-button button {
+  border-radius: 4px;
+  font-size: 16px;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.github-button button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-justify: center;
+  gap: 6px;
+  border: 1px solid #5e5e5e;
+  background-color: transparent;
+  color: #b2b2b2;
+  font-size: 16px;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.github-button button img {
+  width: 20px;
+}
+section.projects div.projects-carousel div.project-container.closed {
+  filter: blur(2px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+section.projects div.projects-carousel div.project-container.closed.closed-left {
+  transform: translateX(-157%) translateY(-50%) scale(0.85);
+}
+section.projects div.projects-carousel div.project-container.closed.closed-right {
+  transform: translateX(57%) translateY(-50%) scale(0.85);
+}
+section.projects div.projects-carousel div.project-arrow {
+  background-color: #362132;
+  width: -moz-fit-content;
+  width: fit-content;
+  aspect-ratio: 1/1;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 1000;
+  border-radius: 50%;
+  text-align: center;
+  text-justify: center;
+  opacity: 0.9;
+  position: fixed;
+  top: 50%;
+  transition: 0.2s ease;
+}
+section.projects div.projects-carousel div.project-arrow:hover {
+  opacity: 1;
+  filter: brightness(1.5);
+}
+section.projects div.projects-carousel div.project-arrow:active {
+  filter: brightness(0.9);
+}
+section.projects div.projects-carousel div.project-arrow-right {
+  right: 4%;
+}
+section.projects div.projects-carousel div.project-arrow-left {
+  left: 4%;
+}
+
 * {
   padding: 0;
   margin: 0;
