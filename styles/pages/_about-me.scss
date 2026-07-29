@@ -18,6 +18,7 @@ main{
 
         h2{
             @include text-title();
+            margin-bottom: 30px;
         }
 
         div.about-me-container{

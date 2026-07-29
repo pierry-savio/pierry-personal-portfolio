@@ -589,6 +589,9 @@ main section.about-me h2 {
     line-height: 65px;
   }
 }
+main section.about-me h2 {
+  margin-bottom: 30px;
+}
 main section.about-me div.about-me-container {
   position: relative;
   font-family: "Source Code Pro", monospace;
@@ -910,6 +913,7 @@ section.projects div.projects-carousel div.project-container div.project-content
 }
 section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container a.github-button button img {
   width: 20px;
+  height: 20px;
 }
 section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container a.github-button button:hover {
   border: 1px solid;
@@ -1000,6 +1004,7 @@ section.projects div.projects-carousel div.project-arrow:hover {
 }
 section.projects div.projects-carousel div.project-arrow:active {
   filter: brightness(0.9);
+  transform: scale(0.85);
 }
 section.projects div.projects-carousel div.project-arrow-right {
   right: 4%;
