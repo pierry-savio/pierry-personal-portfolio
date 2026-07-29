@@ -757,7 +757,7 @@ section.projects div.projects-carousel {
 section.projects div.projects-carousel div.project-container {
   z-index: 3;
   box-shadow: 0 0 50px 0 rgba(255, 0, 204, 0.5);
-  max-width: 400px;
+  max-width: 850px;
   background-color: #212121;
   border-radius: 8px;
   border: 1px solid rgba(255, 0, 204, 0.5);
@@ -787,21 +787,27 @@ section.projects div.projects-carousel div.project-container div.project-header 
 }
 section.projects div.projects-carousel div.project-container div.project-content {
   padding: 14px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   gap: 14px;
 }
 section.projects div.projects-carousel div.project-container div.project-content img {
   width: 100%;
+  height: 100%;
   border-radius: 8px;
 }
-section.projects div.projects-carousel div.project-container div.project-content div.project-skills {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.project-skills {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-section.projects div.projects-carousel div.project-container div.project-content div.project-skills p {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.project-skills p {
   border-radius: 8px;
   background-color: #362132;
   padding: 8px;
@@ -811,7 +817,7 @@ section.projects div.projects-carousel div.project-container div.project-content
   font-weight: 300;
   font-style: normal;
 }
-section.projects div.projects-carousel div.project-container div.project-content div.texts-container {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.texts-container {
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -822,12 +828,12 @@ section.projects div.projects-carousel div.project-container div.project-content
   font-weight: 300;
   font-style: normal;
 }
-section.projects div.projects-carousel div.project-container div.project-content div.texts-container h3 {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.texts-container h3 {
   font-weight: 900;
   font-size: 25px;
   text-align: center;
 }
-section.projects div.projects-carousel div.project-container div.project-content div.texts-container p {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.texts-container p {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -836,25 +842,25 @@ section.projects div.projects-carousel div.project-container div.project-content
   text-align: left;
   font-size: 15px;
 }
-section.projects div.projects-carousel div.project-container div.project-content div.buttons-container {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container a {
   text-decoration: none;
 }
-section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a button {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container a button {
   border-radius: 4px;
   padding: 8px;
   width: 100%;
   height: 100%;
 }
-section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.test-button {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container a.test-button {
   width: 100%;
   text-decoration: none;
 }
-section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.test-button button {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container a.test-button button {
   cursor: pointer;
   letter-spacing: 5px;
   border: none;
@@ -874,21 +880,21 @@ section.projects div.projects-carousel div.project-container div.project-content
   animation: button-animation 4s ease-in-out infinite;
   transition: 0.3s ease;
 }
-section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.test-button button:hover {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container a.test-button button:hover {
   transform: scale(1.02);
   box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
   border: 2px solid rgba(255, 0, 204, 0.8);
 }
-section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.test-button button:active {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container a.test-button button:active {
   transform: scale(0.95);
   box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
   border: 2px solid rgba(255, 0, 204, 0.8);
 }
-section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.test-button button {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container a.test-button button {
   border-radius: 4px;
   font-size: 16px;
 }
-section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.github-button button {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container a.github-button button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -899,9 +905,57 @@ section.projects div.projects-carousel div.project-container div.project-content
   background-color: transparent;
   color: #b2b2b2;
   font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
-section.projects div.projects-carousel div.project-container div.project-content div.buttons-container a.github-button button img {
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container a.github-button button img {
   width: 20px;
+}
+section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container a.github-button button:hover {
+  border: 1px solid;
+}
+@media (orientation: landscape) {
+  section.projects div.projects-carousel div.project-container div.project-content {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+  }
+  section.projects div.projects-carousel div.project-container div.project-content div.part2 {
+    gap: 20px;
+  }
+  section.projects div.projects-carousel div.project-container div.project-content div.part2 div.project-skills {
+    gap: 20px;
+  }
+  section.projects div.projects-carousel div.project-container div.project-content div.part2 div.project-skills p {
+    font-size: 16px;
+  }
+  section.projects div.projects-carousel div.project-container div.project-content div.part2 div.texts-container {
+    gap: 10px;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+  section.projects div.projects-carousel div.project-container div.project-content div.part2 div.texts-container h3 {
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+  }
+  section.projects div.projects-carousel div.project-container div.project-content div.part2 div.texts-container p {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: #b2b2b2;
+    text-align: left;
+    font-size: 15px;
+  }
+  section.projects div.projects-carousel div.project-container div.project-content div.part2 div.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
 }
 section.projects div.projects-carousel div.project-container.closed-left {
   border: 1px solid #5e5e5e;
@@ -925,15 +979,16 @@ section.projects div.projects-carousel div.project-arrow {
   cursor: pointer;
   z-index: 999;
   background-color: #362132;
-  width: -moz-fit-content;
-  width: fit-content;
   aspect-ratio: 1/1;
   padding: 10px;
   font-size: 30px;
   font-weight: 1000;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  text-align: center;
-  text-justify: center;
   opacity: 0.9;
   position: fixed;
   top: 50%;
@@ -951,6 +1006,21 @@ section.projects div.projects-carousel div.project-arrow-right {
 }
 section.projects div.projects-carousel div.project-arrow-left {
   left: 4%;
+}
+@media (orientation: landscape) {
+  section.projects div.projects-carousel div.project-arrow {
+    font-size: 40px;
+    height: 80px;
+    width: 80px;
+  }
+}
+@media (min-width: 1400px) {
+  section.projects div.projects-carousel div.project-arrow-right {
+    right: 16%;
+  }
+  section.projects div.projects-carousel div.project-arrow-left {
+    left: 16%;
+  }
 }
 
 * {

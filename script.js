@@ -34,82 +34,53 @@ const project_arrow_right = document.getElementById("project_arrow_right");
 const project_arrow_left = document.getElementById("project_arrow_left");
 
 //Cards
-const card1 = document.getElementById("project1");
-const card2 = document.getElementById("project2");
-const card3 = document.getElementById("project3");
+const projects_carousel = document.getElementById('projects_carousel');
+const projects = Array.from(projects_carousel.children); // HTMLCollection
 
 //Project index
-let currentProject = 1;
+let currentProject = 0;
+
+projects.forEach( (e) =>{
+    e.classList.remove("closed-left");
+    e.classList.add("closed-right");
+});
+projects[0].classList.remove("closed-right");
+currentProject = 0;
 
 project_arrow_right.addEventListener("click", () =>{
-    
-    if (currentProject < 3) {
+    if (currentProject < projects.length-3){
         currentProject+=1;
-
-        switch (currentProject){
-            case 1:
-                card3.classList.add("closed-left");
-                card1.classList.remove("closed-right");
-                card1.classList.remove("closed-left");
-            break;
-
-            case 2:
-                card1.classList.add("closed-left");
-                card2.classList.remove("closed-right");
-                card2.classList.remove("closed-left");
-            break;
-
-            case 3:
-                card2.classList.add("closed-left");
-                card3.classList.remove("closed-right");
-                card3.classList.remove("closed-left");
-            break;
-        }
+        pPreviusProject = projects[currentProject-2];
+        previousProject = projects[currentProject-1];
+        nextProject = projects[currentProject];
+        nextProject.classList.remove("closed-left", "closed-right");
+        previousProject.classList.add("closed-left");
     }
     else{
-        currentProject = 1;
-        card1.classList.remove("closed-right");
-        card1.classList.remove("closed-left");
-        card2.classList.add("closed-right");
-        card3.classList.add("closed-right");
+        projects.forEach( (e) =>{
+            e.classList.remove("closed-left");
+            e.classList.add("closed-right");
+        });
+        projects[0].classList.remove("closed-right");
+        currentProject = 0;
     }
 });
 
 project_arrow_left.addEventListener("click", () =>{
-    if (currentProject > 1) {
+    if (currentProject > 0){
         currentProject-=1;
-
-        switch (currentProject){
-            case 1:
-                card2.classList.add("closed-right");
-                card1.classList.remove("closed-left");
-                card1.classList.remove("closed-right");
-            break;
-
-            case 2:
-                card3.classList.add("closed-right");
-                card2.classList.remove("closed-left");
-                card2.classList.remove("closed-right");
-            break;
-
-            case 3:
-                card1.classList.add("closed-right");
-                card3.classList.remove("closed-left");
-                card3.classList.remove("closed-right");
-            break;
-        }
+        pPreviusProject = projects[currentProject+2];
+        previousProject = projects[currentProject+1];
+        nextProject = projects[currentProject];
+        nextProject.classList.remove("closed-right", "closed-left");
+        previousProject.classList.add("closed-right");
     }
     else{
-        currentProject = 3;
-        card1.classList.remove("closed-right");
-        card1.classList.add("closed-left");
-
-        card2.classList.remove("closed-right")
-        card2.classList.add("closed-left");
-
-        card3.classList.remove("closed-right");
-        card3.classList.remove("closed-left");
+        projects.forEach( (e) =>{
+            e.classList.remove("closed-right");
+            e.classList.add("closed-left");
+        });
+        projects[projects.length-3].classList.remove("closed-left");
+        currentProject = projects.length-3;
     }
-
-    
 });
