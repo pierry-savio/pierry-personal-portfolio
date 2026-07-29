@@ -276,4 +276,11 @@ section.projects{
             }
         }
     }
+    @media (orientation: landscape){
+        h2{
+            left: 50%;
+            transform: translateX(-50%);
+            top: 110px;
+        }
+    }
 }

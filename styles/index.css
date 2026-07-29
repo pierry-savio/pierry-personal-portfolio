@@ -1027,6 +1027,13 @@ section.projects div.projects-carousel div.project-arrow-left {
     left: 16%;
   }
 }
+@media (orientation: landscape) {
+  section.projects h2 {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 110px;
+  }
+}
 
 * {
   padding: 0;
