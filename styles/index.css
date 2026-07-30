@@ -971,6 +971,15 @@ section.projects div.projects-carousel div.project-container.closed-left {
   left: 50%;
   transform: translateX(-150%) translateY(-50%) scale(0.85);
 }
+section.projects div.projects-carousel div.project-container.invisible-left {
+  border: 1px solid #5e5e5e;
+  box-shadow: 0 0 10px 0 transparent;
+  filter: blur(2px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-200%) translateY(-50%) scale(0.85);
+}
 section.projects div.projects-carousel div.project-container.closed-right {
   border: 1px solid #5e5e5e;
   box-shadow: 0 0 10px 0 transparent;
@@ -979,6 +988,15 @@ section.projects div.projects-carousel div.project-container.closed-right {
   top: 50%;
   left: 50%;
   transform: translateX(50%) translateY(-50%) scale(0.85);
+}
+section.projects div.projects-carousel div.project-container.invisible-right {
+  border: 1px solid #5e5e5e;
+  box-shadow: 0 0 10px 0 transparent;
+  filter: blur(2px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(100%) translateY(-50%) scale(0.85);
 }
 section.projects div.projects-carousel div.project-arrow {
   cursor: pointer;

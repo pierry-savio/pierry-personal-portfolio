@@ -40,11 +40,28 @@ const projects = Array.from(projects_carousel.children); // HTMLCollection
 //Project index
 let currentProject = 0;
 
-projects.forEach( (e) =>{
-    e.classList.remove("closed-left");
-    e.classList.add("closed-right");
+//Remove project classes
+function removeProjectClasses(project){
+    project.classList.remove
+    (
+        "closed-left",
+        "closed-right",
+        "invisible-left",
+        "invisible-right"
+    );
+}
+
+removeProjectClasses(projects[0]);
+removeProjectClasses(projects[1]);
+projects[1].classList.add("closed-right");
+
+projects.forEach( (e) => {
+    if (projects.indexOf(e) > 1){
+        removeProjectClasses(e);
+        e.classList.add("invisible-right");
+    }
 });
-projects[0].classList.remove("closed-right");
+
 currentProject = 0;
 
 project_arrow_right.addEventListener("click", () =>{
@@ -53,15 +70,32 @@ project_arrow_right.addEventListener("click", () =>{
         pPreviusProject = projects[currentProject-2];
         previousProject = projects[currentProject-1];
         nextProject = projects[currentProject];
-        nextProject.classList.remove("closed-left", "closed-right");
+        NNextProject = projects[currentProject+1];
+        
+        removeProjectClasses(nextProject);
+        
+        removeProjectClasses(previousProject);
         previousProject.classList.add("closed-left");
+
+        if (currentProject > 1){
+            removeProjectClasses(pPreviusProject);
+            pPreviusProject.classList.add("invisible-left");
+        }
+
+        removeProjectClasses(NNextProject);
+        NNextProject.classList.add("closed-right");
     }
     else{
-        projects.forEach( (e) =>{
-            e.classList.remove("closed-left");
-            e.classList.add("closed-right");
+        removeProjectClasses(projects[0]);
+        removeProjectClasses(projects[1]);
+        projects[1].classList.add("closed-right");
+
+        projects.forEach( (e) => {
+            if (projects.indexOf(e) > 1){
+                removeProjectClasses(e);
+                e.classList.add("invisible-right");
+            }
         });
-        projects[0].classList.remove("closed-right");
         currentProject = 0;
     }
 });
@@ -72,15 +106,33 @@ project_arrow_left.addEventListener("click", () =>{
         pPreviusProject = projects[currentProject+2];
         previousProject = projects[currentProject+1];
         nextProject = projects[currentProject];
-        nextProject.classList.remove("closed-right", "closed-left");
+        NnextProject = projects[currentProject-1];
+
+        removeProjectClasses(pPreviusProject);
+        pPreviusProject.classList.add("invisible-right");
+
+        removeProjectClasses(previousProject);
         previousProject.classList.add("closed-right");
+
+        removeProjectClasses(nextProject);
+
+        if (currentProject > 1){
+            removeProjectClasses(NnextProject);
+            NnextProject.classList.add("closed-left");
+        }
     }
     else{
+
+        removeProjectClasses(projects[projects.length-3]);
+        removeProjectClasses(projects[projects.length-4]);
+        projects[projects.length-4].classList.add("closed-left");
+
         projects.forEach( (e) =>{
-            e.classList.remove("closed-right");
-            e.classList.add("closed-left");
+            if (projects.indexOf(e) < projects.length-4){
+                removeProjectClasses(e);
+                e.classList.add("invisible-left");
+            }
         });
-        projects[projects.length-3].classList.remove("closed-left");
         currentProject = projects.length-3;
     }
 });
