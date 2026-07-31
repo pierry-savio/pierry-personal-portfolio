@@ -22,6 +22,10 @@ section.projects{
 
     div.projects-carousel{
         margin-top: 85px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         div.project-container{
             z-index: 3;
@@ -30,9 +34,8 @@ section.projects{
             background-color: $gray;
             border-radius: $border-radius;
             border: 1px solid rgba($text-highlight, 0.5);
-            overflow: hidden;
             filter: blur(0px);
-            width: 75%;
+            overflow: hidden;
             position: fixed;
             top: 50%;
             left: 50%;
@@ -61,6 +64,7 @@ section.projects{
                 gap: 14px;
 
                 img{
+                    min-width: 250px;
                     width: 100%;
                     object-fit: cover;
                     border-radius: $border-radius;
@@ -71,20 +75,6 @@ section.projects{
                     flex-direction: column;
                     gap: 14px;
 
-                    div.project-skills{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 10px;
-                        p{
-                            border-radius: $border-radius;
-                            background-color: $skill;
-                            padding: 8px;
-                            font-size: 10px;
-                            @include text-main();
-                        }
-                    }
-
                     div.texts-container{
                         display: flex;
                         flex-direction: column;
@@ -94,66 +84,26 @@ section.projects{
                         @include text-main($title);
                         
                         h3{
-                            
                             font-weight: 900;
                             font-size: 22px;
                             text-align: center;
                         }
                         p{
                             @include text-paragraph();
-                            font-size: 12px;
+                            font-size: 10px;
                         }
                     }
 
-                    div.buttons-container{
-                        
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                        gap: 10px;
-
-                        a{
-                            text-decoration: none;
-                            button{
-                                border-radius: 4px;
-                                padding: 8px;
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
-
-                        a.test-button{
-                            @include button-primary();
-                            button{
-                                border-radius: 4px;
-                                font-size: $text-font-size;
-                            }
-                        }
-
-                        a.github-button{
-
-                            button{
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                text-align: center;
-                                text-justify: center;
-                                gap: 6px;
-                                border: 1px solid $line;
-                                background-color: transparent;
-                                color: $text;
-                                font-size: $text-font-size;
-                                cursor: pointer;
-                                transition: 0.3s ease;
-
-                                img{
-                                    width: 20px;
-                                    height: 20px;
-                                }
-
-                                &:hover{
-                                    border: 1px solid;
-                                }
-                            }
+                    a.test-button{
+                        text-decoration: none;
+                        @include button-primary();
+                        button{
+                            border-radius: 4px;
+                            padding: 5px;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 4px;
+                            font-size: 15px;
                         }
                     }
                 }
@@ -180,25 +130,26 @@ section.projects{
                             
                             h3{
                                 font-weight: 900;
-                                font-size: 50px;
+                                font-size: 60px;
                                 text-align: center;
                             }
                             p{
                                 @include text-paragraph();
-                                font-size: 15px;
+                                font-size: 16px;
                             }
                         }
-
-                        div.buttons-container{
-                            display: grid;
-                            grid-template-columns: repeat(1, 1fr);
-                            gap: 10px;
+                        a.test-button{
+                            text-decoration: none;
+                            @include button-primary();
+                            button{
+                                font-size: 20px;
+                            }
                         }
                     }
                 }
             }
             @media (orientation: landscape){
-                max-width: 850px;
+                max-width: 1000px;
             }
         }
 
@@ -206,9 +157,9 @@ section.projects{
             border: 1px solid rgba($line, 1);
             box-shadow: 0 0 10px 0 transparent;
             filter: blur(2px);
-            position: fixed;
-            top: 50%;
-            left: 50%;
+            position: block;
+            //top: 50%;
+            //left: 50%;
             transform: translateX(-150%) translateY(-50%) scale(0.85);
         }
 
@@ -216,19 +167,19 @@ section.projects{
             border: 1px solid rgba($line, 1);
             box-shadow: 0 0 10px 0 transparent;
             filter: blur(2px);
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translateX(calc(-100vw - 50%)) translateY(-50%) scale(0.85);
+            position: block;
+            //top: 50%;
+            //left: 50%;
+            transform: translateX(calc(-100vw - 50%)) scale(0.85);
         }
 
         div.project-container.closed-right{
             border: 1px solid rgba($line, 1);
             box-shadow: 0 0 10px 0 transparent;
             filter: blur(2px);
-            position: fixed;
-            top: 50%;
-            left: 50%;
+            position: block;
+            //top: 50%;
+            //left: 50%;
             transform: translateX(50%) translateY(-50%) scale(0.85);
         }
 
@@ -236,10 +187,10 @@ section.projects{
             border: 1px solid rgba($line, 1);
             box-shadow: 0 0 10px 0 transparent;
             filter: blur(2px);
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translateX(calc(100vw + 50%)) translateY(-50%) scale(0.85);
+            position: block;
+            //top: 50%;
+            //eft: 50%;
+            transform: translateX(calc(100vw + 50%)) scale(0.85);
         }
 
         div.project-arrow{
@@ -301,8 +252,5 @@ section.projects{
     }
     @media (orientation: landscape){
         padding: 100px 40px 200px 40px;
-        h2{
-            
-        }
     }
 }

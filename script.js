@@ -116,7 +116,7 @@ project_arrow_left.addEventListener("click", () =>{
 
         removeProjectClasses(nextProject);
 
-        if (currentProject > 1){
+        if (currentProject > 0){
             removeProjectClasses(NnextProject);
             NnextProject.classList.add("closed-left");
         }
