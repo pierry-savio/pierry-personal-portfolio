@@ -85,3 +85,44 @@ arrow_right.addEventListener("click", () =>{
         current_project = 0;
     }
 });
+
+arrow_left.addEventListener("click", () =>{
+
+    const previous = projects[current_project + 1];
+    const current  = projects[current_project    ];
+    const next     = projects[current_project - 1];
+    const upNext   = projects[current_project - 2];
+
+    if (current_project > 0){
+
+        if (current_project < projects.length-1){
+            removeClasses(previous);
+            previous.classList.add("hide-right");
+        }
+        removeClasses(current);
+
+        if (current_project > 0){
+            removeClasses(next);
+        }
+
+        if (current_project > 1){
+            removeClasses(upNext);
+            upNext.classList.add("closed-left");
+        }
+
+        current.classList.add("closed-right");
+
+        current_project--;
+    }
+    else{
+        projects.forEach((e) =>{
+            removeClasses(e);
+            e.classList.add("hide-left");
+        })
+
+        removeClasses(projects[projects.length-1]);
+        removeClasses(projects[projects.length-2]);
+        projects[projects.length-2].classList.add("closed-left");
+        current_project = projects.length-1;
+    }
+});

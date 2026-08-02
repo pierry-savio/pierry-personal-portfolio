@@ -2,6 +2,7 @@
     @use '../animations/animations'         as *;
     @use '../components/buttons'            as *;
     @use '../components/fonts'              as *;
+    @use '../components/lines'              as *;
     @use '../variables-functions/colors'    as *;
     @use '../variables-functions/functions' as *;
     @use '../variables-functions/variables' as *;
@@ -15,6 +16,7 @@ section.projects{
     h2{
         margin-bottom: 50px;
         @include text-title();
+        text-align: center;
     }
 
     //ARROWS
@@ -68,15 +70,21 @@ section.projects{
             justify-content: center;
             align-items: center;
             gap: 5px;
+            z-index: 5;
+            cursor: pointer;
             transition: 1s ease;
 
             img{
-                width: 250px;
+                width: 200px;
                 aspect-ratio: 1 / 1;
                 border-radius: 50%;
                 border: 1px solid rgba($text-highlight, 0.5);
                 box-shadow: 0 0 30px 0 rgba($text-highlight, 0.25);
                 transition: 1s ease;
+
+                &:hover{
+                    filter: brightness(2);
+                }
             }
             div.project-texts{
                 text-align: center;
@@ -87,7 +95,7 @@ section.projects{
 
                 h3{
                     @include text-title();
-                    font-size: 50px;
+                    font-size: 40px;
                 }
                 p{
                     @include text-paragraph();
@@ -103,8 +111,8 @@ section.projects{
         div.project.hide-left,
         div.project.hide-right{
             position: absolute;
-
             filter: blur(4px);
+            z-index: 1;
 
             img{
                 border: 1px solid $line;
@@ -114,31 +122,78 @@ section.projects{
 
         //CLOSED
         div.project.closed-left{
-            transform: translateX(-80%) scale(0.85);
+            transform: translateX(-50%) scale(0.80);
+            opacity: 0.5;
         }
         div.project.closed-right{
-            transform: translateX(80%) scale(0.85);
+            transform: translateX(50%) scale(0.80);
+            opacity: 0.5;
         }
 
         //HIDE
         div.project.hide-left{
-            transform: translateX(-100%) scale(0.85);
+            transform: translateX(-100%) scale(0.75);
             opacity: 0;
         }
 
         div.project.hide-right{
-            transform: translateX(100%) scale(0.85);
+            transform: translateX(100%) scale(0.75);
             opacity: 0;
         }
     }
-    /*
-    <div class="project">
-                        <img src="../img/projects/picode.png" alt="Project image">
-                        <div class="project-texts">
-                            <h3>Picode</h3>
-                            <p>Página web para codificação de textos</p>
-                        </div>
-                    </div>
+    
+    div.line{
+        @include neon-line();
+    }
+
+    @media (orientation: landscape){
+        h2{
+            text-align: left;
+        }
+        
+        div.arrow-left{
+            left: 15%;
+        }
+
+        div.arrow-right{
+            right: 15%;
+        }
+
+        div.projects-container{
+            div.project{
+                img{
+                    width: 300px;
+                }
+            }
+
+            //CLOSED
+            div.project.closed-left{
+                transform: translateX(-80%) scale(0.80);
+            }
+            div.project.closed-right{
+                transform: translateX(80%) scale(0.80);
+            }
+
+            //HIDE
+            div.project.hide-left{
+                transform: translateX(-160%) scale(0.75);
+            }
+
+            div.project.hide-right{
+                transform: translateX(160%) scale(0.75);
+            }
+        }
+        /*
+        <div class="projects-container" id="projects_container">
+            <!--PICODE-->
+            <div class="project">
+                <img src="../img/projects/picode-fav.png" alt="Project image">
+                <div class="project-texts">
+                    <h3>PICODE</h3>
+                    <p>Página web para codificação de textos</p>
                 </div>
-          */      
+            </div>
+        </div>
+        */
+    }
 }
