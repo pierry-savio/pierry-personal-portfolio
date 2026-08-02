@@ -732,44 +732,143 @@ section.projects {
   min-height: 100vh;
   background: linear-gradient(180deg, #160015, #221c22);
   padding: 100px 20px 100px 20px;
-  color: white;
+  overflow: clip;
 }
 section.projects h2 {
   margin-bottom: 50px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.projects h2 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
+section.projects div.arrow {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  background-color: #ff00cc;
+  padding: 10px;
+  border-radius: 50%;
+  width: 60px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 50%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+section.projects div.arrow img {
+  width: 30px;
+}
+section.projects div.arrow:hover {
+  transform: scale(1.05);
+  opacity: 100%;
+}
+section.projects div.arrow:active {
+  transform: scale(0.9);
+}
+section.projects div.arrow-left {
+  left: 5%;
+}
+section.projects div.arrow-right {
+  right: 5%;
 }
 section.projects div.projects-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-section.projects div.projects-container div.arrow {
-  position: absolute;
-}
-section.projects div.projects-container div.arrow-left {
-  left: 10%;
+  position: relative;
 }
 section.projects div.projects-container div.project {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
+  transition: 1s ease;
 }
 section.projects div.projects-container div.project img {
   width: 250px;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  border: 1px solid rgba(255, 0, 204, 0.5);
+  box-shadow: 0 0 30px 0 rgba(255, 0, 204, 0.25);
+  transition: 1s ease;
 }
 section.projects div.projects-container div.project div.project-texts {
   text-align: center;
   text-justify: center;
+  opacity: 1;
+  transition: 1s ease;
+  padding: 0 20px 0 20px;
+}
+section.projects div.projects-container div.project div.project-texts h3 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.projects div.projects-container div.project div.project-texts h3 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
 }
 section.projects div.projects-container div.project div.project-texts h3 {
   font-size: 50px;
 }
-section.projects div.projects-container div.arrow-right {
-  right: 10%;
+section.projects div.projects-container div.project div.project-texts p {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  text-align: center;
+  text-justify: center;
+  font-size: 16px;
+}
+section.projects div.projects-container div.project.closed-left,
+section.projects div.projects-container div.project.closed-right,
+section.projects div.projects-container div.project.hide-left,
+section.projects div.projects-container div.project.hide-right {
+  position: absolute;
+  filter: blur(4px);
+}
+section.projects div.projects-container div.project.closed-left img,
+section.projects div.projects-container div.project.closed-right img,
+section.projects div.projects-container div.project.hide-left img,
+section.projects div.projects-container div.project.hide-right img {
+  border: 1px solid #5e5e5e;
+  box-shadow: 0 0 30px 0 transparent;
+}
+section.projects div.projects-container div.project.closed-left {
+  transform: translateX(-80%) scale(0.85);
+}
+section.projects div.projects-container div.project.closed-right {
+  transform: translateX(80%) scale(0.85);
+}
+section.projects div.projects-container div.project.hide-left {
+  transform: translateX(-100%) scale(0.85);
+  opacity: 0;
+}
+section.projects div.projects-container div.project.hide-right {
+  transform: translateX(100%) scale(0.85);
+  opacity: 0;
 }
 section.projects {
   /*

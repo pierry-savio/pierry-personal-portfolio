@@ -10,53 +10,125 @@ section.projects{
     min-height: 100vh;
     background: $background-gradient;
     padding: 100px 20px 100px 20px;
-    color: white;
+    overflow: clip;
 
     h2{
         margin-bottom: 50px;
+        @include text-title();
+    }
+
+    //ARROWS
+    div.arrow{
+        position: absolute;
+        z-index: 999;
+        top: 50%;
+        background-color: $text-highlight;
+        padding: 10px;
+        border-radius: 50%;
+        width: 60px;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 50%;
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        img{
+            width: 30px;
+        }
+
+        &:hover{
+            transform: scale(1.05);
+            opacity: 100%;
+        }
+        &:active{
+            transform: scale(0.9);
+        }
+
+    }
+
+    div.arrow-left{
+        left: 5%;
+    }
+
+    div.arrow-right{
+        right: 5%;
     }
 
     div.projects-container{
         display: flex;
         justify-content: center;
-        align-items: center;
-        flex-direction: row;
-
-        div.arrow{
-            position: absolute;
-        }
-
-        div.arrow-left{
-            left: 10%;
-        }
+        position: relative;
 
         div.project{
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 5px;
+            transition: 1s ease;
 
             img{
                 width: 250px;
                 aspect-ratio: 1 / 1;
                 border-radius: 50%;
+                border: 1px solid rgba($text-highlight, 0.5);
+                box-shadow: 0 0 30px 0 rgba($text-highlight, 0.25);
+                transition: 1s ease;
             }
             div.project-texts{
                 text-align: center;
                 text-justify: center;
+                opacity: 1;
+                transition: 1s ease;
+                padding: 0 20px 0 20px;
 
                 h3{
+                    @include text-title();
                     font-size: 50px;
                 }
                 p{
-
+                    @include text-paragraph();
+                    text-align: center;
+                    text-justify: center;
+                    font-size: 16px;
                 }
             }
         }
 
-        div.arrow-right{
-            right: 10%;
+        div.project.closed-left,
+        div.project.closed-right,
+        div.project.hide-left,
+        div.project.hide-right{
+            position: absolute;
+
+            filter: blur(4px);
+
+            img{
+                border: 1px solid $line;
+                box-shadow: 0 0 30px 0 transparent;
+            }
+        }
+
+        //CLOSED
+        div.project.closed-left{
+            transform: translateX(-80%) scale(0.85);
+        }
+        div.project.closed-right{
+            transform: translateX(80%) scale(0.85);
+        }
+
+        //HIDE
+        div.project.hide-left{
+            transform: translateX(-100%) scale(0.85);
+            opacity: 0;
+        }
+
+        div.project.hide-right{
+            transform: translateX(100%) scale(0.85);
+            opacity: 0;
         }
     }
     /*
