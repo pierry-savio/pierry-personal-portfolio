@@ -24,6 +24,12 @@
     @use './pages/skills'    as *;
     @use './pages/education' as *;
     @use './pages/contact'   as *;
+        //Projects
+        @use './pages/projects/custom-tictactoe' as *;
+        @use './pages/projects/luciana-psico' as *;
+        @use './pages/projects/picode' as *;
+        @use './pages/projects/quokka' as *;
+        @use './pages/projects/savio-sena' as *;
 
 //RESETS
 *{

@@ -8,7 +8,7 @@
     @use '../variables-functions/variables' as *;
 
 section.projects{
-    min-height: 100vh;
+    height: 100vh;
     background: $background-gradient;
     padding: 100px 20px 100px 20px;
     overflow: clip;
@@ -124,22 +124,22 @@ section.projects{
 
         //CLOSED
         div.project.closed-left{
-            transform: translateX(-50%) scale(0.80);
+            transform: translateX(-70%) scale(0.80);
             opacity: 0.5;
         }
         div.project.closed-right{
-            transform: translateX(50%) scale(0.80);
+            transform: translateX(70%) scale(0.80);
             opacity: 0.5;
         }
 
         //HIDE
         div.project.hide-left{
-            transform: translateX(-100%) scale(0.75);
+            transform: translateX(-140%) scale(0.75);
             opacity: 0;
         }
 
         div.project.hide-right{
-            transform: translateX(100%) scale(0.75);
+            transform: translateX(140%) scale(0.75);
             opacity: 0;
         }
         
