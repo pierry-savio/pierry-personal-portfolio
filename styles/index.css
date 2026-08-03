@@ -910,7 +910,7 @@ section.projects div.line {
     transform: translateX(-80%) scale(0.8);
   }
   section.projects div.projects-container div.project.closed-right {
-    transform: translateX(80%) scale(0.8);
+    transform: translateX(80%) scale(0.8) !important;
   }
   section.projects div.projects-container div.project.hide-left {
     transform: translateX(-160%) scale(0.75);
