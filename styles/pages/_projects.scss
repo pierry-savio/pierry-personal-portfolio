@@ -55,7 +55,7 @@ section.projects{
     }
 
     div.arrow-right{
-        right: 5%;
+       right: 5%;
     }
 
     div.projects-container{
@@ -102,10 +102,12 @@ section.projects{
                     text-align: center;
                     text-justify: center;
                     font-size: 16px;
+                    max-width: 300px;
                 }
             }
         }
 
+        
         div.project.closed-left,
         div.project.closed-right,
         div.project.hide-left,
@@ -140,6 +142,7 @@ section.projects{
             transform: translateX(100%) scale(0.75);
             opacity: 0;
         }
+        
     }
     
     div.line{
@@ -168,32 +171,20 @@ section.projects{
 
             //CLOSED
             div.project.closed-left{
-                transform: translateX(-80%) scale(0.80);
+                transform: translateX(-100%) scale(0.80);
             }
             div.project.closed-right{
-                transform: translateX(80%) scale(0.80) !important;
+                transform: translateX(100%) scale(0.80);
             }
 
             //HIDE
             div.project.hide-left{
-                transform: translateX(-160%) scale(0.75);
+                transform: translateX(-200%) scale(0.75);
             }
 
             div.project.hide-right{
-                transform: translateX(160%) scale(0.75);
+                transform: translateX(200%) scale(0.75);
             }
         }
-        /*
-        <div class="projects-container" id="projects_container">
-            <!--PICODE-->
-            <div class="project">
-                <img src="../img/projects/picode-fav.png" alt="Project image">
-                <div class="project-texts">
-                    <h3>PICODE</h3>
-                    <p>Página web para codificação de textos</p>
-                </div>
-            </div>
-        </div>
-        */
     }
 }

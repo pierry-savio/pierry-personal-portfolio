@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @keyframes floating {
   0% {
     transform: scale(1) translateX(-50%);
@@ -849,6 +848,7 @@ section.projects div.projects-container div.project div.project-texts p {
   text-align: center;
   text-justify: center;
   font-size: 16px;
+  max-width: 300px;
 }
 section.projects div.projects-container div.project.closed-left,
 section.projects div.projects-container div.project.closed-right,
@@ -907,30 +907,16 @@ section.projects div.line {
     width: 300px;
   }
   section.projects div.projects-container div.project.closed-left {
-    transform: translateX(-80%) scale(0.8);
+    transform: translateX(-100%) scale(0.8);
   }
   section.projects div.projects-container div.project.closed-right {
-    transform: translateX(80%) scale(0.8) !important;
+    transform: translateX(100%) scale(0.8);
   }
   section.projects div.projects-container div.project.hide-left {
-    transform: translateX(-160%) scale(0.75);
+    transform: translateX(-200%) scale(0.75);
   }
   section.projects div.projects-container div.project.hide-right {
-    transform: translateX(160%) scale(0.75);
-  }
-  section.projects {
-    /*
-    <div class="projects-container" id="projects_container">
-        <!--PICODE-->
-        <div class="project">
-            <img src="../img/projects/picode-fav.png" alt="Project image">
-            <div class="project-texts">
-                <h3>PICODE</h3>
-                <p>Página web para codificação de textos</p>
-            </div>
-        </div>
-    </div>
-    */
+    transform: translateX(200%) scale(0.75);
   }
 }
 
