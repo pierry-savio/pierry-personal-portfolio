@@ -92,6 +92,11 @@ section.projects{
                 opacity: 1;
                 transition: 1s ease;
                 padding: 0 20px 0 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 400px;
 
                 h3{
                     @include text-title();
@@ -100,7 +105,6 @@ section.projects{
                 p{
                     @include text-paragraph();
                     text-align: center;
-                    text-justify: center;
                     font-size: 16px;
                     max-width: 300px;
                 }
@@ -143,11 +147,7 @@ section.projects{
             opacity: 0;
         }
         
-    }
-    
-    div.line{
-        @include neon-line();
-    }
+    }        
 
     @media (orientation: landscape){
         h2{
