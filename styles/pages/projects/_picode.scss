@@ -6,3 +6,100 @@
     @use '../../variables-functions/colors'    as *;
     @use '../../variables-functions/functions' as *;
     @use '../../variables-functions/variables' as *;
+
+section.picode{
+    height: 100vh;
+    background: $background-gradient;
+
+    a.return-arrow{
+        position: fixed;
+        top: 50%;
+        img{
+
+        }
+    }
+
+    img.project-image{
+
+    }
+
+    div.content{
+        div.title-container{
+            h2{
+
+            }
+            img{
+
+            }
+        }
+
+        div.skills-container{
+            p{
+
+            }
+        }
+
+        div.texts-container{
+            p.text{
+
+            }
+        }
+
+        div.buttons-container{
+
+            a{
+                
+            }
+
+            a.test-button{
+                button{
+
+                }
+            }
+
+            a.github-button{
+                button{
+
+                }
+            }
+        }
+    }
+}
+
+/*
+    <section class="picode">
+        <a href="../projects.html">
+            <img src="" alt="Return arrow">
+        </a>
+
+        <img src="" class="project-image" alt="Project image">
+        
+        <div class="content">
+            <div class="title-container">
+                <h2>PICODE</h2>
+                <img src="" alt="Logotipo">
+            </div>
+
+            <div class="skills-container">
+                <p>Javascript</p>
+                <p>SASS</p>
+                <p>CSS</p>
+            </div>
+
+            <div class="texts-container">
+                <p class="text">Teste</p>
+                <p class="text">Tessteeee</p>
+            </div>
+            
+            <div class="buttons-container">
+                <a href="">
+                    <button>TESTAR</button>
+                </a>
+
+                <a href="">
+                    <button><img src="" alt="Github icon"> GITHUB</button>
+                </a>
+            </div>
+        </div>
+    </section>
+*/
