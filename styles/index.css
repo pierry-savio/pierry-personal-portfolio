@@ -915,6 +915,7 @@ section.projects div.projects-container div.project.hide-right {
 section.picode {
   height: 100vh;
   background: linear-gradient(180deg, #160015, #221c22);
+  padding: 100px 20px 100px 20px;
 }
 section.picode a.return-arrow {
   position: fixed;
