@@ -10,25 +10,27 @@
 section.picode{
     min-height: 100vh;
     background: $background-gradient;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    place-items: center;
+    gap: 30px;
     grid-template-columns: repeat(1, 1fr);
-    padding: 80px 0 0 0;
+    padding: 80px 60px 80px 60px;
 
     img.project-img{
-        width: 45%;
+        width: 60%;
+        max-width: 400px;
+        min-width: 200px;
         align-self: center;
         border-radius: 50%;
         border: 1px solid rgba($text-highlight, 0.5);
         box-shadow: 0 0 40px rgba($text-highlight, 0.5);
+        animation: project-icon-animation 4s ease infinite;
     }
 
     div.content{
         display: flex;
         flex-direction: column;
         gap: 16px;
-        padding: 0 60px 0 60px;
 
         div.title-container{
             display: flex;
@@ -37,7 +39,7 @@ section.picode{
             align-items: center;
 
             a.return-arrow{
-                position: fixed;
+                position: absolute;
                 left: 15px;
                 img{
                     width: 30px;
@@ -46,7 +48,7 @@ section.picode{
 
             h2{
                 @include text-title();
-                font-size: 45px;
+                //font-size: 45px;
             }
             img{
                 width: 70px;
@@ -107,13 +109,81 @@ section.picode{
             }
         }
     }
+}
 
-    div.previews{
-        h2{
-
-        }
+section.previews{
+    padding: 80px 20px 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: $background;
+    h2{
+        @include text-title();
+    }
+    div.preview-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
         img{
             width: 100%;
+            box-shadow: 0 0 10px 0 black;
+            border: 1px solid rgba($text-highlight, 0.5);
+        }
+    }
+}
+
+@media (orientation: landscape){
+    section.picode{
+        grid-template-columns: repeat(2, 1fr);
+        //gap: 30;
+
+        img.project-img{
+            width: 80%;
+        }
+
+        div.content{
+            gap: 30px;
+
+            div.title-container{
+
+                a.return-arrow{
+                    position: absolute;
+                    left: 80px;
+                    top: 100px;
+                    img{
+                        width: 40px;
+                    }
+                }
+            }
+
+            div.buttons-container{
+                gap: 20px;
+
+                a.test-button{
+                    button{
+                        padding: 16px;
+                    }
+                }
+
+                a.github-button{
+                    @include button-secondary();
+
+                    button{
+                        padding: 16px;
+                        border-radius: 10px;
+                        img{
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.previews{
+        gap: 50px;
+        div.preview-container{
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }

@@ -23,6 +23,23 @@
     transform: translateY(0px);
   }
 }
+@keyframes project-icon-animation {
+  0% {
+    transform: scale(1);
+    transform: translateY(0px);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.15);
+    transform: translateY(-30px);
+    filter: brightness(1.5);
+  }
+  100% {
+    transform: scale(1);
+    transform: translateY(0px);
+    filter: brightness(1);
+  }
+}
 @keyframes scroll-progress-line-animation {
   0% {
     border-radius: 0 20px 0 0;
@@ -915,24 +932,26 @@ section.projects div.projects-container div.project.hide-right {
 section.picode {
   min-height: 100vh;
   background: linear-gradient(180deg, #160015, #221c22);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  place-items: center;
+  gap: 30px;
   grid-template-columns: repeat(1, 1fr);
-  padding: 80px 0 0 0;
+  padding: 80px 60px 80px 60px;
 }
 section.picode img.project-img {
-  width: 45%;
+  width: 60%;
+  max-width: 400px;
+  min-width: 200px;
   align-self: center;
   border-radius: 50%;
   border: 1px solid rgba(255, 0, 204, 0.5);
   box-shadow: 0 0 40px rgba(255, 0, 204, 0.5);
+  animation: project-icon-animation 4s ease infinite;
 }
 section.picode div.content {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 0 60px 0 60px;
 }
 section.picode div.content div.title-container {
   display: flex;
@@ -941,7 +960,7 @@ section.picode div.content div.title-container {
   align-items: center;
 }
 section.picode div.content div.title-container a.return-arrow {
-  position: fixed;
+  position: absolute;
   left: 15px;
 }
 section.picode div.content div.title-container a.return-arrow img {
@@ -962,9 +981,6 @@ section.picode div.content div.title-container h2 {
     letter-spacing: 10px;
     line-height: 65px;
   }
-}
-section.picode div.content div.title-container h2 {
-  font-size: 45px;
 }
 section.picode div.content div.title-container img {
   width: 70px;
@@ -1078,10 +1094,104 @@ section.picode div.content div.buttons-container a.github-button button {
 section.picode div.content div.buttons-container a.github-button button img {
   width: 25px;
 }
-section.picode div.previews img {
+
+section.previews {
+  padding: 80px 20px 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #171717;
+}
+section.previews h2 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.previews h2 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
+section.previews div.preview-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+}
+section.previews div.preview-container img {
   width: 100%;
+  box-shadow: 0 0 10px 0 black;
+  border: 1px solid rgba(255, 0, 204, 0.5);
 }
 
+@media (orientation: landscape) {
+  section.picode {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.picode img.project-img {
+    width: 80%;
+  }
+  section.picode div.content {
+    gap: 30px;
+  }
+  section.picode div.content div.title-container a.return-arrow {
+    position: absolute;
+    left: 80px;
+    top: 100px;
+  }
+  section.picode div.content div.title-container a.return-arrow img {
+    width: 40px;
+  }
+  section.picode div.content div.buttons-container {
+    gap: 20px;
+  }
+  section.picode div.content div.buttons-container a.test-button button {
+    padding: 16px;
+  }
+  section.picode div.content div.buttons-container a.github-button {
+    width: 100%;
+    text-decoration: none;
+  }
+  section.picode div.content div.buttons-container a.github-button button {
+    cursor: pointer;
+    letter-spacing: 5px;
+    border: none;
+    border-radius: 80px;
+    padding: 12px;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #5e5e5e;
+    font-size: 18px;
+    color: #b2b2b2;
+    transition: 0.3s ease;
+  }
+  section.picode div.content div.buttons-container a.github-button button:hover {
+    border: 1px solid white;
+    letter-spacing: 8px;
+  }
+  section.picode div.content div.buttons-container a.github-button button {
+    padding: 16px;
+    border-radius: 10px;
+  }
+  section.picode div.content div.buttons-container a.github-button button img {
+    width: 25px;
+  }
+  section.previews {
+    gap: 50px;
+  }
+  section.previews div.preview-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 * {
   padding: 0;
   margin: 0;
