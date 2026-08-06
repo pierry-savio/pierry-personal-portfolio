@@ -962,9 +962,18 @@ section.picode div.content div.title-container {
 section.picode div.content div.title-container a.return-arrow {
   position: absolute;
   left: 15px;
+  opacity: 0.75;
+  transition: 0.3s ease;
 }
 section.picode div.content div.title-container a.return-arrow img {
   width: 30px;
+}
+section.picode div.content div.title-container a.return-arrow:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+section.picode div.content div.title-container a.return-arrow:active {
+  transform: scale(0.95);
 }
 section.picode div.content div.title-container h2 {
   font-family: "Source Code Pro", monospace;
@@ -1125,7 +1134,7 @@ section.previews div.preview-container {
 }
 section.previews div.preview-container img {
   width: 100%;
-  box-shadow: 0 0 10px 0 black;
+  box-shadow: 0 0 30px 0 rgba(255, 0, 204, 0.2);
   border: 1px solid rgba(255, 0, 204, 0.5);
 }
 
