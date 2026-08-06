@@ -927,8 +927,65 @@ section.picode a.return-arrow {
 section.picode img.project-image {
   width: 100%;
 }
+section.picode div.content {
+  padding: 20px 40px 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+section.picode div.content div.title-container {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+}
+section.picode div.content div.title-container h2 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.picode div.content div.title-container h2 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
 section.picode div.content div.title-container img {
-  width: 50px;
+  width: 60px;
+}
+section.picode div.content div.skills-container {
+  display: flex;
+  gap: 10px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+}
+section.picode div.content div.skills-container p {
+  font-size: 12px;
+  background-color: rgba(255, 0, 204, 0.2);
+  padding: 4px;
+  border-radius: 4px;
+}
+section.picode div.content div.texts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section.picode div.content div.texts-container p.text {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
 }
 * {
   padding: 0;
