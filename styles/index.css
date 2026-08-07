@@ -31,7 +31,7 @@
   }
   50% {
     transform: scale(1.15);
-    transform: translateY(-30px);
+    transform: translateY(30px);
     filter: brightness(1.5);
   }
   100% {
@@ -1108,8 +1108,11 @@ section.previews {
   padding: 80px 20px 80px 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 120px;
   background-color: #171717;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
 }
 section.previews h2 {
   font-family: "Source Code Pro", monospace;
@@ -1127,15 +1130,15 @@ section.previews h2 {
     line-height: 65px;
   }
 }
-section.previews div.preview-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 15px;
-}
-section.previews div.preview-container img {
+section.previews div.image {
+  opacity: 1;
+  transition: 1s ease;
   width: 100%;
-  box-shadow: 0 0 30px 0 rgba(255, 0, 204, 0.2);
-  border: 1px solid rgba(255, 0, 204, 0.5);
+  background-image: url("../../../img/projects/picode-phone-v.png");
+}
+section.previews div.image.closed {
+  transform: rotate(90deg);
+  background-image: url("../../../img/projects/picode-phone-h.png");
 }
 
 @media (orientation: landscape) {
