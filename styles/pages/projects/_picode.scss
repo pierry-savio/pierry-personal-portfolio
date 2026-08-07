@@ -125,7 +125,7 @@ section.previews{
     padding: 80px 20px 80px 20px;
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: 30px;
     background-color: $background;
     align-items: center;
     min-height: 100vh;
@@ -134,16 +134,9 @@ section.previews{
     h2{
         @include text-title();  
     }
-    div.image{
-        opacity: 1;
-        transition: 1s ease;
-        width: 100%;
-        background-image: url("../../../img/projects/picode-phone-v.png");
-    }
-
-    div.image.closed{
-        transform: rotate(90deg);
-        background-image: url("../../../img/projects/picode-phone-h.png");
+    img{
+        width: 300px;
+        max-width: 100%;
     }
 }
 
