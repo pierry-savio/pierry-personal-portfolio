@@ -1105,14 +1105,12 @@ section.picode div.content div.buttons-container a.github-button button img {
 }
 
 section.previews {
-  padding: 80px 20px 80px 20px;
+  padding: 80px 20px 150px 20px;
   display: flex;
   flex-direction: column;
   gap: 30px;
   background-color: #171717;
   align-items: center;
-  min-height: 100vh;
-  position: relative;
 }
 section.previews h2 {
   font-family: "Source Code Pro", monospace;
@@ -1130,9 +1128,28 @@ section.previews h2 {
     line-height: 65px;
   }
 }
-section.previews img {
-  width: 300px;
-  max-width: 100%;
+section.previews div.mockup-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section.previews div.mockup-wrapper div.mockup {
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  background-size: cover;
+  background-image: url("../../../img/projects/picode-phone-v.png");
+  aspect-ratio: 16/16;
+  transform: rotate(90deg);
+  cursor: pointer;
+  transition: 1s ease;
+}
+section.previews div.mockup-wrapper div.mockup:hover {
+  transform: scale(1.05) rotate(90deg);
+}
+section.previews div.mockup-wrapper div.mockup.horizontal {
+  background-image: url("../../../img/projects/picode-phone-h.png");
+  transform: rotate(0deg);
 }
 
 @media (orientation: landscape) {
@@ -1193,9 +1210,6 @@ section.previews img {
   }
   section.previews {
     gap: 50px;
-  }
-  section.previews div.preview-container {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 * {

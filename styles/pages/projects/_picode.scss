@@ -122,21 +122,40 @@ section.picode{
 }
 
 section.previews{
-    padding: 80px 20px 80px 20px;
+    padding: 80px 20px 150px 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
     background-color: $background;
     align-items: center;
-    min-height: 100vh;
-    position: relative;
 
     h2{
-        @include text-title();  
+        @include text-title();
     }
-    img{
-        width: 300px;
-        max-width: 100%;
+    div.mockup-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        div.mockup{
+            height: 100%;
+            width: 100%;
+            max-width: 600px;
+            background-size: cover;
+            background-image: url('../../../img/projects/picode-phone-v.png');
+            aspect-ratio: 16 / 16;
+            transform: rotate(90deg);
+            cursor: pointer;
+            transition: 1s ease;
+
+            &:hover{
+                transform: scale(1.05) rotate(90deg);
+            }
+        }
+        div.mockup.horizontal{
+            background-image: url('../../../img/projects/picode-phone-h.png');
+            transform: rotate(0deg);
+        }
     }
 }
 
@@ -190,8 +209,5 @@ section.previews{
 
     section.previews{
         gap: 50px;
-        div.preview-container{
-            grid-template-columns: repeat(2, 1fr);
-        }
     }
 }
