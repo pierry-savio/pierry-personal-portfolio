@@ -15,6 +15,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+        ::view-transition-group(page-content){
+            animation-duration: 0.5s;
+            animation-timing-function: ease;
+        }
+
+        ::view-transition-old(page-content){
+            animation-name: slide-up-out;
+        }
+        ::view-transition-new(page-content){
+            animation-name: slide-up-in;
+        }
+
+        main{
+            view-transition-name: page-content;
+        }
+        header{
+            view-transition-name: header;
+        }
+        footer{
+            view-transition-name: footer;
+        }
+        footer{
+            view-transition-name: footer;
+        }
+        button.open-nav-button{
+            view-transition-name: nav-button;
+        }
+
+        @keyframes slide-up-out {
+            from{
+                transform: translateY(0);
+            }
+            to{
+                transform: translateY(-100vh);
+            }
+        }
+        @keyframes slide-up-in {
+            from{
+                transform: translateY(100vh);
+            }
+            to{
+                transform: translateY(0vh);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -39,7 +89,7 @@
                 </div>
 
                 <div class="buttons-container">
-                    <a href="#contact" class="contact-a">
+                    <a href="./pages/contact.html" class="contact-a">
                         <button>CRIAR MEU SITE</button>
                     </a>
                     <a href="#about_me" class="about-me-a">

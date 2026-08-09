@@ -1134,7 +1134,6 @@ section.previews div.mockup-wrapper {
   justify-content: center;
 }
 section.previews div.mockup-wrapper div.mockup {
-  height: 100%;
   width: 100%;
   max-width: 600px;
   background-size: cover;

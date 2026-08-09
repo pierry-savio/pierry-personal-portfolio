@@ -20,6 +20,50 @@
         @view-transition {
             navigation: auto;
         }
+        ::view-transition-group(page-content){
+            animation-duration: 0.5s;
+            animation-timing-function: ease;
+        }
+
+        ::view-transition-old(page-content){
+            animation-name: slide-up-out;
+        }
+        ::view-transition-new(page-content){
+            animation-name: slide-up-in;
+        }
+
+        main{
+            view-transition-name: page-content;
+        }
+        header{
+            view-transition-name: header;
+        }
+        footer{
+            view-transition-name: footer;
+        }
+        footer{
+            view-transition-name: footer;
+        }
+        button.open-nav-button{
+            view-transition-name: nav-button;
+        }
+
+        @keyframes slide-up-out {
+            from{
+                transform: translateY(0);
+            }
+            to{
+                transform: translateY(-100vh);
+            }
+        }
+        @keyframes slide-up-in {
+            from{
+                transform: translateY(100vh);
+            }
+            to{
+                transform: translateY(0vh);
+            }
+        }
     </style>
 </head>
 
@@ -54,11 +98,11 @@
                 </div>
                 
                 <div class="buttons-container">
-                    <a href="" class="test-button">
+                    <a href="https://picode-cipher.netlify.app" target="_blank" class="test-button">
                         <button>TESTAR</button>
                     </a>
 
-                    <a href="" class="github-button">
+                    <a href="https://github.com/pierry-savio/picode-cipher" target="_blank" class="github-button">
                         <button><img src="../../img/icons/github.png" alt="Github icon"> GITHUB</button>
                     </a>
                 </div>
