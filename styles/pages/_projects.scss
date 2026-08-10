@@ -10,13 +10,19 @@
 section.projects{
     height: 100vh;
     background: $background-gradient;
-    padding: 100px 20px 100px 20px;
+    padding: 150px 20px 100px 20px;
     overflow: clip;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h2{
         margin-bottom: 50px;
         @include text-title();
         text-align: center;
+        position: absolute;
+        top: 15%;
     }
 
     //ARROWS
@@ -61,10 +67,12 @@ section.projects{
     div.projects-container{
         display: flex;
         justify-content: center;
+        align-items: center;
         position: relative;
+        width: 100%;
 
         div.project{
-            position: relative;
+            position: absolute;
             display: flex;
             flex-direction: column;
             justify-content: center;

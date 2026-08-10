@@ -747,8 +747,12 @@ main section.about-me div.see-projects-container a button:active {
 section.projects {
   height: 100vh;
   background: linear-gradient(180deg, #160015, #221c22);
-  padding: 100px 20px 100px 20px;
+  padding: 150px 20px 100px 20px;
   overflow: clip;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 section.projects h2 {
   margin-bottom: 50px;
@@ -769,6 +773,8 @@ section.projects h2 {
 }
 section.projects h2 {
   text-align: center;
+  position: absolute;
+  top: 15%;
 }
 section.projects div.arrow {
   position: absolute;
@@ -805,10 +811,12 @@ section.projects div.arrow-right {
 section.projects div.projects-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
+  width: 100%;
 }
 section.projects div.projects-container div.project {
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
