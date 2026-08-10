@@ -126,7 +126,9 @@ section.previews{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    background-color: $background;
+    background-image: url('../../../img/background/background3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     align-items: center;
 
     h2{
