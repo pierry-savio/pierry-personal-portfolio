@@ -22,8 +22,8 @@ section.savio-sena{
         min-width: 200px;
         align-self: center;
         border-radius: 50%;
-        border: 1px solid rgba($text-highlight, 0.5);
-        box-shadow: 0 0 40px rgba($text-highlight, 0.5);
+        border: 2px solid rgba(rgb(0, 248, 0), 1);
+        box-shadow: 0 0 40px rgba(green, 1);
         animation: project-icon-animation 4s ease infinite;
     }
 
@@ -121,7 +121,7 @@ section.savio-sena{
     }
 }
 
-section.previews{
+section.savio-sena-previews{
     padding: 80px 20px 150px 20px;
     display: flex;
     flex-direction: column;
@@ -143,7 +143,7 @@ section.previews{
             width: 100%;
             max-width: 600px;
             background-size: cover;
-            background-image: url('../../../img/projects/picode-phone-v.png');
+            background-image: url('../../../img/projects/savio-sena-phone-v.png');
             aspect-ratio: 16 / 16;
             transform: rotate(90deg);
             cursor: pointer;
@@ -154,7 +154,7 @@ section.previews{
             }
         }
         div.mockup.horizontal{
-            background-image: url('../../../img/projects/picode-phone-h.png');
+            background-image: url('../../../img/projects/savio-sena-phone-h.png');
             transform: rotate(0deg);
         }
     }
@@ -208,7 +208,7 @@ section.previews{
         }
     }
 
-    section.previews{
+    section.picode-previews{
         gap: 50px;
     }
 }

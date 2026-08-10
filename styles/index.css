@@ -937,6 +937,574 @@ section.projects div.projects-container div.project.hide-right {
   }
 }
 
+section.custom-tictactoe {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #160015, #221c22);
+  display: grid;
+  place-items: center;
+  gap: 30px;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 80px 60px 80px 60px;
+}
+section.custom-tictactoe img.project-img {
+  width: 60%;
+  max-width: 400px;
+  min-width: 200px;
+  align-self: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 0, 204, 0.5);
+  box-shadow: 0 0 40px rgba(255, 0, 204, 0.5);
+  animation: project-icon-animation 4s ease infinite;
+}
+section.custom-tictactoe div.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+section.custom-tictactoe div.content div.title-container {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+}
+section.custom-tictactoe div.content div.title-container a.return-arrow {
+  position: absolute;
+  left: 15px;
+  opacity: 0.75;
+  transition: 0.3s ease;
+}
+section.custom-tictactoe div.content div.title-container a.return-arrow img {
+  width: 30px;
+}
+section.custom-tictactoe div.content div.title-container a.return-arrow:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+section.custom-tictactoe div.content div.title-container a.return-arrow:active {
+  transform: scale(0.95);
+}
+section.custom-tictactoe div.content div.title-container h2 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.custom-tictactoe div.content div.title-container h2 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
+section.custom-tictactoe div.content div.title-container img {
+  width: 70px;
+}
+section.custom-tictactoe div.content div.skills-container {
+  display: flex;
+  gap: 10px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+}
+section.custom-tictactoe div.content div.skills-container p {
+  font-size: 14px;
+  background-color: rgba(255, 0, 204, 0.2);
+  padding: 4px;
+  border-radius: 4px;
+}
+section.custom-tictactoe div.content div.texts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section.custom-tictactoe div.content div.texts-container p.text {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  font-size: 14px;
+}
+section.custom-tictactoe div.content div.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section.custom-tictactoe div.content div.buttons-container a.test-button {
+  width: 100%;
+  text-decoration: none;
+}
+section.custom-tictactoe div.content div.buttons-container a.test-button button {
+  cursor: pointer;
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 80px;
+  padding: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.2);
+  background: linear-gradient(33deg, #ff00fb, #8c00ff, #ff00fb);
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  border: 2px solid rgba(255, 0, 204, 0.2);
+  animation: button-animation 4s ease-in-out infinite;
+  transition: 0.3s ease;
+}
+section.custom-tictactoe div.content div.buttons-container a.test-button button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+}
+section.custom-tictactoe div.content div.buttons-container a.test-button button:active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+}
+section.custom-tictactoe div.content div.buttons-container a.test-button button {
+  border-radius: 10px;
+  padding: 8px;
+}
+section.custom-tictactoe div.content div.buttons-container a.github-button {
+  width: 100%;
+  text-decoration: none;
+}
+section.custom-tictactoe div.content div.buttons-container a.github-button button {
+  cursor: pointer;
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 80px;
+  padding: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #5e5e5e;
+  font-size: 18px;
+  color: #b2b2b2;
+  transition: 0.3s ease;
+}
+section.custom-tictactoe div.content div.buttons-container a.github-button button:hover {
+  border: 1px solid white;
+  letter-spacing: 8px;
+}
+section.custom-tictactoe div.content div.buttons-container a.github-button button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 8px;
+}
+section.custom-tictactoe div.content div.buttons-container a.github-button button img {
+  width: 25px;
+}
+
+section.custom-tictactoe-previews {
+  padding: 80px 20px 150px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-image: url("../../../img/background/background3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+}
+section.custom-tictactoe-previews h2 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.custom-tictactoe-previews h2 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
+section.custom-tictactoe-previews div.mockup-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section.custom-tictactoe-previews div.mockup-wrapper div.mockup {
+  width: 100%;
+  max-width: 600px;
+  background-size: cover;
+  background-image: url("../../../img/projects/custom-tictactoe-phone-v.png");
+  aspect-ratio: 16/16;
+  transform: rotate(90deg);
+  cursor: pointer;
+  transition: 1s ease;
+}
+section.custom-tictactoe-previews div.mockup-wrapper div.mockup:hover {
+  transform: scale(1.05) rotate(90deg);
+}
+section.custom-tictactoe-previews div.mockup-wrapper div.mockup.horizontal {
+  background-image: url("../../../img/projects/custom-tictactoe-phone-h.png");
+  transform: rotate(0deg);
+}
+
+@media (orientation: landscape) {
+  section.custom-tictactoe {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.custom-tictactoe img.project-img {
+    width: 80%;
+  }
+  section.custom-tictactoe div.content {
+    gap: 30px;
+  }
+  section.custom-tictactoe div.content div.title-container a.return-arrow {
+    position: absolute;
+    left: 80px;
+    top: 100px;
+  }
+  section.custom-tictactoe div.content div.title-container a.return-arrow img {
+    width: 40px;
+  }
+  section.custom-tictactoe div.content div.buttons-container {
+    gap: 20px;
+  }
+  section.custom-tictactoe div.content div.buttons-container a.test-button button {
+    padding: 16px;
+  }
+  section.custom-tictactoe div.content div.buttons-container a.github-button {
+    width: 100%;
+    text-decoration: none;
+  }
+  section.custom-tictactoe div.content div.buttons-container a.github-button button {
+    cursor: pointer;
+    letter-spacing: 5px;
+    border: none;
+    border-radius: 80px;
+    padding: 12px;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #5e5e5e;
+    font-size: 18px;
+    color: #b2b2b2;
+    transition: 0.3s ease;
+  }
+  section.custom-tictactoe div.content div.buttons-container a.github-button button:hover {
+    border: 1px solid white;
+    letter-spacing: 8px;
+  }
+  section.custom-tictactoe div.content div.buttons-container a.github-button button {
+    padding: 16px;
+    border-radius: 10px;
+  }
+  section.custom-tictactoe div.content div.buttons-container a.github-button button img {
+    width: 25px;
+  }
+  section.custom-tictactoe {
+    gap: 50px;
+  }
+}
+section.luciana-psico {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #160015, #221c22);
+  display: grid;
+  place-items: center;
+  gap: 30px;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 80px 60px 80px 60px;
+}
+section.luciana-psico img.project-img {
+  width: 60%;
+  max-width: 400px;
+  min-width: 200px;
+  align-self: center;
+  border-radius: 50%;
+  border: 2px solid #00fd00;
+  box-shadow: 0 0 40px green;
+  animation: project-icon-animation 4s ease infinite;
+}
+section.luciana-psico div.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+section.luciana-psico div.content div.title-container {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+}
+section.luciana-psico div.content div.title-container a.return-arrow {
+  position: absolute;
+  left: 15px;
+  opacity: 0.75;
+  transition: 0.3s ease;
+}
+section.luciana-psico div.content div.title-container a.return-arrow img {
+  width: 30px;
+}
+section.luciana-psico div.content div.title-container a.return-arrow:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+section.luciana-psico div.content div.title-container a.return-arrow:active {
+  transform: scale(0.95);
+}
+section.luciana-psico div.content div.title-container h2 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.luciana-psico div.content div.title-container h2 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
+section.luciana-psico div.content div.title-container img {
+  width: 70px;
+}
+section.luciana-psico div.content div.skills-container {
+  display: flex;
+  gap: 10px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+}
+section.luciana-psico div.content div.skills-container p {
+  font-size: 14px;
+  background-color: rgba(255, 0, 204, 0.2);
+  padding: 4px;
+  border-radius: 4px;
+}
+section.luciana-psico div.content div.texts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section.luciana-psico div.content div.texts-container p.text {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  font-size: 14px;
+}
+section.luciana-psico div.content div.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section.luciana-psico div.content div.buttons-container a.test-button {
+  width: 100%;
+  text-decoration: none;
+}
+section.luciana-psico div.content div.buttons-container a.test-button button {
+  cursor: pointer;
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 80px;
+  padding: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.2);
+  background: linear-gradient(33deg, #ff00fb, #8c00ff, #ff00fb);
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  border: 2px solid rgba(255, 0, 204, 0.2);
+  animation: button-animation 4s ease-in-out infinite;
+  transition: 0.3s ease;
+}
+section.luciana-psico div.content div.buttons-container a.test-button button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+}
+section.luciana-psico div.content div.buttons-container a.test-button button:active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+}
+section.luciana-psico div.content div.buttons-container a.test-button button {
+  border-radius: 10px;
+  padding: 8px;
+}
+section.luciana-psico div.content div.buttons-container a.github-button {
+  width: 100%;
+  text-decoration: none;
+}
+section.luciana-psico div.content div.buttons-container a.github-button button {
+  cursor: pointer;
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 80px;
+  padding: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #5e5e5e;
+  font-size: 18px;
+  color: #b2b2b2;
+  transition: 0.3s ease;
+}
+section.luciana-psico div.content div.buttons-container a.github-button button:hover {
+  border: 1px solid white;
+  letter-spacing: 8px;
+}
+section.luciana-psico div.content div.buttons-container a.github-button button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 8px;
+}
+section.luciana-psico div.content div.buttons-container a.github-button button img {
+  width: 25px;
+}
+
+section.luciana-psico-previews {
+  padding: 80px 20px 150px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-image: url("../../../img/background/background3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+}
+section.luciana-psico-previews h2 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.luciana-psico-previews h2 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
+section.luciana-psico-previews div.mockup-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section.luciana-psico-previews div.mockup-wrapper div.mockup {
+  width: 100%;
+  max-width: 600px;
+  background-size: cover;
+  background-image: url("../../../img/projects/luciana-psico-phone-v.png");
+  aspect-ratio: 16/16;
+  transform: rotate(90deg);
+  cursor: pointer;
+  transition: 1s ease;
+}
+section.luciana-psico-previews div.mockup-wrapper div.mockup:hover {
+  transform: scale(1.05) rotate(90deg);
+}
+section.luciana-psico-previews div.mockup-wrapper div.mockup.horizontal {
+  background-image: url("../../../img/projects/luciana-psico-phone-h.png");
+  transform: rotate(0deg);
+}
+
+@media (orientation: landscape) {
+  section.luciana-psico {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.luciana-psico img.project-img {
+    width: 80%;
+  }
+  section.luciana-psico div.content {
+    gap: 30px;
+  }
+  section.luciana-psico div.content div.title-container a.return-arrow {
+    position: absolute;
+    left: 80px;
+    top: 100px;
+  }
+  section.luciana-psico div.content div.title-container a.return-arrow img {
+    width: 40px;
+  }
+  section.luciana-psico div.content div.buttons-container {
+    gap: 20px;
+  }
+  section.luciana-psico div.content div.buttons-container a.test-button button {
+    padding: 16px;
+  }
+  section.luciana-psico div.content div.buttons-container a.github-button {
+    width: 100%;
+    text-decoration: none;
+  }
+  section.luciana-psico div.content div.buttons-container a.github-button button {
+    cursor: pointer;
+    letter-spacing: 5px;
+    border: none;
+    border-radius: 80px;
+    padding: 12px;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #5e5e5e;
+    font-size: 18px;
+    color: #b2b2b2;
+    transition: 0.3s ease;
+  }
+  section.luciana-psico div.content div.buttons-container a.github-button button:hover {
+    border: 1px solid white;
+    letter-spacing: 8px;
+  }
+  section.luciana-psico div.content div.buttons-container a.github-button button {
+    padding: 16px;
+    border-radius: 10px;
+  }
+  section.luciana-psico div.content div.buttons-container a.github-button button img {
+    width: 25px;
+  }
+  section.luciana-psico-previews {
+    gap: 50px;
+  }
+}
 section.picode {
   min-height: 100vh;
   background: linear-gradient(180deg, #160015, #221c22);
@@ -1112,7 +1680,7 @@ section.picode div.content div.buttons-container a.github-button button img {
   width: 25px;
 }
 
-section.previews {
+section.picode-previews {
   padding: 80px 20px 150px 20px;
   display: flex;
   flex-direction: column;
@@ -1122,7 +1690,7 @@ section.previews {
   background-size: cover;
   align-items: center;
 }
-section.previews h2 {
+section.picode-previews h2 {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -1132,18 +1700,18 @@ section.previews h2 {
   font-weight: 900;
 }
 @media (orientation: landscape) {
-  section.previews h2 {
+  section.picode-previews h2 {
     font-size: 80px;
     letter-spacing: 10px;
     line-height: 65px;
   }
 }
-section.previews div.mockup-wrapper {
+section.picode-previews div.mockup-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-section.previews div.mockup-wrapper div.mockup {
+section.picode-previews div.mockup-wrapper div.mockup {
   width: 100%;
   max-width: 600px;
   background-size: cover;
@@ -1153,10 +1721,10 @@ section.previews div.mockup-wrapper div.mockup {
   cursor: pointer;
   transition: 1s ease;
 }
-section.previews div.mockup-wrapper div.mockup:hover {
+section.picode-previews div.mockup-wrapper div.mockup:hover {
   transform: scale(1.05) rotate(90deg);
 }
-section.previews div.mockup-wrapper div.mockup.horizontal {
+section.picode-previews div.mockup-wrapper div.mockup.horizontal {
   background-image: url("../../../img/projects/picode-phone-h.png");
   transform: rotate(0deg);
 }
@@ -1217,7 +1785,291 @@ section.previews div.mockup-wrapper div.mockup.horizontal {
   section.picode div.content div.buttons-container a.github-button button img {
     width: 25px;
   }
-  section.previews {
+  section.picode-previews {
+    gap: 50px;
+  }
+}
+section.quokka {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #160015, #221c22);
+  display: grid;
+  place-items: center;
+  gap: 30px;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 80px 60px 80px 60px;
+}
+section.quokka img.project-img {
+  width: 60%;
+  max-width: 400px;
+  min-width: 200px;
+  align-self: center;
+  border-radius: 50%;
+  border: 2px solid yellow;
+  box-shadow: 0 0 40px yellow;
+  animation: project-icon-animation 4s ease infinite;
+}
+section.quokka div.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+section.quokka div.content div.title-container {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+}
+section.quokka div.content div.title-container a.return-arrow {
+  position: absolute;
+  left: 15px;
+  opacity: 0.75;
+  transition: 0.3s ease;
+}
+section.quokka div.content div.title-container a.return-arrow img {
+  width: 30px;
+}
+section.quokka div.content div.title-container a.return-arrow:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+section.quokka div.content div.title-container a.return-arrow:active {
+  transform: scale(0.95);
+}
+section.quokka div.content div.title-container h2 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.quokka div.content div.title-container h2 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
+section.quokka div.content div.title-container img {
+  width: 70px;
+}
+section.quokka div.content div.skills-container {
+  display: flex;
+  gap: 10px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+}
+section.quokka div.content div.skills-container p {
+  font-size: 14px;
+  background-color: rgba(255, 0, 204, 0.2);
+  padding: 4px;
+  border-radius: 4px;
+}
+section.quokka div.content div.texts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section.quokka div.content div.texts-container p.text {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  font-size: 14px;
+}
+section.quokka div.content div.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section.quokka div.content div.buttons-container a.test-button {
+  width: 100%;
+  text-decoration: none;
+}
+section.quokka div.content div.buttons-container a.test-button button {
+  cursor: pointer;
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 80px;
+  padding: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.2);
+  background: linear-gradient(33deg, #ff00fb, #8c00ff, #ff00fb);
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  border: 2px solid rgba(255, 0, 204, 0.2);
+  animation: button-animation 4s ease-in-out infinite;
+  transition: 0.3s ease;
+}
+section.quokka div.content div.buttons-container a.test-button button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+}
+section.quokka div.content div.buttons-container a.test-button button:active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+}
+section.quokka div.content div.buttons-container a.test-button button {
+  border-radius: 10px;
+  padding: 8px;
+}
+section.quokka div.content div.buttons-container a.github-button {
+  width: 100%;
+  text-decoration: none;
+}
+section.quokka div.content div.buttons-container a.github-button button {
+  cursor: pointer;
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 80px;
+  padding: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #5e5e5e;
+  font-size: 18px;
+  color: #b2b2b2;
+  transition: 0.3s ease;
+}
+section.quokka div.content div.buttons-container a.github-button button:hover {
+  border: 1px solid white;
+  letter-spacing: 8px;
+}
+section.quokka div.content div.buttons-container a.github-button button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 8px;
+}
+section.quokka div.content div.buttons-container a.github-button button img {
+  width: 25px;
+}
+
+section.quokka-previews {
+  padding: 80px 20px 150px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-image: url("../../../img/background/background3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+}
+section.quokka-previews h2 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.quokka-previews h2 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
+section.quokka-previews div.mockup-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section.quokka-previews div.mockup-wrapper div.mockup {
+  width: 100%;
+  max-width: 600px;
+  background-size: cover;
+  background-image: url("../../../img/projects/quokka-phone-v.png");
+  aspect-ratio: 16/16;
+  transform: rotate(90deg);
+  cursor: pointer;
+  transition: 1s ease;
+}
+section.quokka-previews div.mockup-wrapper div.mockup:hover {
+  transform: scale(1.05) rotate(90deg);
+}
+section.quokka-previews div.mockup-wrapper div.mockup.horizontal {
+  background-image: url("../../../img/projects/quokka-phone-h.png");
+  transform: rotate(0deg);
+}
+
+@media (orientation: landscape) {
+  section.quokka {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.quokka img.project-img {
+    width: 80%;
+  }
+  section.quokka div.content {
+    gap: 30px;
+  }
+  section.quokka div.content div.title-container a.return-arrow {
+    position: absolute;
+    left: 80px;
+    top: 100px;
+  }
+  section.quokka div.content div.title-container a.return-arrow img {
+    width: 40px;
+  }
+  section.quokka div.content div.buttons-container {
+    gap: 20px;
+  }
+  section.quokka div.content div.buttons-container a.test-button button {
+    padding: 16px;
+  }
+  section.quokka div.content div.buttons-container a.github-button {
+    width: 100%;
+    text-decoration: none;
+  }
+  section.quokka div.content div.buttons-container a.github-button button {
+    cursor: pointer;
+    letter-spacing: 5px;
+    border: none;
+    border-radius: 80px;
+    padding: 12px;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #5e5e5e;
+    font-size: 18px;
+    color: #b2b2b2;
+    transition: 0.3s ease;
+  }
+  section.quokka div.content div.buttons-container a.github-button button:hover {
+    border: 1px solid white;
+    letter-spacing: 8px;
+  }
+  section.quokka div.content div.buttons-container a.github-button button {
+    padding: 16px;
+    border-radius: 10px;
+  }
+  section.quokka div.content div.buttons-container a.github-button button img {
+    width: 25px;
+  }
+  section.quokka-previews {
     gap: 50px;
   }
 }
@@ -1236,8 +2088,8 @@ section.savio-sena img.project-img {
   min-width: 200px;
   align-self: center;
   border-radius: 50%;
-  border: 1px solid rgba(255, 0, 204, 0.5);
-  box-shadow: 0 0 40px rgba(255, 0, 204, 0.5);
+  border: 2px solid #00f800;
+  box-shadow: 0 0 40px green;
   animation: project-icon-animation 4s ease infinite;
 }
 section.savio-sena div.content {
@@ -1396,7 +2248,7 @@ section.savio-sena div.content div.buttons-container a.github-button button img 
   width: 25px;
 }
 
-section.previews {
+section.savio-sena-previews {
   padding: 80px 20px 150px 20px;
   display: flex;
   flex-direction: column;
@@ -1406,7 +2258,7 @@ section.previews {
   background-size: cover;
   align-items: center;
 }
-section.previews h2 {
+section.savio-sena-previews h2 {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -1416,32 +2268,32 @@ section.previews h2 {
   font-weight: 900;
 }
 @media (orientation: landscape) {
-  section.previews h2 {
+  section.savio-sena-previews h2 {
     font-size: 80px;
     letter-spacing: 10px;
     line-height: 65px;
   }
 }
-section.previews div.mockup-wrapper {
+section.savio-sena-previews div.mockup-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-section.previews div.mockup-wrapper div.mockup {
+section.savio-sena-previews div.mockup-wrapper div.mockup {
   width: 100%;
   max-width: 600px;
   background-size: cover;
-  background-image: url("../../../img/projects/picode-phone-v.png");
+  background-image: url("../../../img/projects/savio-sena-phone-v.png");
   aspect-ratio: 16/16;
   transform: rotate(90deg);
   cursor: pointer;
   transition: 1s ease;
 }
-section.previews div.mockup-wrapper div.mockup:hover {
+section.savio-sena-previews div.mockup-wrapper div.mockup:hover {
   transform: scale(1.05) rotate(90deg);
 }
-section.previews div.mockup-wrapper div.mockup.horizontal {
-  background-image: url("../../../img/projects/picode-phone-h.png");
+section.savio-sena-previews div.mockup-wrapper div.mockup.horizontal {
+  background-image: url("../../../img/projects/savio-sena-phone-h.png");
   transform: rotate(0deg);
 }
 
@@ -1501,7 +2353,7 @@ section.previews div.mockup-wrapper div.mockup.horizontal {
   section.savio-sena div.content div.buttons-container a.github-button button img {
     width: 25px;
   }
-  section.previews {
+  section.picode-previews {
     gap: 50px;
   }
 }
