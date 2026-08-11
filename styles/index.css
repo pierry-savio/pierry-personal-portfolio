@@ -941,7 +941,7 @@ section.techs {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 100px 40px 100px 40px;
+  padding: 100px 0px 100px 0px;
 }
 section.techs h2 {
   font-family: "Source Code Pro", monospace;
@@ -961,28 +961,44 @@ section.techs h2 {
 }
 section.techs h2 {
   margin-bottom: 30px;
+  margin-left: 40px;
 }
-section.techs div.carousel {
-  display: flex;
+section.techs div.carrossel-container {
+  width: 100%;
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
 }
-section.techs div.carousel div.techs-container {
-  display: grid;
-  grid-template-columns: repeat(18, 1fr);
-  animation: carousel 10s linear infinite;
+section.techs div.carrossel-container div.carrossel-track {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  animation: rolar 15s linear infinite;
 }
-section.techs div.carousel div.techs-container img {
-  padding: 0 50px 0 50px;
+section.techs div.carrossel-container div.carrossel-track img {
+  height: 125px;
+  margin-right: 80px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: 0.5s ease;
 }
-@keyframes carousel {
+section.techs div.carrossel-container div.carrossel-track img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 50px 0 #ff00cc;
+}
+section.techs div.carrossel-container div.carrossel-track:hover {
+  animation-play-state: paused;
+}
+@keyframes rolar {
   from {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
+}
+section.techs {
+  /* pausa ao passar o mouse (opcional) */
 }
 
 section.custom-tictactoe {

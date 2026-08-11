@@ -10,38 +10,53 @@ section.techs{
 
     min-height: 100vh;
     @include background2();
-    padding: 100px 40px 100px 40px;
+    padding: 100px 0px 100px 0px;
 
     h2{
         @include text-title();
         margin-bottom: 30px;
+        margin-left: 40px;
     }
 
-    div.carousel{
+    div.carrossel-container {
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
 
-        display: flex;
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
-        
+        div.carrossel-track {
+            display: flex;
+            width: max-content;
+            animation: rolar 15s linear infinite;
 
-        div.techs-container {
-            display: grid;
-            grid-template-columns: repeat(18, 1fr);
-            animation: carousel 10s linear infinite;
-            
-            img{
-                padding: 0 50px 0 50px;
+            img {
+                height: 125px;
+                margin-right: 80px;
+                border-radius: 8px;
+                flex-shrink: 0;
+                transition: 0.5s ease;
+
+                &:hover{
+                    transform: scale(1.15);
+                    box-shadow: 0 0 50px 0 $text-highlight;
+                }
+            }
+
+            &:hover {
+                animation-play-state: paused;
             }
         }
-    }
+  }
 
-    @keyframes carousel {
-        from {
-            transform: translateX(0%);
-        }
-        to {
-            transform: translateX(-100%);
-        }
+  @keyframes rolar {
+    from {
+      transform: translateX(0);
     }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* pausa ao passar o mouse (opcional) */
+  
 }
