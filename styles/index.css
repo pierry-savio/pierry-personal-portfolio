@@ -405,9 +405,7 @@ header p {
 
 main section.home {
   background-image: url("../../img/background/background-main.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover;
   padding: 0px 20px 100px 20px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -934,6 +932,56 @@ section.projects div.projects-container div.project.hide-right {
   }
   section.projects div.projects-container div.project.hide-right {
     transform: translateX(200%) scale(0.75);
+  }
+}
+
+section.techs {
+  min-height: 100vh;
+  background-image: url("../../img/background/background2.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 100px 40px 100px 40px;
+}
+section.techs h2 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.techs h2 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
+section.techs h2 {
+  margin-bottom: 30px;
+}
+section.techs div.carousel {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.techs div.carousel div.techs-container {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  animation: carousel 10s linear infinite;
+}
+section.techs div.carousel div.techs-container img {
+  padding: 0 50px 0 50px;
+}
+@keyframes carousel {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 

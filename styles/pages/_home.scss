@@ -8,7 +8,12 @@
 
 main{
     section.home{
-        @include mainBackground();
+        //@include mainBackground();
+       
+        background-image: url("../../img/background/background-main.png");
+        
+        background-size: cover;
+
         padding: 0px 20px 100px 20px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
