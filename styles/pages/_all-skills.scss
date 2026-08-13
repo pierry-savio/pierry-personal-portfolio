@@ -1,0 +1,33 @@
+//Imports
+    @use '../animations/animations'         as *;
+    @use '../components/buttons'            as *;
+    @use '../components/fonts'              as *;
+    @use '../variables-functions/colors'    as *;
+    @use '../variables-functions/functions' as *;
+    @use '../variables-functions/variables' as *;
+
+section.all-techs{
+
+    min-height: 100vh;
+    @include background2();
+    padding: 100px 20px 100px 20px;
+
+    h2{
+        @include text-title();
+        margin-bottom: 60px;
+    }
+
+    div.techs-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        div.tech{
+            img{
+                width: 80px;
+            }
+            p{
+
+            }
+        }
+    }
+}

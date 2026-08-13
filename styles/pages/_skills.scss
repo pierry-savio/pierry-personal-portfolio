@@ -15,11 +15,12 @@ section.techs{
     h2{
         @include text-title();
         padding-left: 20px;
+        text-align: center;
     }
 
     div.carrossel-container {
         width: 100%;
-        padding: 60px 0 0 0;
+        padding: 70px 0 70px 0;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -30,6 +31,7 @@ section.techs{
             top: 0;
             right: 50px;
             @include text-paragraph();
+            cursor: pointer;
             transition: 0.2s ease;
 
             &:hover{
@@ -37,17 +39,14 @@ section.techs{
             }
         }
 
-        
-
-
         div.carrossel-track {
             display: flex;
             width: max-content;
             animation: rolar 15s linear infinite;
-
+            
             img {
-                height: 125px;
-                margin-right: 80px;
+                height: 100px;
+                margin-right: 50px;
                 border-radius: 8px;
                 flex-shrink: 0;
                 cursor: pointer;
@@ -162,13 +161,18 @@ div.popup-background.closed{
     }
 }
 
-/*
+@media (orientation: landscape){
+    section.techs{
 
-<div class="popup-background">
-    <div class="popup-container">
-        <img src="../img/skills/css.png" alt="Tech image"> 
-        <h2>CSS</h2>
-        <p>Ferramenta de estilização para páginas web</p>  
-    </div>    
-</div>
-*/
+        div.carrossel-container {
+
+            div.carrossel-track {
+                
+                img {
+                    height: 150px;
+                    margin-right: 70px;
+                }
+            }
+        }
+    }
+}

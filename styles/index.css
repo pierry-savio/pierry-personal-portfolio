@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @keyframes floating {
   0% {
     transform: scale(1) translateX(-50%);
@@ -962,10 +961,11 @@ section.techs h2 {
 }
 section.techs h2 {
   padding-left: 20px;
+  text-align: center;
 }
 section.techs div.carrossel-container {
   width: 100%;
-  padding: 60px 0 0 0;
+  padding: 70px 0 70px 0;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -981,6 +981,7 @@ section.techs div.carrossel-container p {
   font-style: normal;
   color: #b2b2b2;
   text-align: left;
+  cursor: pointer;
   transition: 0.2s ease;
 }
 section.techs div.carrossel-container p:hover {
@@ -993,8 +994,8 @@ section.techs div.carrossel-container div.carrossel-track {
   animation: rolar 15s linear infinite;
 }
 section.techs div.carrossel-container div.carrossel-track img {
-  height: 125px;
-  margin-right: 80px;
+  height: 100px;
+  margin-right: 50px;
   border-radius: 8px;
   flex-shrink: 0;
   cursor: pointer;
@@ -1113,16 +1114,47 @@ div.popup-background.closed div.popup-container {
   transform: scale(0.5);
 }
 
-/*
-
-<div class="popup-background">
-    <div class="popup-container">
-        <img src="../img/skills/css.png" alt="Tech image"> 
-        <h2>CSS</h2>
-        <p>Ferramenta de estilização para páginas web</p>  
-    </div>    
-</div>
-*/
+@media (orientation: landscape) {
+  section.techs div.carrossel-container div.carrossel-track img {
+    height: 150px;
+    margin-right: 70px;
+  }
+}
+section.all-techs {
+  min-height: 100vh;
+  background-image: url("../../img/background/background2.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 100px 20px 100px 20px;
+}
+section.all-techs h2 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.all-techs h2 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
+section.all-techs h2 {
+  margin-bottom: 60px;
+}
+section.all-techs div.techs-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+section.all-techs div.techs-container div.tech img {
+  width: 80px;
+}
 section.custom-tictactoe {
   min-height: 100vh;
   background: linear-gradient(180deg, #160015, #221c22);

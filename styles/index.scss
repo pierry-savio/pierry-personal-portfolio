@@ -18,12 +18,13 @@
     @use './header' as *;
 
     //Pages
-    @use './pages/home'      as *;
-    @use './pages/about-me'  as *;
-    @use './pages/projects'  as *;
-    @use './pages/skills'    as *;
-    @use './pages/education' as *;
-    @use './pages/contact'   as *;
+    @use './pages/home'       as *;
+    @use './pages/about-me'   as *;
+    @use './pages/projects'   as *;
+    @use './pages/skills'     as *;
+    @use './pages/all-skills' as *;
+    @use './pages/education'  as *;
+    @use './pages/contact'    as *;
         //Projects
         @use './pages/projects/custom-tictactoe' as *;
         @use './pages/projects/luciana-psico' as *;

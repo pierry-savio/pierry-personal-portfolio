@@ -20,17 +20,11 @@
         @view-transition {
             navigation: auto;
         }
+
         ::view-transition-group(page-content){
             animation-duration: 0.5s;
             animation-timing-function: ease;
         }
-
-        /* ::view-transition-old(page-content){
-            animation-name: slide-up-out;
-        }
-        ::view-transition-new(page-content){
-            animation-name: slide-up-in;
-        } */
 
         main{
             view-transition-name: page-content;
@@ -47,23 +41,7 @@
         button.open-nav-button{
             view-transition-name: nav-button;
         }
-
-        @keyframes slide-up-out {
-            from{
-                transform: translateY(0);
-            }
-            to{
-                transform: translateY(-100vh);
-            }
-        }
-        @keyframes slide-up-in {
-            from{
-                transform: translateY(100vh);
-            }
-            to{
-                transform: translateY(0vh);
-            }
-        }
+        
     </style>
 </head>
 
@@ -75,49 +53,57 @@
     </header>
     
     <main>
-        <section class="techs">
+        <section class="all-techs">
             <h2 class="title">TECNOLOGIAS</h2>
 
-            
-            <div class="carrossel-container">
-                <a href="./all-skills.html">
-                    <p>Ver tudo</p>
-                </a>
-                <div class="carrossel-track">
-                    <!-- imagens originais -->
+            <div class="techs-container">
+                <div class="tech">
                     <img src="../img/skills/css.png"        id="css_icon"         style="view-transition-name: css">
-                    <img src="../img/skills/figma.png"      id="figma_icon"       style="view-transition-name: figma">
-                    <img src="../img/skills/game maker.png" id="game_maker_icon"  style="view-transition-name: game-maker">
-                    <img src="../img/skills/git.png"        id="git_icon"         style="view-transition-name: git">
-                    <img src="../img/skills/github.png"     id="github_icon"      style="view-transition-name: github">
-                    <img src="../img/skills/html.png"       id="html_icon"        style="view-transition-name: html">
-                    <img src="../img/skills/java.png"       id="java_icon"        style="view-transition-name: java">
-                    <img src="../img/skills/js.png"         id="js_icon"          style="view-transition-name: js">
-                    <img src="../img/skills/sass.png"       id="sass_icon"        style="view-transition-name: sass">
+                    <p>CSS</p>
+                </div>
 
-                    <!-- as mesmas imagens repetidas, para o loop ficar contínuo -->
-                    <img src="../img/skills/css.png"        id="css_icon2"         >
-                    <img src="../img/skills/figma.png"      id="figma_icon2"       >
-                    <img src="../img/skills/game maker.png" id="game_maker_icon2"  >
-                    <img src="../img/skills/git.png"        id="git_icon2"         >
-                    <img src="../img/skills/github.png"     id="github_icon2"      >
-                    <img src="../img/skills/html.png"       id="html_icon2"        >
-                    <img src="../img/skills/java.png"       id="java_icon2"        >
-                    <img src="../img/skills/js.png"         id="js_icon2"          >
-                    <img src="../img/skills/sass.png"       id="sass_icon2"        >
+                <div class="tech">
+                    <img src="../img/skills/figma.png"      id="figma_icon"       style="view-transition-name: figma">
+                    <p>Figma</p>
+                </div>
+
+                <div class="tech">
+                    <img src="../img/skills/game maker.png" id="game_maker_icon"  style="view-transition-name: game-maker">
+                    <p>Game Maker</p>
+                </div>
+
+                <div class="tech">
+                    <img src="../img/skills/git.png"        id="git_icon"         style="view-transition-name: git">
+                    <p>Git</p>
+                </div>
+
+                <div class="tech">
+                    <img src="../img/skills/github.png"     id="github_icon"      style="view-transition-name: github">
+                    <p>Github</p>
+                </div>
+
+                <div class="tech">
+                    <img src="../img/skills/html.png"       id="html_icon"        style="view-transition-name: html">
+                    <p>HTML</p>
+                </div>
+
+                <div class="tech">
+                    <img src="../img/skills/java.png"       id="java_icon"        style="view-transition-name: java">
+                    <p>Java</p>
+                </div>
+
+                <div class="tech">
+                    <img src="../img/skills/js.png"         id="js_icon"          style="view-transition-name: js">
+                    <p>Javascript</p>
+                </div>
+
+                <div class="tech">
+                    <img src="../img/skills/sass.png"       id="sass_icon"        style="view-transition-name: sass">   
+                    <p>SASS</p>
                 </div>
             </div>
         </section>
     </main>
-
-    <div class="popup-background closed" id="popup_background">
-        <div class="popup-container">
-            <button class="close-button" id="close_button">X</button>
-            <img src="../img/skills/css.png" alt="Tech image" id="popup_image"> 
-            <h2 id="popup_title">CSS</h2>
-            <p id="popup_paragraph">Ferramenta de estilização para páginas web</p>  
-        </div>    
-    </div>
 
     <!--NAV MOBILE-->
     <button class="open-nav-button closed" id="open_nav_mobile_button">
@@ -184,7 +170,6 @@
             <img src="../img/icons/sailling.png" alt="Navegação">
         </button>
     </footer>
-    <script src="../js/skills.js"></script>
     <script src="../script.js"></script>
 </body>
 </html>
