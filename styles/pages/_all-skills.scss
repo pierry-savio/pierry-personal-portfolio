@@ -10,24 +10,44 @@ section.all-techs{
 
     min-height: 100vh;
     @include background2();
-    padding: 100px 20px 100px 20px;
+    padding: 100px 40px 100px 40px;
 
     h2{
         @include text-title();
-        margin-bottom: 60px;
+        margin-bottom: 80px;
+        text-align: center;
     }
 
     div.techs-container{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        place-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0px;
+        max-width: 100%;
+
         div.tech{
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
             img{
-                width: 80px;
+                
             }
             p{
-
+                @include text-paragraph();
+                text-align: center;
+                font-size: 25px;
             }
+        }
+    }
+}
+
+@media (orientation: landscape){
+    section.all-techs{
+        div.techs-container{
+            grid-template-columns: repeat(3, 1fr);
+            gap: 150px;
         }
     }
 }

@@ -1126,7 +1126,7 @@ section.all-techs {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 100px 20px 100px 20px;
+  padding: 100px 40px 100px 40px;
 }
 section.all-techs h2 {
   font-family: "Source Code Pro", monospace;
@@ -1145,15 +1145,39 @@ section.all-techs h2 {
   }
 }
 section.all-techs h2 {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
+  text-align: center;
 }
 section.all-techs div.techs-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  place-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0px;
+  max-width: 100%;
 }
-section.all-techs div.techs-container div.tech img {
-  width: 80px;
+section.all-techs div.techs-container div.tech {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+section.all-techs div.techs-container div.tech p {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  text-align: center;
+  font-size: 25px;
+}
+
+@media (orientation: landscape) {
+  section.all-techs div.techs-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 150px;
+  }
 }
 section.custom-tictactoe {
   min-height: 100vh;
