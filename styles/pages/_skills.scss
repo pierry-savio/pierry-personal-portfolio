@@ -14,15 +14,32 @@ section.techs{
 
     h2{
         @include text-title();
-        margin-bottom: 30px;
-        margin-left: 40px;
+        padding-left: 20px;
     }
 
     div.carrossel-container {
-    width: 100%;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
+        width: 100%;
+        position: relative;
+        padding: 60px 0 0 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        overflow: hidden;
+
+        p{
+            position: absolute;
+            top: 0;
+            right: 50px;
+            @include text-paragraph();
+            transition: 0.2s ease;
+
+            &:hover{
+                color: white;
+            }
+        }
+
+        
+
 
         div.carrossel-track {
             display: flex;

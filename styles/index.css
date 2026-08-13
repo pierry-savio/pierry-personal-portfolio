@@ -961,14 +961,31 @@ section.techs h2 {
   }
 }
 section.techs h2 {
-  margin-bottom: 30px;
-  margin-left: 40px;
+  padding-left: 20px;
 }
 section.techs div.carrossel-container {
   width: 100%;
-  position: fixed;
+  position: relative;
+  padding: 60px 0 0 0;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  overflow: hidden;
+}
+section.techs div.carrossel-container p {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  transition: 0.2s ease;
+}
+section.techs div.carrossel-container p:hover {
+  color: white;
 }
 section.techs div.carrossel-container div.carrossel-track {
   display: flex;
