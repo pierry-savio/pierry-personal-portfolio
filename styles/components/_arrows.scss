@@ -1,0 +1,18 @@
+@mixin return-arrow(){
+    position: absolute;
+    left: 15px;
+    opacity: 0.75;
+    transition: 0.3s ease;
+
+    img{
+        width: 30px;
+    }
+
+    &:hover{
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    &:active{
+        transform: scale(0.95)
+    }
+}

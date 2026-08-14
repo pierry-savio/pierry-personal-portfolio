@@ -2,6 +2,7 @@
     @use '../animations/animations'         as *;
     @use '../components/buttons'            as *;
     @use '../components/fonts'              as *;
+    @use '../components/arrows'       as *;
     @use '../variables-functions/colors'    as *;
     @use '../variables-functions/functions' as *;
     @use '../variables-functions/variables' as *;
@@ -12,14 +13,39 @@ section.all-techs{
     @include background2();
     padding: 100px 40px 100px 40px;
 
-    h2{
-        @include text-title();
+    div.title-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        a.return-button{
+            opacity: 0.75;
+            text-decoration: none;
+            text-align: center;
+            text-justify: center;
+            transition: 0.3s ease;
+
+            img{
+                width: 30px;
+            }
+
+            &:hover{
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            &:active{
+                transform: scale(0.95)
+            }
+            
+        }
+        h2{
+            @include text-title();
+            text-align: center;
+        }
         margin-bottom: 80px;
-        text-align: center;
     }
 
     div.techs-container{
-       
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         max-width: 800px;

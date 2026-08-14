@@ -3,6 +3,7 @@
     @use '../../components/buttons'            as *;
     @use '../../components/fonts'              as *;
     @use '../../components/lines'              as *;
+    @use '../../components/arrows'             as *;
     @use '../../variables-functions/colors'    as *;
     @use '../../variables-functions/functions' as *;
     @use '../../variables-functions/variables' as *;
@@ -39,22 +40,7 @@ section.picode{
             align-items: center;
 
             a.return-arrow{
-                position: absolute;
-                left: 15px;
-                opacity: 0.75;
-                transition: 0.3s ease;
-
-                img{
-                    width: 30px;
-                }
-
-                &:hover{
-                    transform: scale(1.1);
-                    opacity: 1;
-                }
-                &:active{
-                    transform: scale(0.95)
-                }
+                @include return-arrow();
             }
 
             h2{

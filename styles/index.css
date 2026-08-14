@@ -1152,7 +1152,30 @@ section.all-techs {
   background-position: center;
   padding: 100px 40px 100px 40px;
 }
-section.all-techs h2 {
+section.all-techs div.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+section.all-techs div.title-container a.return-button {
+  opacity: 0.75;
+  text-decoration: none;
+  text-align: center;
+  text-justify: center;
+  transition: 0.3s ease;
+}
+section.all-techs div.title-container a.return-button img {
+  width: 30px;
+}
+section.all-techs div.title-container a.return-button:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+section.all-techs div.title-container a.return-button:active {
+  transform: scale(0.95);
+}
+section.all-techs div.title-container h2 {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -1162,15 +1185,17 @@ section.all-techs h2 {
   font-weight: 900;
 }
 @media (orientation: landscape) {
-  section.all-techs h2 {
+  section.all-techs div.title-container h2 {
     font-size: 80px;
     letter-spacing: 10px;
     line-height: 65px;
   }
 }
-section.all-techs h2 {
-  margin-bottom: 80px;
+section.all-techs div.title-container h2 {
   text-align: center;
+}
+section.all-techs div.title-container {
+  margin-bottom: 80px;
 }
 section.all-techs div.techs-container {
   display: grid;
