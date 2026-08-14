@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pierry Savio - Education</title>
-    
+
     <!--CSS LINK-->
     <link rel="stylesheet" href="../styles/index.css">
 
@@ -14,53 +15,63 @@
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
 
     <style>
         @view-transition {
             navigation: auto;
         }
-        ::view-transition-group(page-content){
+
+        ::view-transition-group(page-content) {
             animation-duration: 0.5s;
             animation-timing-function: ease;
         }
 
-        ::view-transition-old(page-content){
+        ::view-transition-old(page-content) {
             animation-name: slide-up-out;
         }
-        ::view-transition-new(page-content){
+
+        ::view-transition-new(page-content) {
             animation-name: slide-up-in;
         }
 
-        main{
+        main {
             view-transition-name: page-content;
         }
-        header{
+
+        header {
             view-transition-name: header;
         }
-        footer{
+
+        footer {
             view-transition-name: footer;
         }
-        footer{
+
+        footer {
             view-transition-name: footer;
         }
-        button.open-nav-button{
+
+        button.open-nav-button {
             view-transition-name: nav-button;
         }
 
         @keyframes slide-up-out {
-            from{
+            from {
                 transform: translateY(0);
             }
-            to{
+
+            to {
                 transform: translateY(-100vh);
             }
         }
+
         @keyframes slide-up-in {
-            from{
+            from {
                 transform: translateY(100vh);
             }
-            to{
+
+            to {
                 transform: translateY(0vh);
             }
         }
@@ -73,13 +84,32 @@
         <div class="scroll-progress-line"></div>
         <p><span class="text-highlight">PIERRY SAVIO</span> - DESENVOLVEDOR WEB</p>
     </header>
-    
+
     <main>
-        <section class="projects" id="projects">
+        <section class="education" id="education">
             <h2 class="title">EDUCAÇÃO</h2>
+
+            <div class="course-container">
+                <div class="course">
+                    <div class="course-header">
+                        <p>code</p>
+                        <p>- cursando</p>
+                    </div>
+                    <img src="../img/education/fatec-preview.jpg" alt="fatec" class="course-img">
+                    <div class="course-title">
+                        <img src="../img/education/fatec.jpg" alt="">
+                        <h3>fatec</h3>
+                    </div>
+                    <ul>
+                        <li>Análise e Desenvolvimento de Sistemas</li>
+                        <li>FATEC Zona Sul</li>
+                        <li>02/2026</li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
-    
+
 
     <!--NAV MOBILE-->
     <button class="open-nav-button closed" id="open_nav_mobile_button">
@@ -148,4 +178,5 @@
     </footer>
     <script src="../script.js"></script>
 </body>
+
 </html>

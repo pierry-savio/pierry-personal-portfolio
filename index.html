@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pierry Savio</title>
-    
+
     <!--CSS LINK-->
     <link rel="stylesheet" href="./styles/index.css">
 
@@ -14,53 +15,63 @@
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
 
     <style>
         @view-transition {
             navigation: auto;
         }
-        ::view-transition-group(page-content){
+
+        ::view-transition-group(page-content) {
             animation-duration: 0.5s;
             animation-timing-function: ease;
         }
 
-        ::view-transition-old(page-content){
+        ::view-transition-old(page-content) {
             animation-name: slide-up-out;
         }
-        ::view-transition-new(page-content){
+
+        ::view-transition-new(page-content) {
             animation-name: slide-up-in;
         }
 
-        main{
+        main {
             view-transition-name: page-content;
         }
-        header{
+
+        header {
             view-transition-name: header;
         }
-        footer{
+
+        footer {
             view-transition-name: footer;
         }
-        footer{
+
+        footer {
             view-transition-name: footer;
         }
-        button.open-nav-button{
+
+        button.open-nav-button {
             view-transition-name: nav-button;
         }
 
         @keyframes slide-up-out {
-            from{
+            from {
                 transform: translateY(0);
             }
-            to{
+
+            to {
                 transform: translateY(-100vh);
             }
         }
+
         @keyframes slide-up-in {
-            from{
+            from {
                 transform: translateY(100vh);
             }
-            to{
+
+            to {
                 transform: translateY(0vh);
             }
         }
@@ -73,7 +84,7 @@
         <div class="scroll-progress-line"></div>
         <p><span class="text-highlight">PIERRY SAVIO</span> - DESENVOLVEDOR WEB</p>
     </header>
-    
+
     <main>
         <section class="home" id="home">
             <div class="hacker-wrapper">
@@ -85,7 +96,8 @@
             <div class="part2">
                 <div class="title-paragraph-container">
                     <h1>PIERRY SAVIO</h1>
-                    <p>Construo aplicações web e soluções modernas, ajudando você a vender mais e a se destacar online.</p>
+                    <p>Construo aplicações web e soluções modernas, ajudando você a vender mais e a se destacar online.
+                    </p>
                 </div>
 
                 <div class="buttons-container">
@@ -98,7 +110,7 @@
                     <a href="" class="curriculum">Veja meu currículo</a>
                 </div>
             </div>
-            
+
         </section>
 
         <section class="about-me" id="about_me">
@@ -108,9 +120,10 @@
 
                 <div class="item left">
                     <img src="./img/about-me/pierry1.png" alt="Pierry">
-                    <p>Sou Pierry Savio, desenvolvedor web freelancer com anos de experiência resolvendo problemas reais de negócio com código.</p>
+                    <p>Sou Pierry Savio, desenvolvedor web freelancer com anos de experiência resolvendo problemas reais
+                        de negócio com código.</p>
                 </div>
-               
+
                 <div class="item right">
                     <img src="./img/about-me/pequeno.png" alt="Mini eu">
                     <p>Desde pequeno sou curioso e me interesso por programação e tecnologia.</p>
@@ -120,7 +133,8 @@
 
                 <div class="item left">
                     <img src="./img/about-me/scratch.png" alt="Scratch">
-                    <p>Comecei criando joguinhos bobos no Scratch e hoje crio aplicações reais que resolvem problemas.</p>
+                    <p>Comecei criando joguinhos bobos no Scratch e hoje crio aplicações reais que resolvem problemas.
+                    </p>
                 </div>
 
                 <div class="item right">
@@ -136,7 +150,7 @@
             </div>
         </section>
     </main>
-    
+
 
     <!--NAV MOBILE-->
     <button class="open-nav-button closed" id="open_nav_mobile_button">
@@ -205,4 +219,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>

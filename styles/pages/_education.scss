@@ -1,7 +1,72 @@
 //Imports
-    @use '../animations/animations'         as *;
-    @use '../components/buttons'            as *;
-    @use '../components/fonts'              as *;
-    @use '../variables-functions/colors'    as *;
-    @use '../variables-functions/functions' as *;
-    @use '../variables-functions/variables' as *;
+@use '../animations/animations' as *;
+@use '../components/buttons' as *;
+@use '../components/fonts' as *;
+@use '../variables-functions/colors' as *;
+@use '../variables-functions/functions' as *;
+@use '../variables-functions/variables' as *;
+
+section.education {
+
+    min-height: 100vh;
+    background-color: $background;
+    padding: 49px 20px 100px 20px;
+
+    h2 {
+        @include text-title();
+        margin-top: 50px;
+
+    }
+
+    div.course-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+
+        div.course {
+
+            padding: 10px;
+            background-color: $gray;
+
+            div.course-header {
+                p {}
+            }
+
+            img.course-img {
+                width: 100%;
+            }
+
+            div.course-title {
+                img {}
+
+                h3 {}
+            }
+
+            ul {
+                li {}
+            }
+        }
+    }
+}
+
+// <section class="education" id="education">
+//             <h2 class="title">EDUCAÇÃO</h2>
+//             <div class="course-container">
+//                 <div class="course">
+//                     <div class="course-header">
+//                         <p>code</p>
+//                         <p>- cursando</p>
+//                     </div>
+//                     <img src="../img/education/fatec-preview.jpg" alt="fatec">
+//                     <div class="course-title">
+//                         <img src="../img/education/fatec.jpg" alt="">
+//                         <h3>fatec</h3>
+//                     </div>
+//                     <ul>
+//                         <li>Análise e Desenvolvimento de Sistemas</li>
+//                         <li>FATEC Zona Sul</li>
+//                         <li>02/2026</li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </section>
