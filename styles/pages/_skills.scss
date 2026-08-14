@@ -16,33 +16,43 @@ section.techs{
         @include text-title();
         padding-left: 20px;
         text-align: center;
+        margin-bottom: 100px;
     }
 
-    div.carrossel-container {
-        width: 100%;
-        padding: 70px 0 70px 0;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        overflow: hidden;
+    a{
+            text-decoration: none;
+            p.see-all{
+                //position: absolute;
+                @include text-paragraph();
+                cursor: pointer;
+                text-align: right;
+                transition: 0.2s ease;
+                margin-right: 40px;
 
-        p{
-            position: absolute;
-            top: 0;
-            right: 50px;
-            @include text-paragraph();
-            cursor: pointer;
-            transition: 0.2s ease;
-
-            &:hover{
-                color: white;
+                &:hover{
+                    color: white;
+                }
             }
+        }
+    div.carrossel-container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        width: 100%;
+        padding: 0px 0 70px 0;
+        overflow: hidden;
+        position: relative;
+
+        h3{
+            @include text-title();
+            font-size: 30px;
+            margin-left: 40px;
         }
 
         div.carrossel-track {
             display: flex;
             width: max-content;
-            animation: rolar 15s linear infinite;
+            animation: carousel 15s linear infinite;
             
             img {
                 height: 100px;
@@ -54,7 +64,6 @@ section.techs{
 
                 &:hover{
                     transform: scale(1.15);
-                    box-shadow: 0 0 50px 0 $text-highlight;
                 }
             }
 
@@ -64,7 +73,7 @@ section.techs{
         }
   }
 
-  @keyframes rolar {
+  @keyframes carousel {
     from {
       transform: translateX(0);
     }
