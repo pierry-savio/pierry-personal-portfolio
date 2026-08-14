@@ -19,25 +19,34 @@ section.all-techs{
     }
 
     div.techs-container{
+       
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 0px;
-        max-width: 100%;
-
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+        justify-self: center;
+        gap: 60px;
         div.tech{
-            border: 1px solid red;
+
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 20px;
+            transition: 0.1s ease;
+
             img{
-                
+                width: 100%;
+                border-radius: 10px;
+                transition: 0.3s ease;
             }
             p{
                 @include text-paragraph();
-                text-align: center;
-                font-size: 25px;
+            }
+
+            &:hover{
+                img{
+                    transform: rotateY(20deg) rotateX(20deg);
+                }
             }
         }
     }
@@ -46,8 +55,7 @@ section.all-techs{
 @media (orientation: landscape){
     section.all-techs{
         div.techs-container{
-            grid-template-columns: repeat(3, 1fr);
-            gap: 150px;
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 }

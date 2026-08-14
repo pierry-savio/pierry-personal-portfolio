@@ -188,7 +188,7 @@ button.open-nav-button.closed {
 }
 
 footer.footer-mobile {
-  z-index: 100;
+  z-index: 999;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -1095,6 +1095,7 @@ div.popup-background div.popup-container button.close-button:active {
 }
 div.popup-background div.popup-container img {
   width: 50%;
+  border-radius: 10px;
   transition: 0.3s ease;
 }
 div.popup-background div.popup-container h2 {
@@ -1173,17 +1174,23 @@ section.all-techs h2 {
 }
 section.all-techs div.techs-container {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 0px;
-  max-width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  justify-self: center;
+  gap: 60px;
 }
 section.all-techs div.techs-container div.tech {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  transition: 0.1s ease;
+}
+section.all-techs div.techs-container div.tech img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s ease;
 }
 section.all-techs div.techs-container div.tech p {
   font-family: "Source Code Pro", monospace;
@@ -1192,14 +1199,14 @@ section.all-techs div.techs-container div.tech p {
   font-style: normal;
   color: #b2b2b2;
   text-align: left;
-  text-align: center;
-  font-size: 25px;
+}
+section.all-techs div.techs-container div.tech:hover img {
+  transform: rotateY(20deg) rotateX(20deg);
 }
 
 @media (orientation: landscape) {
   section.all-techs div.techs-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 150px;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 section.custom-tictactoe {

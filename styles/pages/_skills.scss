@@ -141,8 +141,8 @@ div.popup-background{
 
         img{
             width: 50%;
+            border-radius: 10px;
             transition: 0.3s ease;
-
         }
         h2{
             @include text-title();
