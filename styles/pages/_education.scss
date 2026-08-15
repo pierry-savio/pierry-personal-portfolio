@@ -15,35 +15,141 @@ section.education {
     h2 {
         @include text-title();
         margin-top: 50px;
-
+        margin-bottom: 50px;
     }
 
-    div.course-container {
+    div.courses-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         place-items: center;
+        width: 100%;
+        gap: 0px;
+
+        h3.course-title {
+            @include text-title();
+            font-size: 30px;
+            background-color: $gray;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            text-justify: center;
+            padding: 10px;
+            border-radius: 80px;
+            border-bottom: 2px solid rgba($text-highlight, 1);
+            box-shadow: 0px 5px 14px 0 rgba($text-highlight, 0.25);
+        }
+
+        div.vertical-line {
+            width: 1px;
+            height: 30px;
+            background-color: $text-highlight;
+            box-shadow: 0 0 14px 0 rgba($text-highlight, 1);
+        }
 
         div.course {
+            width: 100%;
+            max-width: 800px;
+            border: 1px solid $line;
+            border-top: 2px solid $text-highlight;
+            box-shadow: 0px -10px 14px 0 rgba($text-highlight, 0.25);
 
-            padding: 10px;
             background-color: $gray;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s ease;
 
             div.course-header {
-                p {}
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                text-justify: center;
+                padding: 6px 20px 6px 20px;
+                background-color: $gray-light;
+
+                p {
+                    @include text-paragraph();
+                    font-size: 12px;
+                }
             }
 
-            img.course-img {
-                width: 100%;
+            div.course-content {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+                transition: 0.3s ease;
+
+                img.course-img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+
+                img.arrow-down {
+                    width: 40px;
+                    transition: 0.3s ease;
+                    transform: rotate(180deg);
+                    justify-self: center;
+                    align-self: center;
+
+                }
+
+                div.text-container {
+                    max-height: 800px;
+                    overflow: hidden;
+                    transition: 0.3s ease;
+
+                    div.time-container {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        margin-bottom: 10px;
+                        gap: 20px;
+
+                        p {
+                            color: $text;
+                            text-align: center;
+                            text-justify: center;
+                        }
+
+                        p.date {
+                            @include text-paragraph();
+                            background-color: rgba($text-highlight, 0.25);
+                            border-radius: 4px;
+                            text-align: center;
+                            text-justify: center;
+                        }
+                    }
+
+                    ul {
+                        padding: 0 0 0 20px;
+
+                        li {
+                            @include text-paragraph();
+                        }
+                    }
+                }
             }
 
-            div.course-title {
-                img {}
-
-                h3 {}
+            &:hover {
+                transform: scale(1.04);
             }
 
-            ul {
-                li {}
+            &:active {
+                transform: scale(1);
+            }
+        }
+
+        div.course.closed {
+
+            div.course-content {
+                padding: 20px 20px 0 20px;
+
+                img.arrow-down {
+                    transform: rotate(0deg);
+                }
+
+                div.text-container {
+                    max-height: 0px;
+                }
             }
         }
     }

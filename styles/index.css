@@ -1257,19 +1257,150 @@ section.education h2 {
 }
 section.education h2 {
   margin-top: 50px;
+  margin-bottom: 50px;
 }
-section.education div.course-container {
+section.education div.courses-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   place-items: center;
-}
-section.education div.course-container div.course {
-  padding: 10px;
-  background-color: #212121;
-}
-section.education div.course-container div.course img.course-img {
   width: 100%;
+  gap: 0px;
 }
+section.education div.courses-container h3.course-title {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.education div.courses-container h3.course-title {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
+section.education div.courses-container h3.course-title {
+  font-size: 30px;
+  background-color: #212121;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  text-justify: center;
+  padding: 10px;
+  border-radius: 80px;
+  border-bottom: 2px solid #ff00cc;
+  box-shadow: 0px 5px 14px 0 rgba(255, 0, 204, 0.25);
+}
+section.education div.courses-container div.vertical-line {
+  width: 1px;
+  height: 30px;
+  background-color: #ff00cc;
+  box-shadow: 0 0 14px 0 #ff00cc;
+}
+section.education div.courses-container div.course {
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #5e5e5e;
+  border-top: 2px solid #ff00cc;
+  box-shadow: 0px -10px 14px 0 rgba(255, 0, 204, 0.25);
+  background-color: #212121;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+section.education div.courses-container div.course div.course-header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  text-justify: center;
+  padding: 6px 20px 6px 20px;
+  background-color: #2d2d2d;
+}
+section.education div.courses-container div.course div.course-header p {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  font-size: 12px;
+}
+section.education div.courses-container div.course div.course-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  transition: 0.3s ease;
+}
+section.education div.courses-container div.course div.course-content img.course-img {
+  width: 100%;
+  border-radius: 10px;
+}
+section.education div.courses-container div.course div.course-content img.arrow-down {
+  width: 40px;
+  transition: 0.3s ease;
+  transform: rotate(180deg);
+  justify-self: center;
+  align-self: center;
+}
+section.education div.courses-container div.course div.course-content div.text-container {
+  max-height: 800px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+section.education div.courses-container div.course div.course-content div.text-container div.time-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 10px;
+  gap: 20px;
+}
+section.education div.courses-container div.course div.course-content div.text-container div.time-container p {
+  color: #b2b2b2;
+  text-align: center;
+  text-justify: center;
+}
+section.education div.courses-container div.course div.course-content div.text-container div.time-container p.date {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  background-color: rgba(255, 0, 204, 0.25);
+  border-radius: 4px;
+  text-align: center;
+  text-justify: center;
+}
+section.education div.courses-container div.course div.course-content div.text-container ul {
+  padding: 0 0 0 20px;
+}
+section.education div.courses-container div.course div.course-content div.text-container ul li {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+}
+section.education div.courses-container div.course:hover {
+  transform: scale(1.04);
+}
+section.education div.courses-container div.course:active {
+  transform: scale(1);
+}
+section.education div.courses-container div.course.closed div.course-content {
+  padding: 20px 20px 0 20px;
+}
+section.education div.courses-container div.course.closed div.course-content img.arrow-down {
+  transform: rotate(0deg);
+}
+section.education div.courses-container div.course.closed div.course-content div.text-container {
+  max-height: 0px;
+}
+
 section.custom-tictactoe {
   min-height: 100vh;
   background: linear-gradient(180deg, #160015, #221c22);
