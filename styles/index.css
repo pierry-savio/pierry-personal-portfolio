@@ -1470,8 +1470,9 @@ section.contact div.buttons-container a.button {
   transition: 0.3s ease;
 }
 section.contact div.buttons-container a.button img {
-  width: 80px;
+  width: 60px;
   border-right: 1px solid #5e5e5e;
+  transition: 0.3s ease;
 }
 section.contact div.buttons-container a.button p {
   font-family: "Source Code Pro", monospace;
@@ -1483,7 +1484,11 @@ section.contact div.buttons-container a.button p {
 }
 section.contact div.buttons-container a.button:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.295);
+  box-shadow: 0 10px 10px 0 rgba(255, 0, 204, 0.2);
+  border: 1px solid white;
+}
+section.contact div.buttons-container a.button:hover img {
+  border-right: 1px solid white;
 }
 section.contact h3 {
   font-family: "Source Code Pro", monospace;

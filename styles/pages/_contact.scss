@@ -1,136 +1,149 @@
 //Imports
-    @use '../animations/animations'         as *;
-    @use '../components/buttons'            as *;
-    @use '../components/fonts'              as *;
-    @use '../variables-functions/colors'    as *;
-    @use '../variables-functions/functions' as *;
-    @use '../variables-functions/variables' as *;
+@use '../animations/animations' as *;
+@use '../components/buttons' as *;
+@use '../components/fonts' as *;
+@use '../variables-functions/colors' as *;
+@use '../variables-functions/functions' as *;
+@use '../variables-functions/variables' as *;
 
-    section.contact{
-        padding: 100px 40px 100px 40px;
-        min-height: 100vh;
-        background: $background-gradient;
+section.contact {
+    padding: 100px 40px 100px 40px;
+    min-height: 100vh;
+    background: $background-gradient;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    div.section-title-container {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
 
-        div.section-title-container{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            h2{
-                @include text-title();
-                text-align: center;
-            }
-            p{
-                @include text-paragraph();
-                text-align: center;
-            }
-        }
-        
-        div.buttons-container{
-
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 100%;
-            max-width: 800px;
-            justify-self: center;
-            align-self: center;
-            margin-bottom: 30px;
-
-            a.button{
-                text-decoration: none;
-                background-color: $gray;
-                display: flex;
-                justify-content: left;
-                align-items: center;
-                gap: 20px;
-                border: 1px solid $line;
-                border-radius: 6px;
-                overflow: hidden;
-                transition: 0.3s ease;
-                img{
-                    width: 80px;
-                    border-right: 1px solid $line;
-                }
-                p{
-                    @include text-paragraph();
-                }
-
-                &:hover{
-                    transform: translateY(-5px);
-                    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.295);
-                }
-            }
-        }
-
-        h3{
+        h2 {
             @include text-title();
-            font-size: 25px;
             text-align: center;
         }
 
-        form{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: 100%;
-            max-width: 800px;
-            justify-self: center;
-            align-self: center;
-            input{
-                background-color: transparent;
-                border: 1px solid $line;
-                padding: 20px;
-                border-radius: 6px;
-                color: white;
-                font-size: 16px;
-            }
-            textarea{
-                background-color: transparent;
-                border: 1px solid $line;
-                padding: 20px;
-                border-radius: 6px;
-                color: white;
-                font-size: 16px;
-                min-height: 200px;
-            }
-            button{
-                padding: 20px;
-                font-size: 16px;
-                border-radius: 6px;
-                cursor: pointer;
-                letter-spacing: 5px;
-                border: none;
-                border-radius: 6px;
-                padding: 12px;
-                @include text-main();
-                width: 100%;
-                box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.2);
-                background: $button-gradient;
-                font-size: 20px;
-                font-weight: 900;
-                color: white;
-                border: 2px solid rgba($text-highlight, 0.2);
-                animation: button-animation 4s ease-in-out infinite;
-                transition: 0.3s ease;
-
-                &:hover{
-                    transform: scale(1.02);
-                    box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.6);
-                    border: 2px solid rgba($text-highlight, 0.8);
-                }
-
-                &:active{
-                    transform: scale(0.95);
-                    box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.6);
-                    border: 2px solid rgba($text-highlight, 0.8);
-                }
-            }   
+        p {
+            @include text-paragraph();
+            text-align: center;
         }
-        
     }
+
+    div.buttons-container {
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 800px;
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 30px;
+
+        a.button {
+            text-decoration: none;
+            background-color: $gray;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid $line;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: 0.3s ease;
+
+            img {
+                width: 60px;
+                border-right: 1px solid $line;
+                transition: 0.3s ease
+            }
+
+            p {
+                @include text-paragraph();
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 10px 0 rgba($text-highlight, 0.2);
+                border: 1px solid white;
+
+                img {
+                    border-right: 1px solid white;
+                }
+            }
+        }
+    }
+
+    h3 {
+        @include text-title();
+        font-size: 25px;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 800px;
+        justify-self: center;
+        align-self: center;
+
+        input {
+            background-color: transparent;
+            border: 1px solid $line;
+            padding: 20px;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+        }
+
+        textarea {
+            background-color: transparent;
+            border: 1px solid $line;
+            padding: 20px;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            min-height: 200px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            letter-spacing: 5px;
+            border: none;
+            border-radius: 6px;
+            padding: 12px;
+            @include text-main();
+            width: 100%;
+            box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.2);
+            background: $button-gradient;
+            font-size: 20px;
+            font-weight: 900;
+            color: white;
+            border: 2px solid rgba($text-highlight, 0.2);
+            animation: button-animation 4s ease-in-out infinite;
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: scale(1.02);
+                box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.6);
+                border: 2px solid rgba($text-highlight, 0.8);
+            }
+
+            &:active {
+                transform: scale(0.95);
+                box-shadow: 0 5px 10px 0 rgba($text-highlight, 0.6);
+                border: 2px solid rgba($text-highlight, 0.8);
+            }
+        }
+    }
+
+}
 
 /*
 
