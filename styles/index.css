@@ -1403,7 +1403,14 @@ section.education div.courses-container div.course.closed div.course-body div.co
 
 @media (orientation: landscape) {
   section.education div.courses-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  section.education div.courses-container div.course div.course-body div.course-content div.texts-container h4 {
+    font-size: 30px;
+    letter-spacing: 0px;
+  }
+  section.education div.courses-container div.course div.course-body div.course-content div.texts-container ul li {
+    font-size: 20px;
   }
 }
 section.contact {
