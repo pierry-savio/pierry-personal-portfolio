@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes floating {
   0% {
     transform: scale(1) translateX(-50%);
@@ -1405,6 +1406,116 @@ section.education div.courses-container div.course.closed div.course-body div.co
     grid-template-columns: repeat(2, 1fr);
   }
 }
+section.contact {
+  padding: 100px 40px 100px 40px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #160015, #221c22);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+section.contact div.section-title-container h2 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.contact div.section-title-container h2 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
+section.contact div.section-title-container h2 {
+  text-align: center;
+}
+section.contact div.section-title-container p {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+}
+section.contact div.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  justify-self: center;
+  align-self: center;
+}
+section.contact div.buttons-container a.button {
+  text-decoration: none;
+  background-color: #212121;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #5e5e5e;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+section.contact div.buttons-container a.button img {
+  width: 80px;
+  border-right: 1px solid #5e5e5e;
+}
+section.contact div.buttons-container a.button p {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+}
+section.contact div.buttons-container a.button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.295);
+}
+/*
+
+    <div class="section-title-container">
+        <h2 class="title">CONTATO</h2>
+        <p>Entre em contato comigo através dos canais abaixo</p>
+    </div>
+
+    <div class="buttons-container">
+        <a href="" class="button">
+            <img src="" alt="Contact icon">
+            <p>WhatsApp</p>
+        </a>
+
+        <a href="" class="button">
+            <img src="" alt="Contact icon">
+            <p>Email</p>
+        </a>
+
+        <a href="" class="button">
+            <img src="" alt="Contact icon">
+            <p>LinkedIn</p>
+        </a>
+
+        <a href="" class="button">
+            <img src="" alt="Contact icon">
+            <p>Github</p>
+        </a>
+    </div>
+
+    <h3>Me envie uma mensagem!</h3>
+
+    <form class="contact-form">
+        <input type="text" name="name" placeholder="Nome" required>
+        <textarea name="message" placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
+*/
 section.custom-tictactoe {
   min-height: 100vh;
   background: linear-gradient(180deg, #160015, #221c22);

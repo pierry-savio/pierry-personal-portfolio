@@ -5,3 +5,114 @@
     @use '../variables-functions/colors'    as *;
     @use '../variables-functions/functions' as *;
     @use '../variables-functions/variables' as *;
+
+    section.contact{
+        padding: 100px 40px 100px 40px;
+        min-height: 100vh;
+        background: $background-gradient;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        div.section-title-container{
+            h2{
+                @include text-title();
+                text-align: center;
+            }
+            p{
+                @include text-paragraph();
+            }
+        }
+        
+        div.buttons-container{
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+            justify-self: center;
+            align-self: center;
+
+            a.button{
+                text-decoration: none;
+                background-color: $gray;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                gap: 20px;
+                border: 1px solid $line;
+                border-radius: 6px;
+                overflow: hidden;
+                transition: 0.3s ease;
+                img{
+                    width: 80px;
+                    border-right: 1px solid $line;
+                }
+                p{
+                    @include text-paragraph();
+                }
+
+                &:hover{
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.295);
+                }
+            }
+        }
+
+        h3{
+
+        }
+
+        form{
+            input{
+                
+            }
+            textarea{
+
+            }
+            button{
+
+            }
+        }
+        
+    }
+
+/*
+
+    <div class="section-title-container">
+        <h2 class="title">CONTATO</h2>
+        <p>Entre em contato comigo através dos canais abaixo</p>
+    </div>
+
+    <div class="buttons-container">
+        <a href="" class="button">
+            <img src="" alt="Contact icon">
+            <p>WhatsApp</p>
+        </a>
+
+        <a href="" class="button">
+            <img src="" alt="Contact icon">
+            <p>Email</p>
+        </a>
+
+        <a href="" class="button">
+            <img src="" alt="Contact icon">
+            <p>LinkedIn</p>
+        </a>
+
+        <a href="" class="button">
+            <img src="" alt="Contact icon">
+            <p>Github</p>
+        </a>
+    </div>
+
+    <h3>Me envie uma mensagem!</h3>
+
+    <form class="contact-form">
+        <input type="text" name="name" placeholder="Nome" required>
+        <textarea name="message" placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
+*/
