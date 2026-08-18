@@ -1414,6 +1414,11 @@ section.contact {
   flex-direction: column;
   gap: 30px;
 }
+section.contact div.section-title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 section.contact div.section-title-container h2 {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
@@ -1440,6 +1445,7 @@ section.contact div.section-title-container p {
   font-style: normal;
   color: #b2b2b2;
   text-align: left;
+  text-align: center;
 }
 section.contact div.buttons-container {
   display: flex;
@@ -1449,6 +1455,7 @@ section.contact div.buttons-container {
   max-width: 800px;
   justify-self: center;
   align-self: center;
+  margin-bottom: 30px;
 }
 section.contact div.buttons-container a.button {
   text-decoration: none;
@@ -1478,6 +1485,86 @@ section.contact div.buttons-container a.button:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.295);
 }
+section.contact h3 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  font-size: 35px;
+  font-weight: 900;
+}
+@media (orientation: landscape) {
+  section.contact h3 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 65px;
+  }
+}
+section.contact h3 {
+  font-size: 25px;
+  text-align: center;
+}
+section.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
+  justify-self: center;
+  align-self: center;
+}
+section.contact form input {
+  background-color: transparent;
+  border: 1px solid #5e5e5e;
+  padding: 20px;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+}
+section.contact form textarea {
+  background-color: transparent;
+  border: 1px solid #5e5e5e;
+  padding: 20px;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  min-height: 200px;
+}
+section.contact form button {
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.2);
+  background: linear-gradient(33deg, #ff00fb, #8c00ff, #ff00fb);
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  border: 2px solid rgba(255, 0, 204, 0.2);
+  animation: button-animation 4s ease-in-out infinite;
+  transition: 0.3s ease;
+}
+section.contact form button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+}
+section.contact form button:active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 10px 0 rgba(255, 0, 204, 0.6);
+  border: 2px solid rgba(255, 0, 204, 0.8);
+}
+
 /*
 
     <div class="section-title-container">
