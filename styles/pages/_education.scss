@@ -60,14 +60,24 @@ section.education {
 
                 div.course-header {
                     background-color: $gray-light;
-                    display: flex;
-                    justify-content: space-between;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
                     padding: 5px 20px 5px 20px;
 
                     p {
                         @include text-paragraph();
                         font-size: 14px;
                         font-weight: 500;
+                    }
+
+                    p.p1 {
+                        text-align: left;
+                    }
+                    p.p2 {
+                        text-align: center;
+                    }
+                    p.p3{
+                        text-align: end;
                     }
 
                     p.done {

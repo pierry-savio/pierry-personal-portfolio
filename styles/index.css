@@ -1312,8 +1312,8 @@ section.education div.courses-container div.course div.course-body {
 }
 section.education div.courses-container div.course div.course-body div.course-header {
   background-color: #2d2d2d;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 5px 20px 5px 20px;
 }
 section.education div.courses-container div.course div.course-body div.course-header p {
@@ -1325,6 +1325,15 @@ section.education div.courses-container div.course div.course-body div.course-he
   text-align: left;
   font-size: 14px;
   font-weight: 500;
+}
+section.education div.courses-container div.course div.course-body div.course-header p.p1 {
+  text-align: left;
+}
+section.education div.courses-container div.course div.course-body div.course-header p.p2 {
+  text-align: center;
+}
+section.education div.courses-container div.course div.course-body div.course-header p.p3 {
+  text-align: end;
 }
 section.education div.courses-container div.course div.course-body div.course-header p.done {
   color: #578e57;
