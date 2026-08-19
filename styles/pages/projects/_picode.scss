@@ -25,13 +25,17 @@ section.picode{
         border-radius: 50%;
         border: 1px solid rgba($text-highlight, 0.5);
         box-shadow: 0 0 40px rgba($text-highlight, 0.5);
-        animation: project-icon-animation 4s ease infinite;
+        animation: 
+            start-animation-2 1s ease forwards, 
+            project-icon-animation 4s ease infinite;
+        animation-delay: 0s, 1s;
     }
 
     div.content{
         display: flex;
         flex-direction: column;
         gap: 16px;
+        
 
         div.title-container{
             display: flex;
@@ -45,9 +49,11 @@ section.picode{
 
             h2{
                 @include text-title();
+                animation: start-animation-2 1s ease forwards;
             }
             img{
                 width: 70px;
+                
             }
         }
 
@@ -55,11 +61,13 @@ section.picode{
             display: flex;
             gap: 10px;
             @include text-paragraph();
+            
             p{
                 font-size: 14px;
                 background-color: rgba($text-highlight, 0.2);
                 padding: 4px;
                 border-radius: 4px;
+                animation: start-animation-1 1s ease forwards;
             }
         }
 
@@ -70,6 +78,7 @@ section.picode{
             p.text{
                 @include text-paragraph;
                 font-size: 14px;
+                animation: start-animation-1 1s ease forwards;
             }
         }
 
@@ -78,6 +87,7 @@ section.picode{
             display: flex;
             flex-direction: column;
             gap: 10px;
+            animation: start-animation-1 1s ease forwards;
 
             a.test-button{
                 @include button-primary();

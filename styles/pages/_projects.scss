@@ -23,6 +23,7 @@ section.projects{
         text-align: center;
         position: absolute;
         top: 15%;
+        animation: start-animation-2 1s ease forwards;
     }
 
     //ARROWS
@@ -30,7 +31,7 @@ section.projects{
         position: absolute;
         z-index: 999;
         top: 50%;
-        background-color: $text-highlight;
+        border: 1px solid rgba($text-highlight, 0.5);
         padding: 10px;
         border-radius: 50%;
         width: 60px;
