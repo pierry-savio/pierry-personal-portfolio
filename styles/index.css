@@ -1491,7 +1491,7 @@ section.contact div.buttons-container a.button p {
 }
 section.contact div.buttons-container a.button:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 10px 0 rgba(255, 0, 204, 0.2);
+  box-shadow: 0 10px 10px 0 rgba(255, 0, 204, 0.05);
   border: 1px solid white;
 }
 section.contact div.buttons-container a.button:hover img {
