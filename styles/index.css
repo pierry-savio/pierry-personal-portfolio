@@ -1238,10 +1238,35 @@ section.all-techs div.techs-container div.tech:hover img {
 }
 section.education {
   min-height: 100vh;
-  background-color: #171717;
+  background: url("../../img/background/background-main.png");
   padding: 100px 20px 100px 20px;
 }
-section.education h2 {
+section.education div.section-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+section.education div.section-title p.mini-title {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+  background: linear-gradient(45deg, #2f00ff, #ff00fb, #ff0037);
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+section.education div.section-title h2 {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -1251,15 +1276,24 @@ section.education h2 {
   font-weight: 900;
 }
 @media (orientation: landscape) {
-  section.education h2 {
+  section.education div.section-title h2 {
     font-size: 80px;
     letter-spacing: 10px;
     line-height: 65px;
   }
 }
-section.education h2 {
+section.education div.section-title h2 {
+  font-size: 50px;
+}
+section.education div.section-title p.subtitle {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
   text-align: center;
-  margin-bottom: 50px;
+  font-size: 15px;
 }
 section.education div.courses-container {
   display: grid;
@@ -1267,132 +1301,106 @@ section.education div.courses-container {
   gap: 20px;
 }
 section.education div.courses-container div.course {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-section.education div.courses-container div.course:hover {
-  transform: scale(1.02);
-}
-section.education div.courses-container div.course:active {
-  transform: scale(0.95);
-}
-section.education div.courses-container div.course div.title-container {
-  display: flex;
-  gap: 10px;
-  justify-content: start;
-  align-items: center;
-  padding-left: 40px;
-}
-section.education div.courses-container div.course div.title-container h3 {
-  font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  color: white;
-  font-size: 35px;
-  font-weight: 900;
-}
-@media (orientation: landscape) {
-  section.education div.courses-container div.course div.title-container h3 {
-    font-size: 80px;
-    letter-spacing: 10px;
-    line-height: 65px;
-  }
-}
-section.education div.courses-container div.course div.title-container h3 {
-  color: white;
-  font-size: 30px;
-}
-section.education div.courses-container div.course div.course-body {
   background-color: #212121;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   border-radius: 10px;
-  overflow: hidden;
+  border: 1px solid rgba(255, 0, 204, 0.3);
+  cursor: pointer;
+  transition: 1s ease;
 }
-section.education div.courses-container div.course div.course-body div.course-header {
-  background-color: #2d2d2d;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 5px 20px 5px 20px;
-}
-section.education div.courses-container div.course div.course-body div.course-header p {
-  font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  color: #b2b2b2;
-  text-align: left;
-  font-size: 14px;
-  font-weight: 500;
-}
-section.education div.courses-container div.course div.course-body div.course-header p.p1 {
-  text-align: left;
-}
-section.education div.courses-container div.course div.course-body div.course-header p.p2 {
-  text-align: center;
-}
-section.education div.courses-container div.course div.course-body div.course-header p.p3 {
-  text-align: end;
-}
-section.education div.courses-container div.course div.course-body div.course-header p.done {
-  color: #578e57;
-}
-section.education div.courses-container div.course div.course-body div.course-header p.coursing {
-  color: #8E8057;
-}
-section.education div.courses-container div.course div.course-body div.course-content {
+section.education div.courses-container div.course div.course-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  padding: 16px 16px 16px 16px;
-  transition: 0.3s ease;
 }
-section.education div.courses-container div.course div.course-body div.course-content img.course-preview {
-  width: 100%;
-  aspect-ratio: 1/0.5;
-}
-section.education div.courses-container div.course div.course-body div.course-content img.course-arrow {
-  width: 50px;
-  justify-self: center;
-  align-self: center;
-  transition: 0.3s ease;
-}
-section.education div.courses-container div.course div.course-body div.course-content div.texts-container {
-  width: 100%;
-  max-height: 300px;
-  overflow: hidden;
+section.education div.courses-container div.course div.course-header div.dates-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
-  transition: 0.3s ease;
 }
-section.education div.courses-container div.course div.course-body div.course-content div.texts-container h4 {
+section.education div.courses-container div.course div.course-header div.dates-container img {
+  width: 40px;
+  background-color: rgba(41, 0, 41, 0.37);
+  padding: 8px;
+  border-radius: 50%;
+}
+section.education div.courses-container div.course div.course-header div.dates-container p {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  font-size: 16px;
+}
+section.education div.courses-container div.course div.course-header p.status.done {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  background-color: rgba(0, 255, 0, 0.075);
+  color: rgb(126, 255, 126);
+  border: 1px solid rgba(126, 255, 126, 0.5);
+  box-shadow: 0 0 10px 0 rgba(126, 255, 126, 0.15);
+  border-radius: 30px;
+  padding: 5px 10px 5px 10px;
+  font-size: 14px;
+}
+section.education div.courses-container div.course div.course-header p.status.coursing {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  background-color: rgba(255, 238, 0, 0.075);
+  color: rgb(255, 253, 126);
+  border: 1px solid rgba(255, 253, 126, 0.5);
+  box-shadow: 0 0 10px 0 rgba(255, 253, 126, 0.15);
+  border-radius: 30px;
+  padding: 5px 10px 5px 10px;
+  font-size: 14px;
+}
+section.education div.courses-container div.course div.course-image-wrapper {
+  overflow: hidden;
+  border-radius: 10px;
+}
+section.education div.courses-container div.course div.course-image-wrapper img.course-image {
+  width: 100%;
+  transition: 0.5s ease;
+}
+section.education div.courses-container div.course div.course-image-wrapper img.course-image:hover {
+  transform: scale(1.1);
+}
+section.education div.courses-container div.course div.course-title-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+section.education div.courses-container div.course div.course-title-container img.course-icon {
+  height: 70px;
+  height: 70px;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+}
+section.education div.courses-container div.course div.course-title-container div.course-title-texts h3 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
   color: white;
-  font-size: 35px;
-  font-weight: 900;
+  font-weight: 800;
+  font-size: 32px;
 }
-@media (orientation: landscape) {
-  section.education div.courses-container div.course div.course-body div.course-content div.texts-container h4 {
-    font-size: 80px;
-    letter-spacing: 10px;
-    line-height: 65px;
-  }
-}
-section.education div.courses-container div.course div.course-body div.course-content div.texts-container h4 {
-  font-size: 20px;
-  line-height: 25px;
-}
-section.education div.courses-container div.course div.course-body div.course-content div.texts-container ul {
-  padding-left: 20px;
-}
-section.education div.courses-container div.course div.course-body div.course-content div.texts-container ul li {
+section.education div.courses-container div.course div.course-title-container div.course-title-texts p {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -1401,28 +1409,57 @@ section.education div.courses-container div.course div.course-body div.course-co
   text-align: left;
   font-size: 14px;
 }
-section.education div.courses-container div.course.closed div.course-body div.course-content {
-  padding: 16px 16px 0px 16px;
+section.education div.courses-container div.course div.course-information {
+  max-height: 200px;
+  overflow: hidden;
+  transition: 1s ease;
 }
-section.education div.courses-container div.course.closed div.course-body div.course-content img.course-arrow {
-  transform: rotate(180deg);
+section.education div.courses-container div.course div.course-information div.line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(45deg, #2f00ff, #ff00fb, #ff0037);
+  border-radius: 50px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px 0 #ff00cc;
+  opacity: 1;
+  transition: 1s ease;
 }
-section.education div.courses-container div.course.closed div.course-body div.course-content div.texts-container {
-  max-height: 0px;
+section.education div.courses-container div.course div.course-information p {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  font-size: 14px;
+  text-align: justify;
+  transition: 1s ease;
+}
+section.education div.courses-container div.course img.arrow {
+  width: 40px;
+  align-self: center;
+  justify-self: center;
+  transform: rotateX(180deg);
+  transition: 1s ease;
 }
 
-@media (orientation: landscape) {
-  section.education div.courses-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  section.education div.courses-container div.course div.course-body div.course-content div.texts-container h4 {
-    font-size: 30px;
-    letter-spacing: 0px;
-  }
-  section.education div.courses-container div.course div.course-body div.course-content div.texts-container ul li {
-    font-size: 20px;
-  }
+section.education div.courses-container div.course.closed {
+  gap: 10px;
 }
+section.education div.courses-container div.course.closed div.course-information {
+  max-height: 0px;
+}
+section.education div.courses-container div.course.closed div.course-information div.line {
+  opacity: 0;
+  width: 0%;
+}
+section.education div.courses-container div.course.closed div.course-information p {
+  opacity: 0;
+}
+section.education div.courses-container div.course.closed img.arrow {
+  transform: rotateX(0deg);
+}
+
 section.contact {
   padding: 100px 40px 100px 40px;
   min-height: 100vh;
