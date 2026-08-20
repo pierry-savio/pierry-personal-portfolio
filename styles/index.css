@@ -1245,6 +1245,7 @@ section.education {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 20px 100px 20px;
+  overflow: hidden;
 }
 section.education div.section-title {
   display: flex;
