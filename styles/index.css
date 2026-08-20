@@ -1487,6 +1487,7 @@ section.contact {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  overflow: hidden;
 }
 section.contact div.section-title-container {
   display: flex;
