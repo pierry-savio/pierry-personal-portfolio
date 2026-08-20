@@ -1288,7 +1288,7 @@ section.education div.section-title h2 {
   }
 }
 section.education div.section-title h2 {
-  font-size: clamp(80px, 2vw, 120px);
+  font-size: clamp(40px, 2vw, 120px);
 }
 section.education div.section-title p.subtitle {
   font-family: "Source Code Pro", monospace;

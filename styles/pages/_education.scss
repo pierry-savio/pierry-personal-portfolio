@@ -42,7 +42,7 @@ section.education {
         }
         h2{
             @include text-title();
-            font-size: clamp(80px, 2vw, 120px);
+            font-size: clamp(40px, 2vw, 120px);
         }
         p.subtitle{
             @include text-paragraph();
