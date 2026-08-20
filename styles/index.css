@@ -1250,6 +1250,9 @@ section.education div.section-title {
   align-items: center;
   gap: 10px;
   margin-bottom: 30px;
+  max-width: 800px;
+  align-self: center;
+  justify-self: center;
 }
 section.education div.section-title p.mini-title {
   font-family: "Source Code Pro", monospace;
@@ -1259,7 +1262,7 @@ section.education div.section-title p.mini-title {
   color: #b2b2b2;
   text-align: left;
   text-align: center;
-  font-size: 15px;
+  font-size: clamp(14px, 1vw, 28px);
   font-weight: 800;
   background: linear-gradient(45deg, #2f00ff, #ff00fb, #ff0037);
   background-size: cover;
@@ -1285,7 +1288,7 @@ section.education div.section-title h2 {
   }
 }
 section.education div.section-title h2 {
-  font-size: 50px;
+  font-size: clamp(80px, 2vw, 120px);
 }
 section.education div.section-title p.subtitle {
   font-family: "Source Code Pro", monospace;
@@ -1295,7 +1298,7 @@ section.education div.section-title p.subtitle {
   color: #b2b2b2;
   text-align: left;
   text-align: center;
-  font-size: 15px;
+  font-size: clamp(14px, 1vw, 28px);
 }
 section.education div.courses-container {
   display: grid;
@@ -1311,6 +1314,8 @@ section.education div.courses-container div.course {
   border-radius: 10px;
   border: 1px solid rgba(255, 0, 204, 0.3);
   cursor: pointer;
+  height: -moz-fit-content;
+  height: fit-content;
   transition: 1s ease;
 }
 section.education div.courses-container div.course div.course-header {
@@ -1410,7 +1415,7 @@ section.education div.courses-container div.course div.course-title-container di
   font-style: normal;
   color: #b2b2b2;
   text-align: left;
-  font-size: 14px;
+  font-size: clamp(14px, 1vw, 28px);
 }
 section.education div.courses-container div.course div.course-information {
   max-height: 200px;
@@ -1434,7 +1439,7 @@ section.education div.courses-container div.course div.course-information p {
   font-style: normal;
   color: #b2b2b2;
   text-align: left;
-  font-size: 14px;
+  font-size: clamp(14px, 1vw, 28px);
   text-align: justify;
   transition: 1s ease;
 }
