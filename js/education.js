@@ -1,6 +1,6 @@
-const course_senai = document.getElementById('course_senai');
-const course_fatec = document.getElementById('course_fatec');
-const course_marlene = document.getElementById('course_marlene');
+const course_senai = document.getElementById("course_senai");
+const course_fatec = document.getElementById("course_fatec");
+const course_marlene = document.getElementById("course_marlene");
 
 course_senai.addEventListener('click', () => {
     course_senai.classList.toggle('closed');
