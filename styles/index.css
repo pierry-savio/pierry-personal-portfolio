@@ -1239,6 +1239,8 @@ section.all-techs div.techs-container div.tech:hover img {
 section.education {
   min-height: 100vh;
   background: url("../../img/background/background-main.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 100px 20px 100px 20px;
 }
 section.education div.section-title {
@@ -1373,6 +1375,7 @@ section.education div.courses-container div.course div.course-image-wrapper {
 }
 section.education div.courses-container div.course div.course-image-wrapper img.course-image {
   width: 100%;
+  aspect-ratio: 1/0.55;
   transition: 0.5s ease;
 }
 section.education div.courses-container div.course div.course-image-wrapper img.course-image:hover {
@@ -1460,6 +1463,11 @@ section.education div.courses-container div.course.closed img.arrow {
   transform: rotateX(0deg);
 }
 
+@media (orientation: landscape) {
+  section.education div.courses-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 section.contact {
   padding: 100px 40px 100px 40px;
   min-height: 100vh;
