@@ -775,6 +775,7 @@ section.projects h2 {
   position: absolute;
   top: 15%;
   animation: start-animation-2 1s ease forwards;
+  font-size: clamp(40px, 2vw, 120px);
 }
 section.projects div.arrow {
   position: absolute;
@@ -965,6 +966,8 @@ section.techs h2 {
   padding-left: 20px;
   text-align: center;
   margin-bottom: 100px;
+  font-size: clamp(40px, 2vw, 120px);
+  animation: start-animation-1 1s ease forwards;
 }
 section.techs a {
   text-decoration: none;
@@ -1270,6 +1273,7 @@ section.education div.section-title p.mini-title {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  animation: start-animation-3 1s ease forwards;
 }
 section.education div.section-title h2 {
   font-family: "Source Code Pro", monospace;
@@ -1289,6 +1293,7 @@ section.education div.section-title h2 {
 }
 section.education div.section-title h2 {
   font-size: clamp(40px, 2vw, 120px);
+  animation: start-animation-1 1s ease forwards;
 }
 section.education div.section-title p.subtitle {
   font-family: "Source Code Pro", monospace;
@@ -1299,6 +1304,7 @@ section.education div.section-title p.subtitle {
   text-align: left;
   text-align: center;
   font-size: clamp(14px, 1vw, 28px);
+  animation: start-animation-2 1s ease forwards;
 }
 section.education div.courses-container {
   display: grid;
@@ -1306,6 +1312,7 @@ section.education div.courses-container {
   gap: 20px;
 }
 section.education div.courses-container div.course {
+  animation: start-animation-1 1s ease forwards;
   background-color: #212121;
   padding: 20px;
   display: flex;
@@ -1504,6 +1511,8 @@ section.contact div.section-title-container h2 {
 }
 section.contact div.section-title-container h2 {
   text-align: center;
+  font-size: clamp(40px, 2vw, 120px);
+  animation: start-animation-2 1s ease forwards;
 }
 section.contact div.section-title-container p {
   font-family: "Source Code Pro", monospace;
@@ -1513,6 +1522,7 @@ section.contact div.section-title-container p {
   color: #b2b2b2;
   text-align: left;
   text-align: center;
+  animation: start-animation-3 1s ease forwards;
 }
 section.contact div.buttons-container {
   display: flex;
@@ -1557,6 +1567,18 @@ section.contact div.buttons-container a.button:hover {
 section.contact div.buttons-container a.button:hover img {
   border-right: 1px solid white;
 }
+section.contact div.buttons-container a.button.whatsapp {
+  animation: start-animation-2 0.5s ease forwards;
+}
+section.contact div.buttons-container a.button.email {
+  animation: start-animation-2 1s ease forwards;
+}
+section.contact div.buttons-container a.button.linkedin {
+  animation: start-animation-2 1.5s ease forwards;
+}
+section.contact div.buttons-container a.button.github {
+  animation: start-animation-2 2s ease forwards;
+}
 section.contact h3 {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
@@ -1576,6 +1598,7 @@ section.contact h3 {
 section.contact h3 {
   font-size: 25px;
   text-align: center;
+  animation: start-animation-1 1s ease forwards;
 }
 section.contact form {
   display: flex;
@@ -1585,6 +1608,7 @@ section.contact form {
   max-width: 800px;
   justify-self: center;
   align-self: center;
+  animation: start-animation-1 1s ease forwards;
 }
 section.contact form input {
   background-color: transparent;
