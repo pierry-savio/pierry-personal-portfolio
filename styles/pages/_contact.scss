@@ -110,6 +110,8 @@ section.contact {
         animation: start-animation-1 1s ease forwards;
 
         input {
+            @include text-paragraph();
+            font-weight: 400;
             background-color: transparent;
             border: 1px solid $line;
             padding: 20px;
@@ -119,6 +121,8 @@ section.contact {
         }
 
         textarea {
+            @include text-paragraph();
+            font-weight: 400;
             background-color: transparent;
             border: 1px solid $line;
             padding: 20px;

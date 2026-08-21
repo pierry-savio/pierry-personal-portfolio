@@ -1615,6 +1615,13 @@ section.contact form {
   animation: start-animation-1 1s ease forwards;
 }
 section.contact form input {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  font-weight: 400;
   background-color: transparent;
   border: 1px solid #5e5e5e;
   padding: 20px;
@@ -1623,6 +1630,13 @@ section.contact form input {
   font-size: 16px;
 }
 section.contact form textarea {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b2b2b2;
+  text-align: left;
+  font-weight: 400;
   background-color: transparent;
   border: 1px solid #5e5e5e;
   padding: 20px;
