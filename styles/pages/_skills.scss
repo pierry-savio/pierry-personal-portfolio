@@ -44,6 +44,7 @@ section.techs{
         padding: 0px 0 70px 0;
         overflow: hidden;
         position: relative;
+        z-index: 0;
 
         h3{
             @include text-title();
@@ -55,6 +56,7 @@ section.techs{
             display: flex;
             width: max-content;
             animation: carousel 15s linear infinite;
+            z-index: 0;
             
             img {
                 height: 100px;
